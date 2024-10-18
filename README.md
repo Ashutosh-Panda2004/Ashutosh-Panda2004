@@ -89,18 +89,6 @@ Welcome to my digital nebula, where bits and bytes dance in cosmic harmony! I'm 
 
 ---
 
-## 📊 LeetCode Coordinates
-
-<div align="center">
-
-[![LeetCode Stats](https://leetcode-stats-six.vercel.app/api?username=Ashutosh___Panda&theme=dark)](https://leetcode.com/Ashutosh___Panda/)
-
-</div>
-
-*Ranked in the top 8.91% worldwide with a contest rating of 1700+. Over 400 coding problems solved in C++!*
-
----
-
 ## 🌌 Connect Across Dimensions
 
 <div align="center">
