@@ -1,4 +1,4 @@
-<div align="center">
+![image](https://github.com/user-attachments/assets/c9ae0d2d-a7ad-4392-a12c-4adde271ea45)<div align="center">
   
 # 🌠 Ashutosh Panda's Intergalactic Code Odyssey 🚀
 
@@ -79,7 +79,7 @@ Welcome, fellow cosmic voyagers, to my digital nebula! I'm Ashutosh, a Computer 
 
 ### 🎨 Obyss: The Design Dimension
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Ashutosh-Panda2004/Ashutosh-Panda2004/main/images/obyss.png](https://github.com/Ashutosh-Panda2004/Ashutosh-Panda2004/blob/main/Github-Profile-Images/Project-Obyss.jpg?raw=true)" alt="Obyss Website Screenshot" width="80%"/>
+  <img src="https://github.com/Ashutosh-Panda2004/Ashutosh-Panda2004/blob/main/Github-Profile-Images/Project-Obyss.jpg?raw=true" alt="Obyss Website Screenshot" width="80%"/>
 </div>
 
 - **Mission:** Craft a sleek, intuitive agency website that's out of this world.
@@ -89,7 +89,7 @@ Welcome, fellow cosmic voyagers, to my digital nebula! I'm Ashutosh, a Computer 
 
 ### 💻 Anvesha: The Collaborative Code Compiler
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Ashutosh-Panda2004/Ashutosh-Panda2004/main/images/anvesha.png](https://github.com/Ashutosh-Panda2004/Ashutosh-Panda2004/blob/main/Github-Profile-Images/Project-Anvesha.jpg?raw=true)" alt="Anvesha Code Compiler Interface" width="80%"/>
+  <img src="https://github.com/Ashutosh-Panda2004/Ashutosh-Panda2004/blob/main/Github-Profile-Images/Project-Anvesha.jpg?raw=true" alt="Anvesha Code Compiler Interface" width="80%"/>
 </div>
 
 - **Mission:** Create a real-time online compiler for code wizards across dimensions.
