@@ -65,12 +65,11 @@ Welcome, fellow cosmic voyagers, to my digital nebula! I'm Ashutosh, a Computer 
 </div>
 
 ---
-
 ## 🚀 Intergalactic Projects
 
 ### 🏥 Sanjeevani: The Healthcare Odyssey
 <div align="center">
-  <img src="https://via.placeholder.com/800x400.png?text=Sanjeevani+Project+Visualization" alt="Sanjeevani Project Visualization" width="80%"/>
+  <img src="https://github.com/Ashutosh-Panda2004/Ashutosh-Panda2004/blob/main/Github-Profile-Images/Project-Sanjeevani.jpg?raw=true" alt="Sanjeevani Project Screenshot" width="80%"/>
 </div>
 
 - **Mission:** Revolutionize city healthcare with real-time OPD tracking, bed availability, and smart ambulance routing.
@@ -80,7 +79,7 @@ Welcome, fellow cosmic voyagers, to my digital nebula! I'm Ashutosh, a Computer 
 
 ### 🎨 Obyss: The Design Dimension
 <div align="center">
-  <img src="https://via.placeholder.com/800x400.png?text=Obyss+Website+Screenshot" alt="Obyss Website Screenshot" width="80%"/>
+  <img src="[https://raw.githubusercontent.com/Ashutosh-Panda2004/Ashutosh-Panda2004/main/images/obyss.png](https://github.com/Ashutosh-Panda2004/Ashutosh-Panda2004/blob/main/Github-Profile-Images/Project-Obyss.jpg?raw=true)" alt="Obyss Website Screenshot" width="80%"/>
 </div>
 
 - **Mission:** Craft a sleek, intuitive agency website that's out of this world.
@@ -90,7 +89,7 @@ Welcome, fellow cosmic voyagers, to my digital nebula! I'm Ashutosh, a Computer 
 
 ### 💻 Anvesha: The Collaborative Code Compiler
 <div align="center">
-  <img src="https://via.placeholder.com/800x400.png?text=Anvesha+Code+Compiler+Interface" alt="Anvesha Code Compiler Interface" width="80%"/>
+  <img src="[https://raw.githubusercontent.com/Ashutosh-Panda2004/Ashutosh-Panda2004/main/images/anvesha.png](https://github.com/Ashutosh-Panda2004/Ashutosh-Panda2004/blob/main/Github-Profile-Images/Project-Anvesha.jpg?raw=true)" alt="Anvesha Code Compiler Interface" width="80%"/>
 </div>
 
 - **Mission:** Create a real-time online compiler for code wizards across dimensions.
@@ -100,7 +99,7 @@ Welcome, fellow cosmic voyagers, to my digital nebula! I'm Ashutosh, a Computer 
   - Integrated chat for cosmic discussions 💬
 - **Tech Stack:** React ⚛️, Node.js 🟢, Express 🚂, Socket.io 🔌
 - **[Code Together](https://project-anvesha-compiler.onrender.com/)** 🔗
-
+ 
 ---
 
 ## 📜 Patent Constellations
