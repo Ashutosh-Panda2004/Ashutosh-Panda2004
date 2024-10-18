@@ -93,7 +93,7 @@ Welcome to my digital nebula, where bits and bytes dance in cosmic harmony! I'm 
 
 <div align="center">
 
-[![LeetCode Stats](https://leetcode-stats-six.vercel.app/api?username=Ashutosh2004&theme=dark)](https://leetcode.com/Ashutosh2004/)
+[![LeetCode Stats](https://leetcode-stats-six.vercel.app/api?username=Ashutosh___Panda&theme=dark)](https://leetcode.com/Ashutosh___Panda/)
 
 </div>
 
