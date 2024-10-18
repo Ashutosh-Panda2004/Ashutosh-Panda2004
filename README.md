@@ -124,21 +124,6 @@ Welcome, fellow cosmic voyagers, to my digital nebula! I'm Ashutosh, a Computer 
  
 ---
 
-## 📜 Patent Constellations
-
-<div align="center">
-  
-| Patent | Number | Description |
-|--------|--------|-------------|
-| 🦼 Multifunctional Wheelchair | 202211059676 | Empowering mobility with split-seat rotating mechanisms and smart sensors. |
-| 🏥 Remote Patient Monitoring System | 202211057004 | IoT-powered health monitoring, beaming vital signs to the cloud. |
-| 🚶‍♂️ Portable Multifunctional Walking Aid | 202311035351 | An innovative Walkig Aid for elderly to enhance mobility support. |
-| 🚨 Emergency Building Escape System | 202211060998 | When conventional evacuation methods are compromised, our collapsible staircase prevails! |
-
-</div>
-
----
-
 ## 📊 LeetCode Coordinates
 
 <div align="center">
@@ -182,7 +167,22 @@ Welcome, fellow cosmic voyagers, to my digital nebula! I'm Ashutosh, a Computer 
 
 ---
 
-## 📚 Publications in the Cosmic Library
+## 📜 Patent Constellations
+
+<div align="center">
+  
+| Patent | Number | Description |
+|--------|--------|-------------|
+| 🦼 Multifunctional Wheelchair | 202211059676 | Empowering mobility with split-seat rotating mechanisms and smart sensors. |
+| 🏥 Remote Patient Monitoring System | 202211057004 | IoT-powered health monitoring, beaming vital signs to the cloud. |
+| 🚶‍♂️ Portable Multifunctional Walking Aid | 202311035351 | An innovative Walkig Aid for elderly to enhance mobility support. |
+| 🚨 Emergency Building Escape System | 202211060998 | When conventional evacuation methods are compromised, our collapsible staircase prevails! |
+
+</div>
+
+---
+
+## 📚 Publications Constellation
 
 <div align="center">
 
