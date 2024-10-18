@@ -67,7 +67,7 @@ Welcome, fellow cosmic voyagers, to my digital nebula! I'm Ashutosh, a Computer 
 
 ### 🏥 Sanjeevani: The Healthcare Odyssey
 <div align="center">
-  <img src="https://github.com/Ashutosh-Panda2004/Ashutosh-Panda2004/blob/main/Github-Profile-Images/Project-Sanjeevani.jpg?raw=true" alt="Sanjeevani Project Screenshot" width="450" height="350"/>
+  <img src="https://github.com/Ashutosh-Panda2004/Ashutosh-Panda2004/blob/main/Github-Profile-Images/Project-Sanjeevani.jpg?raw=true" alt="Sanjeevani Project Screenshot" width="550" height="350"/>
 </div>
 
 - **Mission:** Revolutionize city healthcare with real-time OPD tracking, bed availability, and smart ambulance routing.
@@ -77,7 +77,7 @@ Welcome, fellow cosmic voyagers, to my digital nebula! I'm Ashutosh, a Computer 
 
 ### 🎨 Obyss: The Design Dimension
 <div align="center">
-  <img src="https://github.com/Ashutosh-Panda2004/Ashutosh-Panda2004/blob/main/Github-Profile-Images/Project-Obyss.jpg?raw=true" alt="Obyss Website Screenshot" width="450" height="350"/>
+  <img src="https://github.com/Ashutosh-Panda2004/Ashutosh-Panda2004/blob/main/Github-Profile-Images/Project-Obyss.jpg?raw=true" alt="Obyss Website Screenshot" width="550" height="350"/>
 </div>
 
 - **Mission:** Craft a sleek, intuitive agency website that's out of this world.
@@ -87,7 +87,7 @@ Welcome, fellow cosmic voyagers, to my digital nebula! I'm Ashutosh, a Computer 
 
 ### 💻 Anvesha: The Collaborative Code Compiler
 <div align="center">
-  <img src="https://github.com/Ashutosh-Panda2004/Ashutosh-Panda2004/blob/main/Github-Profile-Images/Project-Anvesha.jpg?raw=true" alt="Anvesha Code Compiler Interface" width="450" height="350"/>
+  <img src="https://github.com/Ashutosh-Panda2004/Ashutosh-Panda2004/blob/main/Github-Profile-Images/Project-Anvesha.jpg?raw=true" alt="Anvesha Code Compiler Interface" width="550" height="350"/>
 </div>
 
 - **Mission:** Create a real-time online compiler for code wizards across dimensions.
