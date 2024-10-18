@@ -120,7 +120,7 @@ Welcome, fellow cosmic voyagers, to my digital nebula! I'm Ashutosh, a Computer 
 <div align="center">
 
 <div align="center">
-  <img src="https://github.com/Ashutosh-Panda2004/Ashutosh-Panda2004/blob/main/Github-Profile-Images/codolio%20card.jpg?raw=true" alt=Codolio Card Screenshot"  width="800" height="400"/>
+  <img src="https://github.com/Ashutosh-Panda2004/Ashutosh-Panda2004/blob/main/Github-Profile-Images/codolio%20card.jpg?raw=true" alt=Codolio Card Screenshot"  width="500" height="400"/>
 </div>
 
 **🏆 Top 8.91% Worldwide | 🌟 1700+ Contest Rating | 💻 400+ Problems Solved in C++**
