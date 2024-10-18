@@ -63,6 +63,30 @@ Welcome, fellow cosmic voyagers, to my digital nebula! I'm Ashutosh, a Computer 
 </div>
 
 ---
+
+---
+
+## 🌌 Galactic Code Contributions
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Ashutosh-Panda2004&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117" alt="Ashutosh's GitHub Stats" />
+</div>
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Ashutosh-Panda2004&theme=radical&layout=compact&hide_border=true&bg_color=0D1117" alt="Ashutosh's Top Languages" />
+</div>
+
+---
+
+<div align="center">
+
+## 🌠 Visitor Count
+  
+![Visitor Count](https://profile-counter.glitch.me/Ashutosh-Panda2004/count.svg)
+
+</div>
+
+---
 ## 🚀 Intergalactic Projects
 
 ### 🏥 Sanjeevani: The Healthcare Odyssey
@@ -120,7 +144,7 @@ Welcome, fellow cosmic voyagers, to my digital nebula! I'm Ashutosh, a Computer 
 <div align="center">
 
 <div align="center">
-  <img src="https://github.com/Ashutosh-Panda2004/Ashutosh-Panda2004/blob/main/Github-Profile-Images/codolio%20card.jpg?raw=true" alt=Codolio Card Screenshot"  width="550" height="350"/>
+  <img src="https://github.com/Ashutosh-Panda2004/Ashutosh-Panda2004/blob/main/Github-Profile-Images/codolio%20card.jpg?raw=true" alt=Codolio Card Screenshot"  width="400" height="350"/>
 </div>
 
 **🏆 Top 8.91% Worldwide | 🌟 1700+ Contest Rating | 💻 400+ Problems Solved in C++**
@@ -169,26 +193,6 @@ Welcome, fellow cosmic voyagers, to my digital nebula! I'm Ashutosh, a Computer 
 </div>
 
 ---
-
-## 🌌 Galactic Code Contributions
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Ashutosh-Panda2004&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117" alt="Ashutosh's GitHub Stats" />
-</div>
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Ashutosh-Panda2004&theme=radical&layout=compact&hide_border=true&bg_color=0D1117" alt="Ashutosh's Top Languages" />
-</div>
-
----
-
-<div align="center">
-
-## 🌠 Visitor Count
-  
-![Visitor Count](https://profile-counter.glitch.me/Ashutosh-Panda2004/count.svg)
-
-</div>
 
 <div align="center">
 
