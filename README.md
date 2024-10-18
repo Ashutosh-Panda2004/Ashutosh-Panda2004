@@ -119,7 +119,9 @@ Welcome, fellow cosmic voyagers, to my digital nebula! I'm Ashutosh, a Computer 
 
 <div align="center">
 
-[![LeetCode Stats](https://leetcode-stats-six.vercel.app/api?username=Ashutosh2004&theme=dark)](https://leetcode.com/Ashutosh2004/)
+<div align="center">
+  <img src="https://github.com/Ashutosh-Panda2004/Ashutosh-Panda2004/blob/main/Github-Profile-Images/KxdKA9dT_codolio_card%20(1).png?raw=true" alt=Codolio Card Screenshot" width="80%"/>
+</div>
 
 **🏆 Top 8.91% Worldwide | 🌟 1700+ Contest Rating | 💻 400+ Problems Solved in C++**
 
