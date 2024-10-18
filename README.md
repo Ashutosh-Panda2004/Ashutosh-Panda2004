@@ -108,8 +108,8 @@ Welcome, fellow cosmic voyagers, to my digital nebula! I'm Ashutosh, a Computer 
 |--------|--------|-------------|
 | 🦼 Multifunctional Wheelchair | 202211059676 | Empowering mobility with split-seat rotating mechanisms and smart sensors. |
 | 🏥 Remote Patient Monitoring System | 202211057004 | IoT-powered health monitoring, beaming vital signs to the cloud. |
-| 🚶‍♂️ Portable Multifunctional Walking Aid | 202311035351 | A cosmic Swiss Army knife for mobility support. |
-| 🚨 Emergency Building Escape System | 202211060998 | When gravity fails, our collapsible staircase prevails! |
+| 🚶‍♂️ Portable Multifunctional Walking Aid | 202311035351 | An innovative Walkig Aid for elderly to enhance mobility support. |
+| 🚨 Emergency Building Escape System | 202211060998 | When conventional evacuation methods are compromised, our collapsible staircase prevails! |
 
 </div>
 
@@ -120,7 +120,7 @@ Welcome, fellow cosmic voyagers, to my digital nebula! I'm Ashutosh, a Computer 
 <div align="center">
 
 <div align="center">
-  <img src="https://github.com/Ashutosh-Panda2004/Ashutosh-Panda2004/blob/main/Github-Profile-Images/codolio%20card.jpg?raw=true" alt=Codolio Card Screenshot"  width="350" height="350"/>
+  <img src="https://github.com/Ashutosh-Panda2004/Ashutosh-Panda2004/blob/main/Github-Profile-Images/codolio%20card.jpg?raw=true" alt=Codolio Card Screenshot"  width="550" height="350"/>
 </div>
 
 **🏆 Top 8.91% Worldwide | 🌟 1700+ Contest Rating | 💻 400+ Problems Solved in C++**
@@ -151,7 +151,7 @@ Welcome, fellow cosmic voyagers, to my digital nebula! I'm Ashutosh, a Computer 
 |----------------|----------------|
 | Dean's List Explorer | Charted as the best project creator and top programmer in the first semester |
 | Smart India Hackathon Voyager | Navigated to the top 20 out of 150 teams in SIH 2024 (Internal) |
-| CBSE National Level Science Challenge | Qualified for this cosmic competition in 2019 |
+| CBSE National Level Science Challenge | Qualified for this National competition in 2019 |
 | State Level Science Fair | Secured 2nd place in this galactic showcase organized by Ministry of Culture, Govt. of India |
 
 </div>
