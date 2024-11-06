@@ -86,60 +86,6 @@ Welcome, fellow cosmic voyagers, to my digital nebula! I'm Ashutosh, a Computer 
 
 </div>
 
----
-## 🚀 Intergalactic Projects
-
-### 🏥 Sanjeevani: The Healthcare Odyssey
-<div align="center">
-  <img src="https://github.com/Ashutosh-Panda2004/Ashutosh-Panda2004/blob/main/Github-Profile-Images/Project-Sanjeevani.jpg?raw=true" alt="Sanjeevani Project Screenshot" width="550" height="350"/>
-</div>
-
-- **Mission:** Revolutionize city healthcare with real-time OPD tracking, bed availability, and smart ambulance routing.
-- **Cosmic Achievement:** Our Priority Score (PS) algorithm improved hospital triage efficiency by 40% and reduced patient starvation by 20%!
-- **Tech Stack:** React ⚛️, Node.js 🟢, Express 🚂, MongoDB 🍃
-- **[Launch Pad](https://github.com/Ashutosh-Panda2004/Project-Sanjeevani.git)** 🔗
-
-### 🎨 Obyss: The Design Dimension
-<div align="center">
-  <img src="https://github.com/Ashutosh-Panda2004/Ashutosh-Panda2004/blob/main/Github-Profile-Images/Project-Obyss.jpg?raw=true" alt="Obyss Website Screenshot" width="550" height="350"/>
-</div>
-
-- **Mission:** Craft a sleek, intuitive agency website that's out of this world.
-- **Galactic Impact:** Seamless navigation ensuring an engaging user experience across the cosmos.
-- **Tech Stack:** HTML5 📄, CSS3 🎨, JavaScript 🌟, GSAP 🚀
-- **[Explore the Design Galaxy](https://obyss-design.vercel.app/)** 🔗
-
-### 💻 Anvesha: The Collaborative Code Compiler
-<div align="center">
-  <img src="https://github.com/Ashutosh-Panda2004/Ashutosh-Panda2004/blob/main/Github-Profile-Images/Project-Anvesha.jpg?raw=true" alt="Anvesha Code Compiler Interface" width="550" height="350"/>
-</div>
-
-- **Mission:** Create a real-time online compiler for code wizards across dimensions.
-- **Stellar Features:** 
-  - Real-time code collaboration 👨‍💻👩‍💻
-  - Multi-language support 🌐
-  - Integrated chat for cosmic discussions 💬
-- **Tech Stack:** React ⚛️, Node.js 🟢, Express 🚂, Socket.io 🔌
-- **[Code Together](https://project-anvesha-compiler.onrender.com/)** 🔗
- 
----
-
-## 📊 LeetCode Coordinates
-
-<div align="center">
-
-<div align="center">
-  <img src="https://github.com/Ashutosh-Panda2004/Ashutosh-Panda2004/blob/main/Github-Profile-Images/codolio%20card.jpg?raw=true" alt=Codolio Card Screenshot"  width="400" height="350"/>
-</div>
-
-**🏆 Top 8.91% Worldwide | 🌟 1700+ Contest Rating | 💻 400+ Problems Solved in C++**
-
-</div>
-
----
-
-<div align="center">
-
 ### 🚀 Ready to explore the code cosmos together? Let's connect and create something stellar! 🌌
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ashutosh-panda-748531255/)
