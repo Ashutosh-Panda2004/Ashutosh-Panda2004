@@ -1,6 +1,6 @@
 # 🌠 Ashutosh Panda's Intergalactic Code Odyssey 🚀
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Roboto+Mono&weight=600&size=30&pause=1000&color=00F71A&background=FF1B1B00&center=true&vCenter=true&width=600&height=70&lines=Full-Stack+Sorcerer+%F0%9F%A7%99%E2%80%8D%E2%99%82%EF%B8%8F;AI+Alchemist+%F0%9F%A7%AA;Patent+Innovator+%F0%9F%93%9C;LeetCode+Warrior+%F0%9F%9B%A1%EF%B8%8F;Cosmic+Code+Explorer+%F0%9F%8C%8C)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Roboto+Mono&weight=600&size=30&pause=1000&color=00F71A&background=FF1B1B00&center=true&vCenter=true&width=600&height=70&lines=Full-Stack+Sorcerer+%F0%9F%A7%99%E2%80%8D%E2%99%82%EF%B8%8F;AI+Alchemist+%F0%9F%A7%AA;LeetCode+Warrior+%F0%9F%9B%A1%EF%B8%8F;Cosmic+Code+Explorer+%F0%9F%8C%8C)](https://git.io/typing-svg)
 
 </div>
 
