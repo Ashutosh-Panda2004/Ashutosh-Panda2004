@@ -29,7 +29,6 @@ Welcome, fellow cosmic voyagers, to my digital nebula! I'm Ashutosh, a Computer 
 
 <div align="center">
 
-[![GitHub Streak](http://github-readme-streak-stats.herokuapp.com?user=Ashutosh-Panda2004&theme=githubdark&hide_border=true&background=0D1117&ring=FFC700&fire=FFC700&currStreakLabel=FFC700)](https://git.io/streak-stats)
 
 <p align="center" ><img src="https://github-readme-streak-stats.herokuapp.com/?user=Ashutosh-Panda2004&theme=chartreuse-dark"></p>
 
