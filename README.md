@@ -28,8 +28,10 @@ Welcome, fellow cosmic voyagers, to my digital nebula! I'm Ashutosh, a Computer 
 ## 🛸 Mission Control: Quick Stats
 
 <div align="center">
-  
-[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Ashutosh-Panda2004&theme=radical&hide_border=true&background=000000&ring=ffd700&fire=ffd700&currStreakLabel=ffd700)](https://git.io/streak-stats)
+
+[![GitHub Streak](http://github-readme-streak-stats.herokuapp.com?user=Ashutosh-Panda2004&theme=github-dark&hide_border=true&background=0D1117&ring=FFC700&fire=FFC700&currStreakLabel=FFC700)](https://git.io/streak-stats)
+
+<img src="https://github-profile-trophy.vercel.app/?username=Ashutosh-Panda2004&theme=darkhub&no-frame=true&row=1&column=6&margin-w=15&margin-h=15" alt="Achievement Trophies" />
 
 </div>
 
