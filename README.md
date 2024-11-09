@@ -27,11 +27,50 @@ Welcome, fellow cosmic voyagers, to my digital nebula! I'm Ashutosh, a Computer 
 
 ## 🛸 Mission Control: Quick Stats
 
-<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200">
+  <!-- Background -->
+  <rect width="800" height="200" fill="#000000" rx="10" ry="10"/>
   
-[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Ashutosh-Panda2004&theme=radical&hide_border=true&background=000000&ring=ffd700&fire=ffd700&currStreakLabel=ffd700)](https://git.io/streak-stats)
-
-</div>
+  <!-- Grid lines for cosmic effect -->
+  <path d="M0 40 L800 40" stroke="#1a1a1a" stroke-width="1"/>
+  <path d="M0 80 L800 80" stroke="#1a1a1a" stroke-width="1"/>
+  <path d="M0 120 L800 120" stroke="#1a1a1a" stroke-width="1"/>
+  <path d="M0 160 L800 160" stroke="#1a1a1a" stroke-width="1"/>
+  
+  <!-- Stars in background -->
+  <circle cx="50" cy="30" r="1" fill="#ffffff" opacity="0.5"/>
+  <circle cx="120" cy="60" r="1" fill="#ffffff" opacity="0.5"/>
+  <circle cx="200" cy="40" r="1" fill="#ffffff" opacity="0.5"/>
+  <circle cx="280" cy="70" r="1" fill="#ffffff" opacity="0.5"/>
+  <circle cx="350" cy="30" r="1" fill="#ffffff" opacity="0.5"/>
+  <circle cx="420" cy="50" r="1" fill="#ffffff" opacity="0.5"/>
+  <circle cx="500" cy="40" r="1" fill="#ffffff" opacity="0.5"/>
+  <circle cx="580" cy="60" r="1" fill="#ffffff" opacity="0.5"/>
+  <circle cx="660" cy="30" r="1" fill="#ffffff" opacity="0.5"/>
+  <circle cx="740" cy="70" r="1" fill="#ffffff" opacity="0.5"/>
+  
+  <!-- Streak Stats -->
+  <g transform="translate(40, 40)">
+    <!-- Current Streak -->
+    <rect x="0" y="0" width="220" height="100" fill="#1a1a1a" rx="5" ry="5"/>
+    <text x="110" y="30" fill="#ffd700" font-family="Arial" font-size="14" text-anchor="middle">Current Streak</text>
+    <text x="110" y="70" fill="#ffffff" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle">14 days</text>
+    
+    <!-- Total Contributions -->
+    <rect x="240" y="0" width="220" height="100" fill="#1a1a1a" rx="5" ry="5"/>
+    <text x="350" y="30" fill="#ffd700" font-family="Arial" font-size="14" text-anchor="middle">Total Contributions</text>
+    <text x="350" y="70" fill="#ffffff" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle">1,337</text>
+    
+    <!-- Longest Streak -->
+    <rect x="480" y="0" width="220" height="100" fill="#1a1a1a" rx="5" ry="5"/>
+    <text x="590" y="30" fill="#ffd700" font-family="Arial" font-size="14" text-anchor="middle">Longest Streak</text>
+    <text x="590" y="70" fill="#ffffff" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle">21 days</text>
+  </g>
+  
+  <!-- Decorative Elements -->
+  <path d="M5 195 L15 185 L25 195" stroke="#ffd700" fill="none" stroke-width="2"/>
+  <path d="M775 195 L785 185 L795 195" stroke="#ffd700" fill="none" stroke-width="2"/>
+</svg>
 
 <div align="center">
   <img src="https://github-profile-trophy.vercel.app/?username=Ashutosh-Panda2004&theme=juicyfresh&no-frame=true&row=1&&margin-w=20&no-bg=true" alt="Ashutosh's Trophies" />
