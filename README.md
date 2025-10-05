@@ -140,7 +140,7 @@ class CurrentGoals:
 I'm always excited to collaborate on innovative projects and connect with fellow developers!
 
 [![LinkedIn](https://img.shields.io/badge/Connect_on_LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ashutosh-panda-748531255/)
-[![Portfolio](https://img.shields.io/badge/View_My_Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white)](https://ashutosh-panda2004.github.io/Portfolio-Ashutosh/)
+[![Portfolio](https://img.shields.io/badge/View_My_Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white)](https://ashutoshpanda.vercel.app/)
 [![Email](https://img.shields.io/badge/Send_Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ashutoshpanda.india@gmail.com)
 
 ### 📬 Open for:
