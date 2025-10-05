@@ -1,106 +1,165 @@
-# 🌠 Ashutosh Panda's Intergalactic Code Odyssey 🚀
-
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Roboto+Mono&weight=600&size=30&pause=1000&color=00F71A&background=FF1B1B00&center=true&vCenter=true&width=600&height=70&lines=Full-Stack+Sorcerer+%F0%9F%A7%99%E2%80%8D%E2%99%82%EF%B8%8F;AI+Alchemist+%F0%9F%A7%AA;Problem+Solver+%F0%9F%9B%A1%EF%B8%8F;Cosmic+Code+Explorer+%F0%9F%8C%8C)](https://git.io/typing-svg)
-
-</div>
+# 🌌 Ashutosh Panda | Digital Universe Architect
 
 <div align="center">
-  
-[![GitHub followers](https://img.shields.io/github/followers/Ashutosh-Panda2004?style=for-the-badge&logo=github)](https://github.com/Ashutosh-Panda2004)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/ashutosh-panda-748531255/)
-[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-brightgreen?style=for-the-badge&logo=google-chrome)](https://ashutosh-panda2004.github.io/Portfolio-Ashutosh/)
-[![Email](https://img.shields.io/badge/Email-Contact-red?style=for-the-badge&logo=gmail)](mailto:ashutoshpanda.india@gmail.com)
+
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=28&duration=3000&pause=1000&color=00F5FF&center=true&vCenter=true&width=600&lines=Full-Stack+Developer+%F0%9F%9A%80;AI+%26+ML+Enthusiast+%F0%9F%A7%A0;Problem+Solving+Ninja+%E2%9A%94%EF%B8%8F;Building+Digital+Galaxies+%F0%9F%8C%A0)](https://git.io/typing-svg)
 
 </div>
 
 ---
 
 <div align="center">
-  
-> *"In the vast cosmos of code, every challenge is a star waiting to be reached."* 🌌
 
-</div>
+### 🎯 Navigation Hub
 
-Welcome, fellow cosmic voyagers, to my digital nebula! I'm Ashutosh, a Computer Science explorer charting courses through the binary stars and data streams of the tech universe. Strap in as we embark on an exhilarating journey through galaxies of innovation, where every line of code opens a wormhole to new possibilities! 🎭🔭🧑‍🚀
+[![GitHub](https://img.shields.io/badge/GitHub-171515?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Ashutosh-Panda2004)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ashutosh-panda-748531255/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white)](https://ashutosh-panda2004.github.io/Portfolio-Ashutosh/)
+[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ashutoshpanda.india@gmail.com)
 
----
-
-## 🛸 Mission Control: Quick Stats
-
-<div align="center">
-
-
-<p align="center" ><img src="https://github-readme-streak-stats.herokuapp.com/?user=Ashutosh-Panda2004&theme=chartreuse-dark"></p>
-
-
-<img src="https://github-profile-trophy.vercel.app/?username=Ashutosh-Panda2004&theme=darkhub&no-frame=true&row=1&column=6&margin-w=15&margin-h=15" alt="Achievement Trophies" />
-
-</div>
-
-
-<div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=Ashutosh-Panda2004&theme=juicyfresh&no-frame=true&row=1&&margin-w=20&no-bg=true" alt="Ashutosh's Trophies" />
-</div>
-
----
-
-## 🌠 Constellation of Skills
-
-<div align="center">
-
-![Python](https://img.shields.io/badge/-Python-black?style=for-the-badge&logo=Python&logoColor=ffdd54)
-![C++](https://img.shields.io/badge/-C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
-![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Nodejs](https://img.shields.io/badge/-Nodejs-339933?style=for-the-badge&logo=Node.js&logoColor=white)
-![React](https://img.shields.io/badge/-React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![Java](https://img.shields.io/badge/-Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/-CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![Express.js](https://img.shields.io/badge/-Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
-![MongoDB](https://img.shields.io/badge/-MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/-Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Bootstrap](https://img.shields.io/badge/-Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
-![JWT](https://img.shields.io/badge/-JWT-000000?style=for-the-badge&logo=JSON%20web%20tokens)
-![GSAP](https://img.shields.io/badge/-GSAP-88CE02?style=for-the-badge&logo=GreenSock&logoColor=white)
-![Three.js](https://img.shields.io/badge/-Three.js-000000?style=for-the-badge&logo=three.js&logoColor=white)
-![Chart.js](https://img.shields.io/badge/-Chart.js-FF6384?style=for-the-badge&logo=chart.js&logoColor=white)
+![Profile Views](https://komarev.com/ghpvc/?username=Ashutosh-Panda2004&color=blueviolet&style=for-the-badge)
 
 </div>
 
 ---
 
+## 👨‍💻 About the Developer
+
+```javascript
+const ashutosh = {
+    location: "Navigating the Digital Cosmos 🌍",
+    role: "SWE Intern @ Nielsen | Computer Science Student",
+    mission: "Transforming ideas into elegant code",
+    currentFocus: ["Web Development", "AI/ML", "Problem Solving"],
+    philosophy: "Code is poetry written in logic",
+    
+    dailyRoutine: function() {
+        return [
+            "☕ Coffee",
+            "💻 Code",
+            "🐛 Debug", 
+            "🚀 Deploy",
+            "🔁 Repeat"
+        ];
+    }
+};
+```
+
+> *"Every bug is just an opportunity to write better code."* ✨
+
 ---
 
-## 🌌 Galactic Code Contributions
+## 🛠️ Tech Arsenal
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Ashutosh-Panda2004&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117" alt="Ashutosh's GitHub Stats" />
+
+### Languages
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+
+### Frontend Mastery
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
+
+### Backend & Database
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=JSON%20web%20tokens&logoColor=white)
+
+### Animation & Visualization
+![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
+![Three.js](https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=threedotjs&logoColor=white)
+![Chart.js](https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=chartdotjs&logoColor=white)
+
+</div>
+
+---
+
+## 📊 GitHub Analytics
+
+<div align="center">
+
+<img width="49%" src="https://github-readme-stats.vercel.app/api?username=Ashutosh-Panda2004&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00F5FF&icon_color=00F5FF&text_color=FFFFFF" />
+<img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=Ashutosh-Panda2004&theme=tokyonight&hide_border=true&background=0D1117&ring=00F5FF&fire=00F5FF&currStreakLabel=00F5FF" />
+
 </div>
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Ashutosh-Panda2004&theme=radical&layout=compact&hide_border=true&bg_color=0D1117" alt="Ashutosh's Top Languages" />
+
+<img width="70%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Ashutosh-Panda2004&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00F5FF&text_color=FFFFFF" />
+
+</div>
+
+---
+
+## 🏆 Achievement Showcase
+
+<div align="center">
+
+![Trophy](https://github-profile-trophy.vercel.app/?username=Ashutosh-Panda2004&theme=tokyonight&no-frame=true&column=7&margin-w=15&margin-h=15&no-bg=true)
+
+</div>
+
+---
+
+## 📈 Contribution Graph
+
+<div align="center">
+
+[![Ashutosh's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=Ashutosh-Panda2004&theme=tokyo-night&hide_border=true&bg_color=0D1117&color=00F5FF&line=00F5FF&point=FFFFFF)](https://github.com/Ashutosh-Panda2004)
+
+</div>
+
+---
+
+## 💡 Current Mission
+
+```python
+class CurrentGoals:
+    def __init__(self):
+        self.learning = ["Advanced React Patterns", "System Design", "Cloud Architecture"]
+        self.building = ["Full-Stack Projects", "Open Source Contributions"]
+        self.exploring = ["AI/ML Applications", "Web3 Technologies"]
+    
+    def next_milestone(self):
+        return "Building solutions that make a difference 🎯"
+```
+
+---
+
+## 🤝 Let's Connect!
+
+<div align="center">
+
+I'm always excited to collaborate on innovative projects and connect with fellow developers!
+
+[![LinkedIn](https://img.shields.io/badge/Connect_on_LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ashutosh-panda-748531255/)
+[![Portfolio](https://img.shields.io/badge/View_My_Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white)](https://ashutosh-panda2004.github.io/Portfolio-Ashutosh/)
+[![Email](https://img.shields.io/badge/Send_Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ashutoshpanda.india@gmail.com)
+
+### 📬 Open for:
+✅ Collaboration | ✅ Open Source | ✅ Networking
+
 </div>
 
 ---
 
 <div align="center">
 
-## 🌠 Visitor Count
-  
-![Visitor Count](https://profile-counter.glitch.me/Ashutosh-Panda2004/count.svg)
+### 🌟 "Code with passion, debug with patience, deploy with pride"
 
-</div>
+![Snake animation](https://raw.githubusercontent.com/Ashutosh-Panda2004/Ashutosh-Panda2004/output/github-contribution-grid-snake-dark.svg)
 
-### 🚀 Ready to explore the code cosmos together? Let's connect and create something stellar! 🌌
+---
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ashutosh-panda-748531255/)
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ashutoshpanda.india@gmail.com)
-[![Portfolio](https://img.shields.io/badge/Portfolio-1DA1F2?style=for-the-badge&logo=github&logoColor=white)](https://ashutosh-panda2004.github.io/Portfolio-Ashutosh/)
+**⭐ From [Ashutosh-Panda2004](https://github.com/Ashutosh-Panda2004) with 💙**
 
-</div>
-
-<div align="center">
-
-*May your code compile, your algorithms optimize, and your creativity know no bounds!* 🚀🌌✨
+*Last Updated: October 2025*
 
 </div>
