@@ -82,16 +82,6 @@ philosophy:   "Don't just write code. Build leverage."
 ### 🏢 Honeywell
 **`Feb 2026 → Present · Bengaluru`**
 
-```
-DOMAIN:   Enterprise Industrial Automation
-STACK:    C# · .NET · Azure · Salesforce
-MISSION:  [ DETAILS RESTRICTED ]
-
-Sole backend engineer on a high-stakes
-enterprise platform used by global sales
-engineering teams. The kind of software
-where correctness isn't optional.
-```
 
 Turning **weeks-long manual bottlenecks** into automated pipelines — at enterprise scale, across some of the world's largest industrial automation vendors.
 
@@ -101,13 +91,6 @@ Turning **weeks-long manual bottlenecks** into automated pipelines — at enterp
 ### 📡 Nielsen
 **`Jan 2025 → Feb 2026 · Bengaluru`**
 
-```
-DOMAIN:   OTT Analytics · Behavioural Tracking
-STACK:    Node.js · AI Pipelines · AWS · Oracle
-SCALE:    100,000+ active panelists
-          4,000,000+ events processed / day
-UPTIME:   Zero critical incidents post-launch
-```
 
 Built backend systems and AI-powered data pipelines that kept **96.7% data accuracy** at millions of events per day — and slashed delivery time from hours to minutes for OTT clients.
 
