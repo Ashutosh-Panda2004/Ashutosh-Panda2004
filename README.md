@@ -1,39 +1,8 @@
+# 🌌 Ashutosh Panda | Digital Universe Architect
+
 <div align="center">
 
-```
-╔═══════════════════════════════════════════════════════════════════════════════╗
-║                                                                               ║
-║    ░█████╗░░██████╗██╗░░██╗██╗░░░██╗████████╗░█████╗░░██████╗██╗░░██╗         ║
-║    ██╔══██╗██╔════╝██║░░██║██║░░░██║╚══██╔══╝██╔══██╗██╔════╝██║░░██║         ║
-║    ███████║╚█████╗░███████║██║░░░██║░░░██║░░░██║░░██║╚█████╗░███████║         ║
-║    ██╔══██║░╚═══██╗██╔══██║██║░░░██║░░░██║░░░██║░░██║░╚═══██╗██╔══██║         ║
-║    ██║░░██║██████╔╝██║░░██║╚██████╔╝░░░██║░░░╚█████╔╝██████╔╝██║░░██║         ║
-║    ╚═╝░░╚═╝╚═════╝░╚═╝░░╚═╝░╚═════╝░░░╚═╝░░░░╚════╝░╚═════╝░╚═╝░░╚═╝          ║
-║                                                                               ║
-║     ██████╗░░█████╗░███╗░░██╗██████╗░░█████╗░                                 ║
-║     ██╔══██╗██╔══██╗████╗░██║██╔══██╗██╔══██╗                                 ║
-║     ██████╔╝███████║██╔██╗██║██║░░██║███████║                                 ║
-║     ██╔═══╝░██╔══██║██║╚████║██║░░██║██╔══██║                                 ║
-║     ██║░░░░░██║░░██║██║░╚███║██████╔╝██║░░██║                                 ║
-║     ╚═╝░░░░░╚═╝░░╚═╝╚═╝░░╚══╝╚═════╝░╚═╝░░╚═╝                                 ║
-║                                                                               ║
-║                    P  A  N  D  A   .   E  X  E                                ║
-║                                                                               ║
-╚═══════════════════════════════════════════════════════════════════════════════╝
-```
-
-
-
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=18&duration=2500&pause=800&color=39FF14&center=true&vCenter=true&repeat=true&width=760&lines=Software+Engineer+%40+Honeywell+%7C+Ex-Nielsen;4+Published+Patents+%7C+IEEE+Author+%7C+ICRAIE+2022;Top+8.91%25+Globally+on+LeetCode+%5B1800%2B+%7C+400%2B+problems%5D;CGPA%3A+9.33+%7C+Dean%27s+List+%7C+Best+Programmer+Award;Build+systems+that+scale.+Not+just+code+that+runs.)](https://git.io/typing-svg)
-
-<br/>
-
-[![Portfolio](https://img.shields.io/badge/◈_PORTFOLIO-0A0A0A?style=for-the-badge&logoColor=39FF14&labelColor=0A0A0A&color=39FF14)](https://ashutosh-panda2004.github.io/Portfolio-Ashutosh/)
-[![LinkedIn](https://img.shields.io/badge/◈_LINKEDIN-0A0A0A?style=for-the-badge&logoColor=39FF14&labelColor=0A0A0A&color=39FF14)](https://www.linkedin.com/in/ashutosh-panda-748531255/)
-[![GitHub](https://img.shields.io/badge/◈_GITHUB-0A0A0A?style=for-the-badge&logoColor=39FF14&labelColor=0A0A0A&color=39FF14)](https://github.com/Ashutosh-Panda2004)
-[![Email](https://img.shields.io/badge/◈_CONTACT-0A0A0A?style=for-the-badge&logoColor=39FF14&labelColor=0A0A0A&color=39FF14)](mailto:ashutoshpanda.india@gmail.com)
-
-![](https://komarev.com/ghpvc/?username=Ashutosh-Panda2004&color=39FF14&style=flat-square&label=OPERATIVE+SIGHTINGS)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=28&duration=3000&pause=1000&color=00F5FF&center=true&vCenter=true&width=600&lines=Full-Stack+Developer+%F0%9F%9A%80;AI+%26+ML+Enthusiast+%F0%9F%A7%A0;Problem+Solving+Ninja+%E2%9A%94%EF%B8%8F;Building+Digital+Galaxies+%F0%9F%8C%A0)](https://git.io/typing-svg)
 
 </div>
 
@@ -41,233 +10,141 @@
 
 <div align="center">
 
-```
-╔══════════════════════════════════════════════════════════════════╗
-║            ▓▓  CLASSIFIED DOSSIER  ▓▓                           ║
-║            CLEARANCE  :  PUBLIC ACCESS                          ║
-║            SUBJECT    :  ASHUTOSH PANDA                         ║
-║            STATUS     :  ACTIVELY BUILDING                      ║
-╚══════════════════════════════════════════════════════════════════╝
-```
+### 🎯 Navigation Hub
+
+[![GitHub](https://img.shields.io/badge/GitHub-171515?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Ashutosh-Panda2004)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ashutosh-panda-748531255/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white)](https://ashutosh-panda2004.github.io/Portfolio-Ashutosh/)
+[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ashutoshpanda.india@gmail.com)
+
+![Profile Views](https://komarev.com/ghpvc/?username=Ashutosh-Panda2004&color=blueviolet&style=for-the-badge)
 
 </div>
 
 ---
 
-## ◈ IDENTITY
+## 👨‍💻 About the Developer
 
-```yaml
-name:         Ashutosh Panda
-callsign:     "The Architect"
-location:     Bengaluru, India 🇮🇳
-current_post: Software Engineer @ Honeywell
-prev_post:    SWE Intern @ Nielsen
-education:    B.E. Computer Science — Chitkara University
-              CGPA: 9.33/10 · Dean's List · Best Programmer Award
-patents:      4 Published (IoT · Automation · Intelligent Systems · IEEE)
-leetcode:     Top 8.91% Globally · 1800+ Rating · 400+ Problems Solved
-philosophy:   "Don't just write code. Build leverage."
+```javascript
+const ashutosh = {
+    location: "Navigating the Digital Cosmos 🌍",
+    role: "SWE Intern @ Nielsen | Computer Science Student",
+    mission: "Transforming ideas into elegant code",
+    currentFocus: ["Web Development", "AI/ML", "Problem Solving"],
+    philosophy: "Code is poetry written in logic",
+    
+    dailyRoutine: function() {
+        return [
+            "☕ Coffee",
+            "💻 Code",
+            "🐛 Debug", 
+            "🚀 Deploy",
+            "🔁 Repeat"
+        ];
+    }
+};
 ```
 
----
-
-## ◈ MISSION LOG
-
-> *What I've shipped. Not what I did — what it* ***changed.***
-
-<table>
-<tr>
-<td width="50%" valign="top">
-
-### 🏢 Honeywell
-**`Feb 2026 → Present · Bengaluru`**
-
-
-Turning **weeks-long manual bottlenecks** into automated pipelines — at enterprise scale, across some of the world's largest industrial automation vendors.
-
-</td>
-<td width="50%" valign="top">
-
-### 📡 Nielsen
-**`Jan 2025 → Feb 2026 · Bengaluru`**
-
-
-Built backend systems and AI-powered data pipelines that kept **96.7% data accuracy** at millions of events per day — and slashed delivery time from hours to minutes for OTT clients.
-
-</td>
-</tr>
-</table>
+> *"Every bug is just an opportunity to write better code."* ✨
 
 ---
 
-## ◈ ARSENAL
+## 🛠️ Tech Arsenal
 
 <div align="center">
 
-**LANGUAGES**
-
-![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+### Languages
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
 
-**BACKEND & CLOUD**
-
-![.NET](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
-![Azure](https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonwebservices&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/CI%2FCD-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
-
-**FRONTEND & VISUALIZATION**
-
+### Frontend Mastery
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Three.js](https://img.shields.io/badge/Three.js-000?style=for-the-badge&logo=threedotjs&logoColor=white)
-![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/Tailwind-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Socket.io](https://img.shields.io/badge/Socket.io-010101?style=for-the-badge&logo=socketdotio&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
 
-**DATA & AI**
-
-![Oracle SQL](https://img.shields.io/badge/Oracle_SQL-F80000?style=for-the-badge&logo=oracle&logoColor=white)
+### Backend & Database
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
-![Agentic AI](https://img.shields.io/badge/Agentic_AI-FF6B6B?style=for-the-badge&logoColor=white&labelColor=0A0A0A)
-![Anomaly Detection](https://img.shields.io/badge/Anomaly_Detection-39FF14?style=for-the-badge&logoColor=black&labelColor=0A0A0A)
+![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=JSON%20web%20tokens&logoColor=white)
+
+### Animation & Visualization
+![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
+![Three.js](https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=threedotjs&logoColor=white)
+![Chart.js](https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=chartdotjs&logoColor=white)
 
 </div>
 
 ---
 
-## ◈ FIELD OPERATIONS
-
-```
-╔══════════════════════════════════════════════════════════════════════╗
-║  OPERATION: INTERVIEWCOACH AI                   STATUS: ✅ DEPLOYED  ║
-╠══════════════════════════════════════════════════════════════════════╣
-║  Stack  → React 19 · TypeScript · Gemini Multimodal · WebSockets   ║
-║  Brief  → Voice-first AI interview agent. Bidirectional comms.      ║
-║           Sub-500ms latency. Zero backend infra. 60fps audio viz.  ║
-║  Link   → github.com/ashutosh-panda2004/Interviewcoach-AI          ║
-╚══════════════════════════════════════════════════════════════════════╝
-
-╔══════════════════════════════════════════════════════════════════════╗
-║  OPERATION: RULE ENGINE WITH AST                STATUS: ✅ LIVE      ║
-╠══════════════════════════════════════════════════════════════════════╣
-║  Stack  → React · Node.js · Express · MongoDB                      ║
-║  Brief  → Dynamic eligibility engine using Abstract Syntax Trees.  ║
-║           Multi-condition logic. 3-tier architecture. No hardcode. ║
-║  Link   → project-1-v-2-frontend-ashutoshpanda.onrender.com        ║
-╚══════════════════════════════════════════════════════════════════════╝
-
-╔══════════════════════════════════════════════════════════════════════╗
-║  OPERATION: ANVESHA COLLABORATIVE COMPILER      STATUS: ✅ LIVE      ║
-╠══════════════════════════════════════════════════════════════════════╣
-║  Stack  → React · Node.js · Socket.io · Express                    ║
-║  Brief  → Real-time multi-user coding environment.                 ║
-║           Synchronized state. Low-latency. Code together, live.   ║
-║  Link   → project-anvesha-compiler.onrender.com                    ║
-╚══════════════════════════════════════════════════════════════════════╝
-```
-
----
-
-## ◈ COMBAT STATS
+## 📊 GitHub Analytics
 
 <div align="center">
 
-<img height="175em" src="https://github-readme-stats.vercel.app/api?username=Ashutosh-Panda2004&show_icons=true&count_private=true&theme=chartreuse-dark&hide_border=true&bg_color=0A0A0A&title_color=39FF14&icon_color=39FF14&text_color=CCCCCC" />
-<img height="175em" src="https://github-readme-streak-stats.herokuapp.com/?user=Ashutosh-Panda2004&theme=dark&hide_border=true&background=0A0A0A&ring=39FF14&fire=FF6B6B&currStreakLabel=39FF14&sideLabels=CCCCCC&dates=888&sideNums=39FF14&currStreakNum=FF6B6B" />
+<img width="49%" src="https://github-readme-stats.vercel.app/api?username=Ashutosh-Panda2004&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00F5FF&icon_color=00F5FF&text_color=FFFFFF" />
+<img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=Ashutosh-Panda2004&theme=tokyonight&hide_border=true&background=0D1117&ring=00F5FF&fire=00F5FF&currStreakLabel=00F5FF" />
 
-<img height="175em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Ashutosh-Panda2004&layout=compact&theme=chartreuse-dark&hide_border=true&bg_color=0A0A0A&title_color=39FF14&text_color=CCCCCC&langs_count=8" />
+</div>
+
+<div align="center">
+
+<img width="70%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Ashutosh-Panda2004&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00F5FF&text_color=FFFFFF" />
 
 </div>
 
 ---
 
-## ◈ COMMENDATIONS
-
-```
-┌─ INTELLECTUAL PROPERTY ─────────────────────────────────────────────┐
-│  ◉ 4 Published Patents                                              │
-│    → Domains: IoT · Industrial Automation · Intelligent Systems     │
-│    → Areas:  Remote Patient Monitoring · Assistive Mobility · Safety│
-│                                                                     │
-│  ◉ IEEE Publication — ICRAIE 2022                                   │
-│    → 7th Intl. Conference on Recent Advances in Engineering         │
-└─────────────────────────────────────────────────────────────────────┘
-
-┌─ COMPETITIVE PROGRAMMING ───────────────────────────────────────────┐
-│  ◉ LeetCode: Top 8.91% Globally                                     │
-│    → Rating: 1800+   |   Problems Solved: 400+                     │
-│    → Focus: Data Structures · Algorithms · System Design            │
-└─────────────────────────────────────────────────────────────────────┘
-
-┌─ ACADEMICS ─────────────────────────────────────────────────────────┐
-│  ◉ CGPA: 9.33 / 10  (7 Semesters · Chitkara University)           │
-│  ◉ Dean's List — Best Project + Top Programmer Designation         │
-│  ◉ High School: 91.2%  |  Higher Secondary: 86.2%                 │
-└─────────────────────────────────────────────────────────────────────┘
-
-┌─ COMPETITIONS ──────────────────────────────────────────────────────┐
-│  ◉ Top 20 / 150 teams — Smart India Hackathon (Internal) 2024      │
-│  ◉ 2nd Place — State Level Science Fair 2019 (Govt. of India)      │
-│  ◉ Qualified — CBSE National Science Challenge 2019                │
-└─────────────────────────────────────────────────────────────────────┘
-```
-
----
-
-## ◈ ACTIVITY GRID
+## 🏆 Achievement Showcase
 
 <div align="center">
 
-[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=Ashutosh-Panda2004&theme=chartreuse-dark&hide_border=true&bg_color=0A0A0A&color=39FF14&line=39FF14&point=FF6B6B&area=true)](https://github.com/Ashutosh-Panda2004)
+![Trophy](https://github-profile-trophy.vercel.app/?username=Ashutosh-Panda2004&theme=tokyonight&no-frame=true&column=7&margin-w=15&margin-h=15&no-bg=true)
 
 </div>
 
 ---
 
-## ◈ TROPHIES
+## 📈 Contribution Graph
 
 <div align="center">
 
-![](https://github-profile-trophy.vercel.app/?username=Ashutosh-Panda2004&theme=matrix&no-frame=true&no-bg=true&column=7&margin-w=8)
+[![Ashutosh's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=Ashutosh-Panda2004&theme=tokyo-night&hide_border=true&bg_color=0D1117&color=00F5FF&line=00F5FF&point=FFFFFF)](https://github.com/Ashutosh-Panda2004)
 
 </div>
 
 ---
 
-## ◈ OPEN CHANNEL
+## 💡 Current Mission
+
+```python
+class CurrentGoals:
+    def __init__(self):
+        self.learning = ["Advanced React Patterns", "System Design", "Cloud Architecture"]
+        self.building = ["Full-Stack Projects", "Open Source Contributions"]
+        self.exploring = ["AI/ML Applications", "Web3 Technologies"]
+    
+    def next_milestone(self):
+        return "Building solutions that make a difference 🎯"
+```
+
+---
+
+## 🤝 Let's Connect!
 
 <div align="center">
 
-```
-I build things that handle pressure.
-Not prototype-level. Production-level.
+I'm always excited to collaborate on innovative projects and connect with fellow developers!
 
-100K+ users. Millions of events daily.
-Weeks-long manual bottlenecks — automated away.
-4 patents. 400+ problems. 9.33 GPA.
+[![LinkedIn](https://img.shields.io/badge/Connect_on_LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ashutosh-panda-748531255/)
+[![Portfolio](https://img.shields.io/badge/View_My_Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white)](https://ashutoshpanda.vercel.app/)
+[![Email](https://img.shields.io/badge/Send_Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ashutoshpanda.india@gmail.com)
 
-If you're building something hard,
-or something that matters,
-or both — let's talk.
-```
-
-<br/>
-
-[![CONNECT ON LINKEDIN](https://img.shields.io/badge/◈_INITIATE_CONTACT-0A0A0A?style=for-the-badge&logoColor=39FF14&labelColor=0A0A0A&color=39FF14)](https://www.linkedin.com/in/ashutosh-panda-748531255/)
-[![VIEW PORTFOLIO](https://img.shields.io/badge/◈_VIEW_PORTFOLIO-0A0A0A?style=for-the-badge&logoColor=39FF14&labelColor=0A0A0A&color=39FF14)](https://ashutosh-panda2004.github.io/Portfolio-Ashutosh/)
-[![SEND EMAIL](https://img.shields.io/badge/◈_SEND_MESSAGE-0A0A0A?style=for-the-badge&logoColor=39FF14&labelColor=0A0A0A&color=39FF14)](mailto:ashutoshpanda.india@gmail.com)
-
-<br/>
-
-```
-OPEN TO:  Full-Time SWE Roles  ·  Collaborations  ·  Open Source  ·  Good Conversations
-```
+### 📬 Open for:
+✅ Collaboration | ✅ Open Source | ✅ Networking
 
 </div>
 
@@ -275,13 +152,14 @@ OPEN TO:  Full-Time SWE Roles  ·  Collaborations  ·  Open Source  ·  Good Con
 
 <div align="center">
 
-![Snake](https://raw.githubusercontent.com/Ashutosh-Panda2004/Ashutosh-Panda2004/output/github-contribution-grid-snake-dark.svg)
+### 🌟 "Code with passion, debug with patience, deploy with pride"
 
-<br/>
+![Snake animation](https://raw.githubusercontent.com/Ashutosh-Panda2004/Ashutosh-Panda2004/output/github-contribution-grid-snake-dark.svg)
 
-```
-END OF FILE — ashutosh_panda.exe
-Built in India. Deployed everywhere. ✦
-```
+---
+
+**⭐ From [Ashutosh-Panda2004](https://github.com/Ashutosh-Panda2004) with 💙**
+
+*Last Updated: October 2025*
 
 </div>
