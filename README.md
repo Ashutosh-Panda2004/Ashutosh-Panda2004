@@ -1,6 +1,7 @@
 <div align="center">
 
 ```
+```
 ╔═══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                               ║
 ║    ░█████╗░░██████╗██╗░░██╗██╗░░░██╗████████╗░█████╗░░██████╗██╗░░██╗       ║
@@ -9,289 +10,281 @@
 ║    ██╔══██║░╚═══██╗██╔══██║██║░░░██║░░░██║░░░██║░░██║░╚═══██╗██╔══██║       ║
 ║    ██║░░██║██████╔╝██║░░██║╚██████╔╝░░░██║░░░╚█████╔╝██████╔╝██║░░██║       ║
 ║    ╚═╝░░╚═╝╚═════╝░╚═╝░░╚═╝░╚═════╝░░░╚═╝░░░░╚════╝░╚═════╝░╚═╝░░╚═╝       ║
-║                                                                               ║
+║                                                                       
+
+██████╗░░█████╗░███╗░░██╗██████╗░░█████╗░
+██╔══██╗██╔══██╗████╗░██║██╔══██╗██╔══██╗
+██████╔╝███████║██╔██╗██║██║░░██║███████║
+██╔═══╝░██╔══██║██║╚████║██║░░██║██╔══██║
+██║░░░░░██║░░██║██║░╚███║██████╔╝██║░░██║
+╚═╝░░░░░╚═╝░░╚═╝╚═╝░░╚══╝╚═════╝░╚═╝░░╚═╝
+║
 ║                    P  A  N  D  A  .  E  X  E                                 ║
 ║                                                                               ║
 ╚═══════════════════════════════════════════════════════════════════════════════╝
-```
 
-</div>
 
-<div align="center">
-
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=22&duration=2800&pause=900&color=00FFB3&center=true&vCenter=true&repeat=true&width=700&lines=⚡+Full-Stack+Architect+%7C+Systems+Thinker;🧠+AI%2FML+Explorer+%7C+Pattern+Hunter;🛰️+SWE+Intern+%40+Nielsen+%7C+CS+Student;🌌+Building+the+Future%2C+One+Commit+at+a+Time;🔥+%22If+it+compiles%2C+ship+it%22+—+just+kidding.)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=18&duration=2500&pause=800&color=39FF14&center=true&vCenter=true&repeat=true&width=760&lines=Software+Engineer+%40+Honeywell+%7C+Ex-Nielsen;4+Published+Patents+%7C+IEEE+Author+%7C+ICRAIE+2022;Top+8.91%25+Globally+on+LeetCode+%5B1800%2B+%7C+400%2B+problems%5D;CGPA%3A+9.33+%7C+Dean%27s+List+%7C+Best+Programmer+Award;Build+systems+that+scale.+Not+just+code+that+runs.)](https://git.io/typing-svg)
 
 <br/>
 
-<a href="https://github.com/Ashutosh-Panda2004"><img src="https://img.shields.io/badge/GitHub-@Ashutosh--Panda2004-0D1117?style=for-the-badge&logo=github&logoColor=00FFB3&labelColor=0D1117&color=00FFB3" /></a>
-<a href="https://www.linkedin.com/in/ashutosh-panda-748531255/"><img src="https://img.shields.io/badge/LinkedIn-Connect-0D1117?style=for-the-badge&logo=linkedin&logoColor=0A66C2&labelColor=0D1117&color=0A66C2" /></a>
-<a href="https://ashutosh-panda2004.github.io/Portfolio-Ashutosh/"><img src="https://img.shields.io/badge/Portfolio-Live-0D1117?style=for-the-badge&logo=vercel&logoColor=FF6B6B&labelColor=0D1117&color=FF6B6B" /></a>
-<a href="mailto:ashutoshpanda.india@gmail.com"><img src="https://img.shields.io/badge/Email-Let's_Talk-0D1117?style=for-the-badge&logo=gmail&logoColor=EA4335&labelColor=0D1117&color=EA4335" /></a>
+[![Portfolio](https://img.shields.io/badge/◈_PORTFOLIO-0A0A0A?style=for-the-badge&logoColor=39FF14&labelColor=0A0A0A&color=39FF14)](https://ashutosh-panda2004.github.io/Portfolio-Ashutosh/)
+[![LinkedIn](https://img.shields.io/badge/◈_LINKEDIN-0A0A0A?style=for-the-badge&logoColor=39FF14&labelColor=0A0A0A&color=39FF14)](https://www.linkedin.com/in/ashutosh-panda-748531255/)
+[![GitHub](https://img.shields.io/badge/◈_GITHUB-0A0A0A?style=for-the-badge&logoColor=39FF14&labelColor=0A0A0A&color=39FF14)](https://github.com/Ashutosh-Panda2004)
+[![Email](https://img.shields.io/badge/◈_CONTACT-0A0A0A?style=for-the-badge&logoColor=39FF14&labelColor=0A0A0A&color=39FF14)](mailto:ashutoshpanda.india@gmail.com)
 
-<br/><br/>
-
-![Profile Views](https://komarev.com/ghpvc/?username=Ashutosh-Panda2004&color=00FFB3&style=flat-square&label=SYSTEM+VISITORS)
+![](https://komarev.com/ghpvc/?username=Ashutosh-Panda2004&color=39FF14&style=flat-square&label=OPERATIVE+SIGHTINGS)
 
 </div>
 
 ---
 
-<img align="right" width="380" src="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg" alt="snake eating contributions"/>
+<div align="center">
 
-## `> whoami`
-
-```rust
-struct Developer {
-    name:     "Ashutosh Panda",
-    alias:    "The Digital Architect",
-    role:     "SWE Intern @ Nielsen  |  CS Student",
-    location: "India 🇮🇳  →  Internet 🌐",
-    timezone: "Always online (unfortunately)",
-}
-
-impl Developer {
-    fn current_obsessions(&self) -> Vec<&str> {
-        vec![
-            "System Design at Scale",
-            "AI/ML that actually ships",
-            "Clean APIs with dirty secrets",
-            "React patterns that don't make you cry",
-        ]
-    }
-
-    fn life_equation(&self) -> &str {
-        "Coffee + Curiosity + Code = Something Meaningful"
-    }
-}
+```
+╔══════════════════════════════════════════════════════════════════╗
+║            ▓▓  CLASSIFIED DOSSIER  ▓▓                           ║
+║            CLEARANCE  :  PUBLIC ACCESS                          ║
+║            SUBJECT    :  ASHUTOSH PANDA                         ║
+║            STATUS     :  ACTIVELY BUILDING                      ║
+╚══════════════════════════════════════════════════════════════════╝
 ```
 
-<br clear="right"/>
+</div>
 
 ---
 
-## `> cat /sys/class/skills/*`
+## ◈ IDENTITY
 
-<details open>
-<summary><b>🧬 Languages — The DNA of Creation</b></summary>
-<br/>
+```yaml
+name:         Ashutosh Panda
+callsign:     "The Architect"
+location:     Bengaluru, India 🇮🇳
+current_post: Software Engineer @ Honeywell
+prev_post:    SWE Intern @ Nielsen
+education:    B.E. Computer Science — Chitkara University
+              CGPA: 9.33/10 · Dean's List · Best Programmer Award
+patents:      4 Published (IoT · Automation · Intelligent Systems · IEEE)
+leetcode:     Top 8.91% Globally · 1800+ Rating · 400+ Problems Solved
+philosophy:   "Don't just write code. Build leverage."
+```
+
+---
+
+## ◈ MISSION LOG
+
+> *What I've shipped. Not what I did — what it* ***changed.***
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### 🏢 Honeywell
+**`Feb 2026 → Present · Bengaluru`**
+
+```
+DOMAIN:   Enterprise Industrial Automation
+STACK:    C# · .NET · Azure · Salesforce
+MISSION:  [ DETAILS RESTRICTED ]
+
+Sole backend engineer on a high-stakes
+enterprise platform used by global sales
+engineering teams. The kind of software
+where correctness isn't optional.
+```
+
+Turning **weeks-long manual bottlenecks** into automated pipelines — at enterprise scale, across some of the world's largest industrial automation vendors.
+
+</td>
+<td width="50%" valign="top">
+
+### 📡 Nielsen
+**`Jan 2025 → Feb 2026 · Bengaluru`**
+
+```
+DOMAIN:   OTT Analytics · Behavioural Tracking
+STACK:    Node.js · AI Pipelines · AWS · Oracle
+SCALE:    100,000+ active panelists
+          4,000,000+ events processed / day
+UPTIME:   Zero critical incidents post-launch
+```
+
+Built backend systems and AI-powered data pipelines that kept **96.7% data accuracy** at millions of events per day — and slashed delivery time from hours to minutes for OTT clients.
+
+</td>
+</tr>
+</table>
+
+---
+
+## ◈ ARSENAL
 
 <div align="center">
 
-| Language | Proficiency | Used For |
-|:--------:|:-----------:|:--------:|
-| ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) | `████████░░` 80% | ML, Scripting, Backend |
-| ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) | `█████████░` 90% | Full-Stack, Anywhere |
-| ![C++](https://img.shields.io/badge/C++-00599C?style=flat-square&logo=cplusplus&logoColor=white) | `███████░░░` 70% | DSA, Systems |
-| ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white) | `██████░░░░` 60% | OOP, Backend |
+**LANGUAGES**
 
-</div>
-</details>
+![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
 
-<details open>
-<summary><b>⚛️ Frontend — What the World Sees</b></summary>
-<br/>
+**BACKEND & CLOUD**
 
-<div align="center">
+![.NET](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
+![Azure](https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonwebservices&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/CI%2FCD-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
+
+**FRONTEND & VISUALIZATION**
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/Tailwind-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Three.js](https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=threedotjs&logoColor=white)
+![Three.js](https://img.shields.io/badge/Three.js-000?style=for-the-badge&logo=threedotjs&logoColor=white)
 ![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-
-</div>
-</details>
-
-<details open>
-<summary><b>⚙️ Backend & Data — The Engine Room</b></summary>
-<br/>
-
-<div align="center">
-
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![Express.js](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
-![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white)
-![REST API](https://img.shields.io/badge/REST_API-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![Socket.io](https://img.shields.io/badge/Socket.io-010101?style=for-the-badge&logo=socketdotio&logoColor=white)
 
-</div>
-</details>
+**DATA & AI**
 
-<details>
-<summary><b>🛠️ Tools of the Trade</b></summary>
-<br/>
-
-<div align="center">
-
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
-![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-
-</div>
-</details>
-
----
-
-## `> tail -f /var/log/stats.log`
-
-<div align="center">
-
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=Ashutosh-Panda2004&show_icons=true&count_private=true&theme=merko&hide_border=true&bg_color=0D1117&title_color=00FFB3&icon_color=00FFB3&text_color=C9D1D9&ring_color=00FFB3" />
-<img height="180em" src="https://github-readme-streak-stats.herokuapp.com/?user=Ashutosh-Panda2004&theme=merko&hide_border=true&background=0D1117&ring=00FFB3&fire=FF6B6B&currStreakLabel=00FFB3&sideLabels=C9D1D9&dates=C9D1D9&sideNums=00FFB3&currStreakNum=FF6B6B" />
-
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Ashutosh-Panda2004&layout=compact&theme=merko&hide_border=true&bg_color=0D1117&title_color=00FFB3&text_color=C9D1D9&langs_count=8" />
+![Oracle SQL](https://img.shields.io/badge/Oracle_SQL-F80000?style=for-the-badge&logo=oracle&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+![Agentic AI](https://img.shields.io/badge/Agentic_AI-FF6B6B?style=for-the-badge&logoColor=white&labelColor=0A0A0A)
+![Anomaly Detection](https://img.shields.io/badge/Anomaly_Detection-39FF14?style=for-the-badge&logoColor=black&labelColor=0A0A0A)
 
 </div>
 
 ---
 
-## `> ls -la /projects`
+## ◈ FIELD OPERATIONS
 
-> *Projects that ship. Not just repos that exist.*
+```
+╔══════════════════════════════════════════════════════════════════════╗
+║  OPERATION: INTERVIEWCOACH AI                   STATUS: ✅ DEPLOYED  ║
+╠══════════════════════════════════════════════════════════════════════╣
+║  Stack  → React 19 · TypeScript · Gemini Multimodal · WebSockets   ║
+║  Brief  → Voice-first AI interview agent. Bidirectional comms.      ║
+║           Sub-500ms latency. Zero backend infra. 60fps audio viz.  ║
+║  Link   → github.com/ashutosh-panda2004/Interviewcoach-AI          ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  OPERATION: RULE ENGINE WITH AST                STATUS: ✅ LIVE      ║
+╠══════════════════════════════════════════════════════════════════════╣
+║  Stack  → React · Node.js · Express · MongoDB                      ║
+║  Brief  → Dynamic eligibility engine using Abstract Syntax Trees.  ║
+║           Multi-condition logic. 3-tier architecture. No hardcode. ║
+║  Link   → project-1-v-2-frontend-ashutoshpanda.onrender.com        ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  OPERATION: ANVESHA COLLABORATIVE COMPILER      STATUS: ✅ LIVE      ║
+╠══════════════════════════════════════════════════════════════════════╣
+║  Stack  → React · Node.js · Socket.io · Express                    ║
+║  Brief  → Real-time multi-user coding environment.                 ║
+║           Synchronized state. Low-latency. Code together, live.   ║
+║  Link   → project-anvesha-compiler.onrender.com                    ║
+╚══════════════════════════════════════════════════════════════════════╝
+```
+
+---
+
+## ◈ COMBAT STATS
 
 <div align="center">
 
-<a href="https://github.com/Ashutosh-Panda2004">
-<img src="https://github-readme-stats.vercel.app/api/pin/?username=Ashutosh-Panda2004&repo=Project-1_No-Distraction-App-V-1&theme=merko&hide_border=true&bg_color=0D1117&title_color=00FFB3&text_color=C9D1D9&icon_color=00FFB3" />
-</a>
-<a href="https://github.com/Ashutosh-Panda2004">
-<img src="https://github-readme-stats.vercel.app/api/pin/?username=Ashutosh-Panda2004&repo=AskHive&theme=merko&hide_border=true&bg_color=0D1117&title_color=00FFB3&text_color=C9D1D9&icon_color=00FFB3" />
-</a>
+<img height="175em" src="https://github-readme-stats.vercel.app/api?username=Ashutosh-Panda2004&show_icons=true&count_private=true&theme=chartreuse-dark&hide_border=true&bg_color=0A0A0A&title_color=39FF14&icon_color=39FF14&text_color=CCCCCC" />
+<img height="175em" src="https://github-readme-streak-stats.herokuapp.com/?user=Ashutosh-Panda2004&theme=dark&hide_border=true&background=0A0A0A&ring=39FF14&fire=FF6B6B&currStreakLabel=39FF14&sideLabels=CCCCCC&dates=888&sideNums=39FF14&currStreakNum=FF6B6B" />
+
+<img height="175em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Ashutosh-Panda2004&layout=compact&theme=chartreuse-dark&hide_border=true&bg_color=0A0A0A&title_color=39FF14&text_color=CCCCCC&langs_count=8" />
 
 </div>
 
 ---
 
-## `> crontab -l  # what i do every day`
+## ◈ COMMENDATIONS
 
 ```
-┌──────────── minute (0–59)
-│ ┌────────── hour (0–23)
-│ │ ┌──────── day of month (1–31)
-│ │ │
-* * *   brew coffee && open terminal
-* * *   git pull origin curiosity
-* * *   solve --problem=hardest_available
-* * *   push --force-with-lease "today's progress"
-* * *   review && refactor && repeat
-0 23 *  sleep 6h  # optional
-```
+┌─ INTELLECTUAL PROPERTY ─────────────────────────────────────────────┐
+│  ◉ 4 Published Patents                                              │
+│    → Domains: IoT · Industrial Automation · Intelligent Systems     │
+│    → Areas:  Remote Patient Monitoring · Assistive Mobility · Safety│
+│                                                                     │
+│  ◉ IEEE Publication — ICRAIE 2022                                   │
+│    → 7th Intl. Conference on Recent Advances in Engineering         │
+└─────────────────────────────────────────────────────────────────────┘
 
----
+┌─ COMPETITIVE PROGRAMMING ───────────────────────────────────────────┐
+│  ◉ LeetCode: Top 8.91% Globally                                     │
+│    → Rating: 1800+   |   Problems Solved: 400+                     │
+│    → Focus: Data Structures · Algorithms · System Design            │
+└─────────────────────────────────────────────────────────────────────┘
 
-## `> ps aux  # currently running processes`
+┌─ ACADEMICS ─────────────────────────────────────────────────────────┐
+│  ◉ CGPA: 9.33 / 10  (7 Semesters · Chitkara University)           │
+│  ◉ Dean's List — Best Project + Top Programmer Designation         │
+│  ◉ High School: 91.2%  |  Higher Secondary: 86.2%                 │
+└─────────────────────────────────────────────────────────────────────┘
 
-```
-PID   USER    COMMAND                              STATUS
-───   ─────   ───────────────────────────────────  ─────────
-001   ashut   learning Advanced System Design       [running]
-002   ashut   building Full-Stack SaaS Projects     [running]
-003   ashut   exploring AI/ML Applications          [running]
-004   ashut   contributing to Open Source           [running]
-005   ashut   grinding LeetCode (DSA Patterns)      [running]
-006   ashut   planning Cloud Architecture course    [queued]
-007   ashut   sleeping                              [suspended]
-```
-
----
-
-## `> htop  # what's consuming my CPU`
-
-```
-CPU Usage ████████████████████████████████████ 97.3%
-Memory    ████████████░░░░░░░░░░░░░░░░░░░░░░░░ 35.1%  (coffee reserves low)
-Swap      [stack overflow tabs: 847]
-
-Top Processes:
-  [99%]  problem-solving.exe
-  [87%]  building-cool-stuff.sh
-  [76%]  reading-documentation.pdf  ← lies. stackoverflow.com
-  [52%]  overthinking-architecture.md
-  [12%]  touching-grass.bin  ← rarely scheduled
+┌─ COMPETITIONS ──────────────────────────────────────────────────────┐
+│  ◉ Top 20 / 150 teams — Smart India Hackathon (Internal) 2024      │
+│  ◉ 2nd Place — State Level Science Fair 2019 (Govt. of India)      │
+│  ◉ Qualified — CBSE National Science Challenge 2019                │
+└─────────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## `> fortune | cowsay`
-
-```
- _____________________________________________
-/ "I don't always test my code, but when I   \
-| do, I do it in production."                |
-\ — Every Developer at 3AM                   /
- ---------------------------------------------
-        \   ^__^
-         \  (oo)\_______
-            (__)\       )\/\
-                ||----w |
-                ||     ||
-```
-
----
-
-## `> git log --oneline --graph --all  # my journey`
-
-```
-* 🌱  [2020]  Hello World — wrote first line of code
-* 🔧  [2021]  Built first webpage (it was ugly. it worked.)
-* ⚛️  [2022]  Discovered React. Life changed.
-* 🧠  [2023]  Went full-stack. Node, Express, MongoDB — locked in.
-|\
-| * 🤖  [2024]  Dove into AI/ML. Caught the bug.
-* |  [2024]  Landed SWE Internship @ Nielsen 🎯
-|/
-* 🚀  [2025]  Building bigger. Thinking wider. Shipping faster.
-* ⭐  [NOW ]  Here. Writing code. Reading this README. (hi.)
-```
-
----
-
-## `> trophy --display --no-frame`
+## ◈ ACTIVITY GRID
 
 <div align="center">
 
-![Trophy](https://github-profile-trophy.vercel.app/?username=Ashutosh-Panda2004&theme=matrix&no-frame=true&no-bg=true&column=7&margin-w=10)
+[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=Ashutosh-Panda2004&theme=chartreuse-dark&hide_border=true&bg_color=0A0A0A&color=39FF14&line=39FF14&point=FF6B6B&area=true)](https://github.com/Ashutosh-Panda2004)
 
 </div>
 
 ---
 
-## `> cat /etc/contribution-graph`
+## ◈ TROPHIES
 
 <div align="center">
 
-[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=Ashutosh-Panda2004&theme=merko&hide_border=true&bg_color=0D1117&color=00FFB3&line=00FFB3&point=FF6B6B&area=true&area_color=00FFB3)](https://github.com/Ashutosh-Panda2004)
+![](https://github-profile-trophy.vercel.app/?username=Ashutosh-Panda2004&theme=matrix&no-frame=true&no-bg=true&column=7&margin-w=8)
 
 </div>
 
 ---
 
-## `> ping ashutosh  # let's connect`
+## ◈ OPEN CHANNEL
 
 <div align="center">
 
 ```
-PING ashutosh.panda (0.0.0.0): 56 data bytes
-64 bytes from ashutoshpanda.india@gmail.com: ttl=64 time=<1ms
-64 bytes from linkedin.com/in/ashutosh-panda-748531255: ttl=64 time=<1ms
-64 bytes from ashutoshpanda.vercel.app: ttl=64 time=<1ms
+I build things that handle pressure.
+Not prototype-level. Production-level.
 
---- ashutosh ping statistics ---
-∞ packets transmitted, ∞ received, 0% packet loss
-Open to: Collabs | Open Source | Internships | Just a good conversation
+100K+ users. Millions of events daily.
+Weeks-long manual bottlenecks — automated away.
+4 patents. 400+ problems. 9.33 GPA.
+
+If you're building something hard,
+or something that matters,
+or both — let's talk.
 ```
 
 <br/>
 
-[![LinkedIn](https://img.shields.io/badge/Let's_Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ashutosh-panda-748531255/)
-[![Portfolio](https://img.shields.io/badge/See_My_Work-FF6B6B?style=for-the-badge&logo=vercel&logoColor=white)](https://ashutosh-panda2004.github.io/Portfolio-Ashutosh/)
-[![Email](https://img.shields.io/badge/Drop_a_Mail-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ashutoshpanda.india@gmail.com)
+[![CONNECT ON LINKEDIN](https://img.shields.io/badge/◈_INITIATE_CONTACT-0A0A0A?style=for-the-badge&logoColor=39FF14&labelColor=0A0A0A&color=39FF14)](https://www.linkedin.com/in/ashutosh-panda-748531255/)
+[![VIEW PORTFOLIO](https://img.shields.io/badge/◈_VIEW_PORTFOLIO-0A0A0A?style=for-the-badge&logoColor=39FF14&labelColor=0A0A0A&color=39FF14)](https://ashutosh-panda2004.github.io/Portfolio-Ashutosh/)
+[![SEND EMAIL](https://img.shields.io/badge/◈_SEND_MESSAGE-0A0A0A?style=for-the-badge&logoColor=39FF14&labelColor=0A0A0A&color=39FF14)](mailto:ashutoshpanda.india@gmail.com)
+
+<br/>
+
+```
+OPEN TO:  Full-Time SWE Roles  ·  Collaborations  ·  Open Source  ·  Good Conversations
+```
 
 </div>
 
@@ -299,30 +292,13 @@ Open to: Collabs | Open Source | Internships | Just a good conversation
 
 <div align="center">
 
-```
-╔══════════════════════════════════════════════════════════════╗
-║                                                              ║
-║        Thanks for reading this far. Seriously.              ║
-║                                                              ║
-║   Most people stop at the badges. You're different.         ║
-║                                                              ║
-║   ⭐ If something here sparked something in you —           ║
-║      drop a star, send a message, or just build something.  ║
-║                                                              ║
-║   The world has enough consumers.                           ║
-║   Be a creator.                                             ║
-║                                                              ║
-╚══════════════════════════════════════════════════════════════╝
-```
+![Snake](https://raw.githubusercontent.com/Ashutosh-Panda2004/Ashutosh-Panda2004/output/github-contribution-grid-snake-dark.svg)
 
 <br/>
 
-![Snake animation](https://raw.githubusercontent.com/Ashutosh-Panda2004/Ashutosh-Panda2004/output/github-contribution-grid-snake-dark.svg)
-
-<br/>
-
-**`— Ashutosh Panda · Built with 🖤 and too much caffeine`**
-
-![Visitor Badge](https://img.shields.io/badge/You_are_visitor_number-?-00FFB3?style=flat-square&logo=github&labelColor=0D1117)
+```
+END OF FILE — ashutosh_panda.exe
+Built in India. Deployed everywhere. ✦
+```
 
 </div>
