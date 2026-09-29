@@ -11,6 +11,7 @@ external image service again.
 import json
 import os
 import sys
+import traceback
 import urllib.request
 from datetime import date
 
@@ -142,8 +143,8 @@ def main():
         return 1
     try:
         stats = fetch_stats(username, token)
-    except Exception as e:  # noqa: BLE001 - fail loudly so CI shows it
-        print(f"failed to fetch GitHub stats: {e}", file=sys.stderr)
+    except Exception:  # noqa: BLE001 - fail loudly so CI shows it
+        traceback.print_exc()
         return 1
     svg = render(username, stats, theme)
     parent = os.path.dirname(output_path)
