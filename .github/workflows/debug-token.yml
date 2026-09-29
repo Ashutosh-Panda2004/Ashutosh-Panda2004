@@ -1,4 +1,4 @@
-name: Debug token probe
+name: Debug probe 2
 on:
   workflow_dispatch:
 jobs:
@@ -8,39 +8,16 @@ jobs:
       contents: write
       issues: write
     steps:
-      - name: Probe token and GraphQL
-        run: |
-          {
-            echo "== token check =="
-            if [ -z "$GITHUB_TOKEN" ]; then echo "TOKEN EMPTY"; else echo "token present len=${#GITHUB_TOKEN} prefix=${GITHUB_TOKEN:0:4}"; fi
-            echo "== rest probe =="
-            curl -s -m 20 -o /tmp/rest.json -w "http=%{http_code}\n" -H "Authorization: Bearer $GITHUB_TOKEN" https://api.github.com/user || echo "rest curl failed"
-            head -c 200 /tmp/rest.json; echo
-            echo "== graphql probe =="
-            curl -s -m 20 -o /tmp/gql.json -w "http=%{http_code}\n" -X POST https://api.github.com/graphql -H "Authorization: Bearer $GITHUB_TOKEN" -H "Content-Type: application/json" -d '{"query":"{ viewer { login } }"}' || echo "gql curl failed"
-            head -c 500 /tmp/gql.json; echo
-            echo "== python urllib probe =="
-            python3 - << 'PYEOF'
-          import os, json, urllib.request
-          token = os.environ.get("GITHUB_TOKEN")
-          print("py token set:", bool(token))
-          req = urllib.request.Request("https://api.github.com/graphql",
-              data=json.dumps({"query":"{ viewer { login } }"}).encode(),
-              headers={"Authorization": f"Bearer {token}", "Content-Type": "application/json", "User-Agent": "probe"})
-          try:
-              r = urllib.request.urlopen(req, timeout=30)
-              print("py http:", r.status)
-              print(r.read()[:300])
-          except Exception as e:
-              print("py FAILED:", type(e).__name__, e)
-          PYEOF
-          } > /tmp/probe.txt 2>&1
-          cat /tmp/probe.txt
-          echo "== creating issue =="
-          ISSUE_JSON=$(python3 -c "
-          import json
-          content = open('/tmp/probe.txt').read()
-          print(json.dumps({'title':'[debug] CI token probe - DO NOT MERGE','body':'probe output:\n\n```\n'+content+'\n```'}))")
-          curl -s -m 30 -X POST -H "Authorization: Bearer $GITHUB_TOKEN" -H "Content-Type: application/json" -d "$ISSUE_JSON" https://api.github.com/repos/Ashutosh-Panda2004/Ashutosh-Panda2004/issues | python3 -c "import json,sys; print(json.load(sys.stdin).get('html_url','NO URL'))"
+      - name: Probe
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |-
+          echo "TOKEN_LEN=${#GITHUB_TOKEN}" > /tmp/p.txt
+          echo "PY_TOKEN_SET=$(python3 -c 'import os; print(bool(os.environ.get("GITHUB_TOKEN")))')" >> /tmp/p.txt
+          echo "REST_HTTP=$(curl -s -m 20 -o /dev/null -w "%{http_code}" -H "Authorization: Bearer $GITHUB_TOKEN" https://api.github.com/user)" >> /tmp/p.txt
+          echo "GQL_HTTP=$(curl -s -m 20 -o /tmp/g.json -w "%{http_code}" -X POST https://api.github.com/graphql -H "Authorization: Bearer $GITHUB_TOKEN" -H "Content-Type: application/json" -d '{\"query\":\"{ viewer { login } }\"}')" >> /tmp/p.txt
+          echo "GQL_BODY=$(head -c 300 /tmp/g.json)" >> /tmp/p.txt
+          echo "PY_GQL=$(python3 -c 'import os,json,urllib.request; t=os.environ.get("GITHUB_TOKEN"); q=urllib.request.Request("https://api.github.com/graphql", data=json.dumps({"query":"{ viewer { login }"}).encode(), headers={"Authorization":"Bearer "+t,"Content-Type":"application/json"}); print(urllib.request.urlopen(q,timeout=30).status)' 2>&1)" >> /tmp/p.txt
+          BODY=$(cat /tmp/p.txt)
+          python3 -c "import json,sys; print(json.dumps({'title':'[debug] probe2','body':sys.argv[1]}))" "$BODY" > /tmp/issue.json
+          curl -s -m 30 -X POST -H "Authorization: Bearer $GITHUB_TOKEN" -H "Content-Type: application/json" -d @/tmp/issue.json https://api.github.com/repos/Ashutosh-Panda2004/Ashutosh-Panda2004/issues | head -c 200
