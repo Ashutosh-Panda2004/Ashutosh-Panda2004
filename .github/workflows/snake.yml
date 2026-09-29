@@ -33,9 +33,6 @@ jobs:
           username: Ashutosh-Panda2004
           output_path: dist/trophy.svg
           theme: tokyonight
-          column: 7
-          no-frame: true
-          no-bg: true
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate activity graph
