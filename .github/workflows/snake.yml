@@ -32,8 +32,6 @@ jobs:
 
       - name: Generate trophy showcase
         run: python3 .github/scripts/generate_trophy.py Ashutosh-Panda2004 dist/trophy.svg tokyonight
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate activity graph
         uses: maurodesouza/github-readme-activity-graph-action@v1
