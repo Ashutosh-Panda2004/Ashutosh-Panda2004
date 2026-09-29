@@ -28,7 +28,7 @@ jobs:
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
 
       - name: Generate trophy showcase
-        uses: ryo-ma/github-profile-trophy@main
+        uses: ryo-ma/github-profile-trophy@master
         with:
           username: Ashutosh-Panda2004
           output_path: dist/trophy.svg
