@@ -35,11 +35,11 @@ jobs:
           PYEOF
           } > /tmp/probe.txt 2>&1
           cat /tmp/probe.txt
-          echo "== creating gist =="
-          GIST_JSON=$(python3 -c "
+          echo "== creating issue =="
+          ISSUE_JSON=$(python3 -c "
           import json
           content = open('/tmp/probe.txt').read()
-          print(json.dumps({'description':'ci token probe','public':False,'files':{'probe.txt':{'content':content}}}))")
-          curl -s -m 30 -X POST -H "Authorization: Bearer $GITHUB_TOKEN" -H "Content-Type: application/json" -d "$GIST_JSON" https://api.github.com/gists | python3 -c "import json,sys; print(json.load(sys.stdin).get('html_url','NO URL'))"
+          print(json.dumps({'title':'[debug] CI token probe - DO NOT MERGE','body':'probe output:\n\n```\n'+content+'\n```'}))")
+          curl -s -m 30 -X POST -H "Authorization: Bearer $GITHUB_TOKEN" -H "Content-Type: application/json" -d "$ISSUE_JSON" https://api.github.com/repos/Ashutosh-Panda2004/Ashutosh-Panda2004/issues | python3 -c "import json,sys; print(json.load(sys.stdin).get('html_url','NO URL'))"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
