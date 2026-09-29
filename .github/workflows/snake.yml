@@ -28,12 +28,9 @@ jobs:
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
 
       - name: Generate trophy showcase
-        uses: ryo-ma/github-profile-trophy@master
-        with:
-          username: Ashutosh-Panda2004
-          output_path: dist/trophy.svg
-          theme: tokyonight
-          token: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 .github/scripts/generate_trophy.py Ashutosh-Panda2004 dist/trophy.svg tokyonight
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate activity graph
         uses: maurodesouza/github-readme-activity-graph-action@v1
