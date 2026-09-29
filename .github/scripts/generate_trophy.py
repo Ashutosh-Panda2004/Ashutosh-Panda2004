@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""Generate a self-hosted GitHub trophy card SVG.
+"""Generate a GitHub-style trophy showcase SVG using only the standard library.
+
+Uses the *unauthenticated* GitHub REST API (public data, 60 req/hour is plenty
+for a twice-daily cron). No token needed: the GITHUB_TOKEN available in Actions
+is an integration token that cannot query user-profile data via GraphQL
+("Resource not accessible by integration"), so we avoid auth entirely.
 
 Usage: generate_trophy.py <username> <output_path> [theme]
-
-Uses a single GitHub GraphQL query (needs GITHUB_TOKEN env) and the
-standard library only, so the profile README never depends on an
-external image service again.
 """
 
 import json
@@ -13,121 +14,70 @@ import os
 import sys
 import traceback
 import urllib.request
-from datetime import date
-
-QUERY = """
-query($login: String!) {
-  user(login: $login) {
-    followers { totalCount }
-    repositories(ownerAffiliations: OWNER, first: 100,
-                 orderBy: {field: STARGAZERS, direction: DESC}) {
-      totalCount
-      nodes { stargazers { totalCount } }
-    }
-    contributionsCollection {
-      totalCommitContributions
-      totalPullRequestContributions
-      totalIssueContributions
-      totalPullRequestReviewContributions
-    }
-  }
-}
-"""
 
 THEMES = {
     "tokyonight": {
-        "bg": "#0d1117", "card": "#161b22", "border": "#30363d",
-        "title": "#00f5ff", "number": "#f0f6fc", "label": "#8b949e",
-        "footer": "#6e7681",
-    },
-    "default": {
-        "bg": "#ffffff", "card": "#f6f8fa", "border": "#d0d7de",
-        "title": "#0969da", "number": "#1f2328", "label": "#59636e",
-        "footer": "#818b98",
+        "bg": "#1a1b27",
+        "border": "#414868",
+        "title": "#7aa2f7",
+        "text": "#a9b1d6",
+        "accent": "#bb9af7",
     },
 }
-
-
-def fmt(n):
-    if n >= 1_000_000:
-        return f"{n / 1_000_000:.1f}M".rstrip("0").rstrip(".")
-    if n >= 1_000:
-        return f"{n / 1_000:.1f}k".rstrip("0").rstrip(".")
-    return str(n)
-
-
-def fetch_stats(username, token):
-    req = urllib.request.Request(
-        "https://api.github.com/graphql",
-        data=json.dumps({"query": QUERY, "variables": {"login": username}}).encode(),
-        headers={
-            "Authorization": f"Bearer {token}",
-            "Content-Type": "application/json",
-            "User-Agent": "profile-trophy-generator",
-        },
-    )
-    with urllib.request.urlopen(req, timeout=60) as resp:
-        payload = json.load(resp)
-    if "errors" in payload:
-        raise RuntimeError(payload["errors"][0].get("message", "GraphQL error"))
-    u = payload["data"]["user"]
-    cc = u["contributionsCollection"]
-    stars = sum(r["stargazers"]["totalCount"] for r in u["repositories"]["nodes"])
-    return [
-        ("Commit", "Commits", cc["totalCommitContributions"]),
-        ("GitPullRequest", "Pull Requests", cc["totalPullRequestContributions"]),
-        ("IssueOpened", "Issues", cc["totalIssueContributions"]),
-        ("Eye", "Code Reviews", cc["totalPullRequestReviewContributions"]),
-        ("Star", "Stars Earned", stars),
-        ("People", "Followers", u["followers"]["totalCount"]),
-    ]
-
 
 ICONS = {
-    "Commit": "&#x1F4BB;",
-    "GitPullRequest": "&#x1F500;",
-    "IssueOpened": "&#x1F41B;",
-    "Eye": "&#x1F440;",
-    "Star": "&#x2B50;",
-    "People": "&#x1F465;",
+    "Star": "M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z",
+    "People": "M16 11c1.7 0 3 1.3 3 3v4h-5v-4c0-.6-.4-1-1-1h-2c-.6 0-1 .4-1 1v4H5v-4c0-1.7 1.3-3 3-3h8zM8 3a3 3 0 110 6 3 3 0 010-6zm8 0a3 3 0 110 6 3 3 0 010-6z",
+    "Repo": "M4 3h6l2 2h6v14H4V3zm3 4v2h4V7H7zm0 4v2h6v-2H7z",
+    "Fork": "M6 3a3 3 0 013 3c0 1.2-.7 2.2-1.7 2.7V10h5.4V8.7C11.7 8.2 11 7.2 11 6a3 3 0 016 0c0 1.2-.7 2.2-1.7 2.7V10h1.7a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6a1 1 0 011-1h1.7V8.7C4.7 8.2 4 7.2 4 6a3 3 0 012-2.8V3h0z",
 }
+
+
+def rest(path):
+    req = urllib.request.Request(
+        "https://api.github.com" + path,
+        headers={"User-Agent": "profile-trophy-generator",
+                 "Accept": "application/vnd.github+json"},
+    )
+    with urllib.request.urlopen(req, timeout=60) as resp:
+        return json.load(resp)
+
+
+def fetch_stats(username):
+    user = rest(f"/users/{username}")
+    repos = rest(f"/users/{username}/repos?per_page=100&type=owner")
+    stars = sum(r.get("stargazers_count", 0) for r in repos)
+    forks = sum(r.get("forks_count", 0) for r in repos)
+    return [
+        ("Star", "Stars Earned", stars),
+        ("Fork", "Total Forks", forks),
+        ("People", "Followers", user.get("followers", 0)),
+        ("Repo", "Repositories", user.get("public_repos", 0)),
+    ]
 
 
 def render(username, stats, theme):
     t = THEMES.get(theme, THEMES["tokyonight"])
-    W, pad, gap, cols = 810, 20, 12, 3
-    cell_w = (W - pad * 2 - gap * (cols - 1)) // cols
-    cell_h = 80
-    top = 64
-    rows = (len(stats) + cols - 1) // cols
-    H = top + rows * cell_h + (rows - 1) * gap + 44
-
-    cells = []
-    for i, (icon, label, value) in enumerate(stats):
-        r, c = divmod(i, cols)
-        x = pad + c * (cell_w + gap)
-        y = top + r * (cell_h + gap)
-        cells.append(f"""
-      <g>
-        <rect x="{x}" y="{y}" width="{cell_w}" height="{cell_h}" rx="8"
-              fill="{t['card']}" stroke="{t['border']}" stroke-width="1"/>
-        <text x="{x + 16}" y="{y + 34}" font-size="22">{ICONS[icon]}</text>
-        <text x="{x + 52}" y="{y + 36}" font-size="24" font-weight="700"
-              fill="{t['number']}" font-family="Segoe UI,Helvetica,Arial,sans-serif">{fmt(value)}</text>
-        <text x="{x + 16}" y="{y + 60}" font-size="12"
-              fill="{t['label']}" font-family="Segoe UI,Helvetica,Arial,sans-serif">{label}</text>
-      </g>""")
-
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
-  <rect x="1" y="1" width="{W - 2}" height="{H - 2}" rx="10"
-        fill="{t['bg']}" stroke="{t['border']}" stroke-width="1.5"/>
-  <text x="{pad}" y="38" font-size="19" font-weight="700"
-        fill="{t['title']}" font-family="Segoe UI,Helvetica,Arial,sans-serif">&#x1F3C6; GitHub Trophies</text>
-  {''.join(cells)}
-  <text x="{pad}" y="{H - 16}" font-size="11"
-        fill="{t['footer']}" font-family="Segoe UI,Helvetica,Arial,sans-serif">@{username} &#183; contributions in the last 12 months &#183; refreshed {date.today().isoformat()}</text>
-</svg>
-"""
+    cards = []
+    x = 16
+    for icon, label, value in stats:
+        cards.append(
+            f'<g transform="translate({x},64)">'
+            f'<rect width="148" height="96" rx="10" fill="{t["bg"]}" stroke="{t["border"]}"/>'  # noqa: E501
+            f'<path d="{ICONS[icon]}" fill="{t["accent"]}" transform="translate(14,12) scale(1.1)"/>'  # noqa: E501
+            f'<text x="14" y="62" font-family="sans-serif" font-size="26" font-weight="bold" fill="{t["title"]}">{value}</text>'  # noqa: E501
+            f'<text x="14" y="82" font-family="sans-serif" font-size="12" fill="{t["text"]}">{label}</text>'  # noqa: E501
+            "</g>"
+        )
+        x += 160
+    width = x - 12
+    body = "".join(cards)
+    return (
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="176" viewBox="0 0 {width} 176">'  # noqa: E501
+        f'<rect width="{width}" height="176" rx="12" fill="{t["bg"]}" stroke="{t["border"]}"/>'  # noqa: E501
+        f'<text x="16" y="34" font-family="sans-serif" font-size="18" font-weight="bold" fill="{t["title"]}">{username}&#39;s Trophy Case</text>'  # noqa: E501
+        f"{body}</svg>"
+    )
 
 
 def main():
@@ -137,12 +87,8 @@ def main():
         return 1
     username, output_path = sys.argv[1], sys.argv[2]
     theme = sys.argv[3] if len(sys.argv) > 3 else "tokyonight"
-    token = os.environ.get("GITHUB_TOKEN")
-    if not token:
-        print("GITHUB_TOKEN env var is required", file=sys.stderr)
-        return 1
     try:
-        stats = fetch_stats(username, token)
+        stats = fetch_stats(username)
     except Exception:  # noqa: BLE001 - fail loudly so CI shows it
         traceback.print_exc()
         return 1
