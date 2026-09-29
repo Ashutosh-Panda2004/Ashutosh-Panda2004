@@ -1,4 +1,4 @@
-name: Debug probe 2
+name: Debug probe 3
 on:
   workflow_dispatch:
 jobs:
@@ -8,16 +8,16 @@ jobs:
       contents: write
       issues: write
     steps:
-      - name: Probe
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Run trophy script with full output
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |-
-          echo "TOKEN_LEN=${#GITHUB_TOKEN}" > /tmp/p.txt
-          echo "PY_TOKEN_SET=$(python3 -c 'import os; print(bool(os.environ.get("GITHUB_TOKEN")))')" >> /tmp/p.txt
-          echo "REST_HTTP=$(curl -s -m 20 -o /dev/null -w "%{http_code}" -H "Authorization: Bearer $GITHUB_TOKEN" https://api.github.com/user)" >> /tmp/p.txt
-          echo "GQL_HTTP=$(curl -s -m 20 -o /tmp/g.json -w "%{http_code}" -X POST https://api.github.com/graphql -H "Authorization: Bearer $GITHUB_TOKEN" -H "Content-Type: application/json" -d '{\"query\":\"{ viewer { login } }\"}')" >> /tmp/p.txt
-          echo "GQL_BODY=$(head -c 300 /tmp/g.json)" >> /tmp/p.txt
-          echo "PY_GQL=$(python3 -c 'import os,json,urllib.request; t=os.environ.get("GITHUB_TOKEN"); q=urllib.request.Request("https://api.github.com/graphql", data=json.dumps({"query":"{ viewer { login }"}).encode(), headers={"Authorization":"Bearer "+t,"Content-Type":"application/json"}); print(urllib.request.urlopen(q,timeout=30).status)' 2>&1)" >> /tmp/p.txt
-          BODY=$(cat /tmp/p.txt)
-          python3 -c "import json,sys; print(json.dumps({'title':'[debug] probe2','body':sys.argv[1]}))" "$BODY" > /tmp/issue.json
-          curl -s -m 30 -X POST -H "Authorization: Bearer $GITHUB_TOKEN" -H "Content-Type: application/json" -d @/tmp/issue.json https://api.github.com/repos/Ashutosh-Panda2004/Ashutosh-Panda2004/issues | head -c 200
+          mkdir -p /tmp/tout
+          python3 .github/scripts/generate_trophy.py Ashutosh-Panda2004 /tmp/tout/trophy.svg tokyonight > /tmp/tout/out.txt 2>&1
+          echo "EXIT=$?" >> /tmp/tout/out.txt
+          ls -la /tmp/tout/ >> /tmp/tout/out.txt 2>&1
+          BODY=$(cat /tmp/tout/out.txt)
+          python3 -c "import json,sys; print(json.dumps({'title':'[debug] probe3','body':sys.argv[1][:6000]}))" "$BODY" > /tmp/issue.json
+          curl -s -m 30 -X POST -H "Authorization: Bearer $GITHUB_TOKEN" -H "Content-Type: application/json" -d @/tmp/issue.json https://api.github.com/repos/Ashutosh-Panda2004/Ashutosh-Panda2004/issues | head -c 100
