@@ -27,24 +27,11 @@ jobs:
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
 
+      - name: Fix dist ownership (snake action runs as root in Docker)
+        run: sudo chown -R $(id -u):$(id -g) dist/
+
       - name: Generate trophy showcase
-        run: |
-          set +e
-          {
-            echo "== python =="; python3 --version
-            echo "== scripts =="; ls -la .github/scripts/
-            echo "== token empty? =="; if [ -z "$GITHUB_TOKEN" ]; then echo "TOKEN EMPTY"; else echo "token present, len=${#GITHUB_TOKEN}"; fi
-            echo "== graphql probe =="
-            curl -s -m 20 -o /tmp/probe.json -w "http=%{http_code}\n" -X POST https://api.github.com/graphql \
-              -H "Authorization: Bearer $GITHUB_TOKEN" -H "Content-Type: application/json" \
-              -d '{"query":"{ viewer { login } }"}' || echo "curl failed"
-            head -c 300 /tmp/probe.json; echo
-            echo "== generator =="
-            python3 .github/scripts/generate_trophy.py Ashutosh-Panda2004 dist/trophy.svg tokyonight
-            echo "generator exit=$?"
-          } > dist/trophy-debug.txt 2>&1
-          cat dist/trophy-debug.txt
-          exit 0
+        run: python3 .github/scripts/generate_trophy.py Ashutosh-Panda2004 dist/trophy.svg tokyonight
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
