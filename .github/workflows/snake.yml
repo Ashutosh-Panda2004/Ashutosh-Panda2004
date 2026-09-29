@@ -28,7 +28,11 @@ jobs:
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
 
       - name: Generate trophy showcase
-        run: python3 .github/scripts/generate_trophy.py Ashutosh-Panda2004 dist/trophy.svg tokyonight
+        run: |
+          python3 --version
+          ls -la .github/scripts/
+          echo "token set: ${{ secrets.GITHUB_TOKEN != '' }}"
+          python3 .github/scripts/generate_trophy.py Ashutosh-Panda2004 dist/trophy.svg tokyonight
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
