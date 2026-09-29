@@ -1,4 +1,4 @@
-name: Generate Snake
+name: Generate profile widgets
 
 on:
   schedule:
@@ -8,26 +8,46 @@ on:
     branches:
     - main
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      
-      - name: Generate Snake
+
+      - name: Generate snake animation
         uses: Platane/snk@v3
         with:
           github_user_name: Ashutosh-Panda2004
           outputs: |
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Deploy to GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v3.1.0
+      - name: Generate trophy showcase
+        uses: ryo-ma/github-profile-trophy@main
+        with:
+          username: Ashutosh-Panda2004
+          output_path: dist/trophy.svg
+          theme: tokyonight
+          column: 7
+          no-frame: true
+          no-bg: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate activity graph
+        uses: maurodesouza/github-readme-activity-graph-action@v1
+        with:
+          username: Ashutosh-Panda2004
+          options: theme=tokyo-night&hide_border=true&bg_color=0D1117&color=00F5FF&line=00F5FF&point=FFFFFF
+          output_path: dist/activity-graph.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Deploy to output branch
+        uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output
           build_dir: dist
