@@ -68,7 +68,7 @@ const ashutosh = {
 
 <div align="center">
 
-![Trophy](https://github-profile-trophy.vercel.app/?username=Ashutosh-Panda2004&theme=tokyonight&no-frame=true&column=7&margin-w=15&margin-h=15&no-bg=true)
+![Trophy](https://raw.githubusercontent.com/Ashutosh-Panda2004/Ashutosh-Panda2004/output/trophy.svg)
 
 </div>
 
@@ -78,7 +78,7 @@ const ashutosh = {
 
 <div align="center">
 
-[![Ashutosh's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=Ashutosh-Panda2004&theme=tokyo-night&hide_border=true&bg_color=0D1117&color=00F5FF&line=00F5FF&point=FFFFFF)](https://github.com/Ashutosh-Panda2004)
+[![Ashutosh's github activity graph](https://raw.githubusercontent.com/Ashutosh-Panda2004/Ashutosh-Panda2004/output/activity-graph.svg)](https://github.com/Ashutosh-Panda2004)
 
 </div>
 
