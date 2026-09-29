@@ -29,6 +29,7 @@ jobs:
 
       - name: Generate trophy showcase
         run: |
+          set +e
           {
             echo "== python =="; python3 --version
             echo "== scripts =="; ls -la .github/scripts/
@@ -41,7 +42,9 @@ jobs:
             echo "== generator =="
             python3 .github/scripts/generate_trophy.py Ashutosh-Panda2004 dist/trophy.svg tokyonight
             echo "generator exit=$?"
-          } > dist/trophy-debug.txt 2>&1; cat dist/trophy-debug.txt
+          } > dist/trophy-debug.txt 2>&1
+          cat dist/trophy-debug.txt
+          exit 0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
