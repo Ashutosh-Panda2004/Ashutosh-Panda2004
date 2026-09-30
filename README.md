@@ -64,16 +64,6 @@ const ashutosh = {
 
 ---
 
-## 🏆 Achievement Showcase
-
-<div align="center">
-
-![Trophy](https://raw.githubusercontent.com/Ashutosh-Panda2004/Ashutosh-Panda2004/output/trophy.svg)
-
-</div>
-
----
-
 ## 📈 Contribution Graph
 
 <div align="center">
