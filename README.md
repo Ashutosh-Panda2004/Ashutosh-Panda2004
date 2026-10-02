@@ -27,19 +27,6 @@
 const ashutosh = {
     location: "Navigating the Digital Cosmos 🌍",
     role: "SDE-1 @ Honeywell | Ex-SWE Intern @ Nielsen",
-    mission: "Transforming ideas into elegant code",
-    currentFocus: ["Web Development", "AI/ML", "Problem Solving"],
-    philosophy: "Code is poetry written in logic",
-    
-    dailyRoutine: function() {
-        return [
-            "☕ Coffee",
-            "💻 Code",
-            "🐛 Debug", 
-            "🚀 Deploy",
-            "🔁 Repeat"
-        ];
-    }
 };
 ```
 
@@ -116,6 +103,6 @@ I'm always excited to collaborate on innovative projects and connect with fellow
 
 **⭐ From [Ashutosh-Panda2004](https://github.com/Ashutosh-Panda2004) with 💙**
 
-*Last Updated: October 2025*
+*Last Updated: October 2026*
 
 </div>
