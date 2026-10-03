@@ -34,6 +34,51 @@ const ashutosh = {
 
 ---
 
+## 🚀 Featured Projects
+
+<div align="center">
+
+### 🔭 TokenLens — the itemised bill for AI-assisted engineering
+
+A cost-observability platform for **GitHub Copilot**: measures credit usage from the local ledger, attributes waste to five cost centres, forecasts budget burn, and explains every figure. CLI + local dashboard + VS Code extension — fully local, no network calls.
+
+`TypeScript` · `Fastify` · `React` · `SQLite` · `VS Code API`
+
+<a href="https://tokenslens.vercel.app/"><img width="85%" src="https://raw.githubusercontent.com/Ashutosh-Panda2004/TokensLens/main/docs/screenshots/dashboard-overview.png" alt="TokenLens dashboard" /></a>
+
+[![Live Site](https://img.shields.io/badge/Live_Site-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://tokenslens.vercel.app/)
+[![Source Code](https://img.shields.io/badge/Source_Code-171515?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Ashutosh-Panda2004/TokensLens)
+
+---
+
+### 🛑 ShutdownCheck — will your service survive SIGTERM?
+
+Terminates your service the way your orchestrator will — **under real load** — and tells you exactly which of the **seven stages of shutdown** you got wrong, with named findings (SC000–SC017) and framework-specific fixes. Deterministic scoring, Docker targets, and a GitHub Action for CI.
+
+`Go` · `Docker` · `GitHub Actions`
+
+<a href="https://shutdowncheck.vercel.app/"><img width="85%" src="https://raw.githubusercontent.com/Ashutosh-Panda2004/ShutdownCheck/main/docs/screenshots/report.png" alt="ShutdownCheck report" /></a>
+
+[![Live Site](https://img.shields.io/badge/Live_Site-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://shutdowncheck.vercel.app/)
+[![Source Code](https://img.shields.io/badge/Source_Code-171515?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Ashutosh-Panda2004/ShutdownCheck)
+
+---
+
+### 🎙️ InterviewCoach AI — mock interviews with an AI that knows your resume
+
+**Voice-based interview practice, anytime**: real-time voice interviews via Gemini Live, resume-aware questions, evidence-validated feedback with STAR review, a JavaScript practice arena, and a full system-design canvas. Privacy-first — your data stays in your browser.
+
+`React 19` · `TypeScript` · `Gemini Live API` · `Express`
+
+<a href="https://interview-coach-ai-steel.vercel.app/"><img width="85%" src="https://raw.githubusercontent.com/Ashutosh-Panda2004/Interviewcoach--AI/main/assets/dashboard_1.png" alt="InterviewCoach AI dashboard" /></a>
+
+[![Live Site](https://img.shields.io/badge/Live_Site-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://interview-coach-ai-steel.vercel.app/)
+[![Source Code](https://img.shields.io/badge/Source_Code-171515?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Ashutosh-Panda2004/Interviewcoach--AI)
+
+</div>
+
+---
+
 ## 📊 GitHub Analytics
 
 <div align="center">
