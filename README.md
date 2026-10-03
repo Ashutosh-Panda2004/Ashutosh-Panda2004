@@ -13,7 +13,7 @@
 [![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white)](https://ashutosh-panda-system.vercel.app/)
 [![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ashutoshpanda.india@gmail.com)
 
-![Profile Views](https://komarev.com/ghpvc/?username=Ashutosh-Panda2004&label=PROFILE+VIEWS&color=8a2be2&style=for-the-badge)
+![Profile Views](https://visitor-badge.laobi.icu/badge?page_id=Ashutosh-Panda2004.Ashutosh-Panda2004)
 
 </div>
 
