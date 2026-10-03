@@ -1,5 +1,11 @@
 <div align="center">
 
+<img src="https://raw.githubusercontent.com/Ashutosh-Panda2004/Ashutosh-Panda2004/main/assets/banner.svg" alt="Ashutosh Panda — SDE 1 at Honeywell" width="100%" />
+
+</div>
+
+<div align="center">
+
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=26&duration=3000&pause=1200&color=58A6FF&center=true&vCenter=true&width=600&lines=SDE+1+at+Honeywell;Backend+systems+%C2%B7+Go+%C2%B7+TypeScript;I+build+developer+tools+in+the+open)](https://git.io/typing-svg)
 
 [![GitHub](https://img.shields.io/badge/GitHub-171515?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Ashutosh-Panda2004)
@@ -18,6 +24,8 @@
 I'm a software development engineer at Honeywell in Bengaluru, where I'm the sole backend engineer on M2H, an enterprise migration platform built on .NET and Azure. Before that, I was a software engineering intern at Nielsen, working on a cross-browser metering extension used by over a million panelists.
 
 Outside work, I build small, focused developer tools — ShutdownCheck, TokenLens, and InterviewCoach AI, below — and contribute fixes and tests to open-source projects.
+
+**Now (October 2026):** hardening ShutdownCheck's release pipeline, day-to-day backend work on M2H at Honeywell, and small open-source contributions most weeks.
 
 ---
 
