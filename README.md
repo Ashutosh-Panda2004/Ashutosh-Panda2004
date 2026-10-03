@@ -61,12 +61,12 @@ Interview practice with a voice AI. Real-time voice interviews through Gemini Li
 ## Experience
 
 **Honeywell** — Software Development Engineer 1 · Feb 2026 – present
-Sole backend engineer on the M2H enterprise migration platform: C#/.NET, Entity Framework Core, Azure Service Bus, Entra ID RBAC. Built a 4-stage RAG pipeline that cut assessment time from hours to minutes.
+Sole backend engineer on the M2H enterprise migration platform: C#/.NET, Entity Framework Core, Azure Service Bus, Entra ID RBAC. 
 
 **Nielsen** — Software Engineer Intern · Jan 2025 – Feb 2026
-Scaled a cross-browser metering extension to 1M+ panelists at 99.9% uptime, with canary CI/CD and a Node.js validation layer over Oracle SQL pipelines.
+Scaled a cross-browser metering extension to 1,00,000+ panelists at 99.9% uptime, with canary CI/CD and a Node.js validation layer over Oracle SQL pipelines.
 
-Six patents filed (one granted), an IEEE publication, and a Smart India Hackathon top-20 finish.
+Six patents filed (three granted), an IEEE publication, and a Smart India Hackathon top-20 finish.
 
 ---
 
