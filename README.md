@@ -1,18 +1,10 @@
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=28&duration=3000&pause=1000&color=00F5FF&center=true&vCenter=true&width=600&lines=Full-Stack+Developer+%F0%9F%9A%80;AI+%26+ML+Enthusiast+%F0%9F%A7%A0;Problem+Solving+Ninja+%E2%9A%94%EF%B8%8F;Building+Digital+Galaxies+%F0%9F%8C%A0)](https://git.io/typing-svg)
-
-</div>
-
----
-
-<div align="center">
-
-### 🎯 Navigation Hub
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=26&duration=3000&pause=1200&color=58A6FF&center=true&vCenter=true&width=600&lines=SDE+1+at+Honeywell;Backend+systems+%C2%B7+Go+%C2%B7+TypeScript;I+build+developer+tools+in+the+open)](https://git.io/typing-svg)
 
 [![GitHub](https://img.shields.io/badge/GitHub-171515?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Ashutosh-Panda2004)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ashutosh-panda-748531255/)
-[![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white)](https://ashutosh-panda2004.github.io/Portfolio-Ashutosh/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white)](https://ashutosh-panda-system.vercel.app/)
 [![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ashutoshpanda.india@gmail.com)
 
 ![Profile Views](https://komarev.com/ghpvc/?username=Ashutosh-Panda2004&color=blueviolet&style=for-the-badge)
@@ -21,130 +13,89 @@
 
 ---
 
-## 👨‍💻 About the Developer
+## About
 
-```javascript
-const ashutosh = {
-    location: "Navigating the Digital Cosmos 🌍",
-    role: "SDE-1 @ Honeywell | Ex-SWE Intern @ Nielsen",
-};
-```
+I'm a software development engineer at Honeywell in Bengaluru, where I'm the sole backend engineer on M2H, an enterprise migration platform built on .NET and Azure. Before that, I was a software engineering intern at Nielsen, working on a cross-browser metering extension used by over a million panelists.
 
-> *"Every bug is just an opportunity to write better code."* ✨
+Outside work, I build small, focused developer tools — ShutdownCheck, TokenLens, and InterviewCoach AI, below — and contribute fixes and tests to open-source projects.
 
 ---
 
-## 🚀 Featured Projects
+## Featured projects
 
-<div align="center">
+### TokenLens
 
-### 🔭 TokenLens — the itemised bill for AI-assisted engineering
+Cost observability for GitHub Copilot. It reads the local usage ledger, attributes spend to five cost centres, forecasts budget burn, and shows where credits are being wasted. Ships as a CLI, a local dashboard, and a VS Code extension, and runs entirely on your machine.
 
-A cost-observability platform for **GitHub Copilot**: measures credit usage from the local ledger, attributes waste to five cost centres, forecasts budget burn, and explains every figure. CLI + local dashboard + VS Code extension — fully local, no network calls.
+`TypeScript` · `Fastify` · `React` · `SQLite`
 
-`TypeScript` · `Fastify` · `React` · `SQLite` · `VS Code API`
+[![Live Site](https://img.shields.io/badge/Live_Site-000000?style=flat-square&logo=vercel&logoColor=white)](https://tokenslens.vercel.app/)
+[![Source Code](https://img.shields.io/badge/Source_Code-171515?style=flat-square&logo=github&logoColor=white)](https://github.com/Ashutosh-Panda2004/TokensLens)
 
+### ShutdownCheck
 
-[![Live Site](https://img.shields.io/badge/Live_Site-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://tokenslens.vercel.app/)
-[![Source Code](https://img.shields.io/badge/Source_Code-171515?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Ashutosh-Panda2004/TokensLens)
-
----
-
-### 🛑 ShutdownCheck — will your service survive SIGTERM?
-
-Terminates your service the way your orchestrator will — **under real load** — and tells you exactly which of the **seven stages of shutdown** you got wrong, with named findings (SC000–SC017) and framework-specific fixes. Deterministic scoring, Docker targets, and a GitHub Action for CI.
+Checks whether a service shuts down cleanly. It terminates the service under real load, the way an orchestrator would, and reports which of the seven stages of graceful shutdown failed — with named findings (SC000–SC017) and specific fixes for each. Works against processes, Docker containers, and in CI.
 
 `Go` · `Docker` · `GitHub Actions`
 
+[![Live Site](https://img.shields.io/badge/Live_Site-000000?style=flat-square&logo=vercel&logoColor=white)](https://shutdowncheck.vercel.app/)
+[![Source Code](https://img.shields.io/badge/Source_Code-171515?style=flat-square&logo=github&logoColor=white)](https://github.com/Ashutosh-Panda2004/ShutdownCheck)
 
-[![Live Site](https://img.shields.io/badge/Live_Site-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://shutdowncheck.vercel.app/)
-[![Source Code](https://img.shields.io/badge/Source_Code-171515?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Ashutosh-Panda2004/ShutdownCheck)
+### InterviewCoach AI
 
----
-
-### 🎙️ InterviewCoach AI — mock interviews with an AI that knows your resume
-
-**Voice-based interview practice, anytime**: real-time voice interviews via Gemini Live, resume-aware questions, evidence-validated feedback with STAR review, a JavaScript practice arena, and a full system-design canvas. Privacy-first — your data stays in your browser.
+Interview practice with a voice AI. Real-time voice interviews through Gemini Live, questions grounded in your resume, evidence-checked feedback with STAR review, a JavaScript practice arena, and a system-design canvas. Your data stays in your browser.
 
 `React 19` · `TypeScript` · `Gemini Live API` · `Express`
 
-
-[![Live Site](https://img.shields.io/badge/Live_Site-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://interview-coach-ai-steel.vercel.app/)
-[![Source Code](https://img.shields.io/badge/Source_Code-171515?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Ashutosh-Panda2004/Interviewcoach--AI)
-
-</div>
+[![Live Site](https://img.shields.io/badge/Live_Site-000000?style=flat-square&logo=vercel&logoColor=white)](https://interview-coach-ai-steel.vercel.app/)
+[![Source Code](https://img.shields.io/badge/Source_Code-171515?style=flat-square&logo=github&logoColor=white)](https://github.com/Ashutosh-Panda2004/Interviewcoach--AI)
 
 ---
 
-## 📊 GitHub Analytics
+## Experience
+
+**Honeywell** — Software Development Engineer 1 · Feb 2026 – present
+Sole backend engineer on the M2H enterprise migration platform: C#/.NET, Entity Framework Core, Azure Service Bus, Entra ID RBAC. Built a 4-stage RAG pipeline that cut assessment time from hours to minutes.
+
+**Nielsen** — Software Engineer Intern · Jan 2025 – Feb 2026
+Scaled a cross-browser metering extension to 1M+ panelists at 99.9% uptime, with canary CI/CD and a Node.js validation layer over Oracle SQL pipelines.
+
+Six patents filed (one granted), an IEEE publication, and a Smart India Hackathon top-20 finish.
+
+---
+
+## Tools I work with
+
+- **Languages:** Go, TypeScript, C#, Python, Java
+- **Backend:** .NET, Node.js (Fastify, Express), Azure Service Bus
+- **Frontend:** React
+- **Platforms and tools:** Azure, Docker, GitHub Actions, SQLite, Git
+
+---
+
+## Writing
+
+Notes on system design and engineering practice, on [Medium](https://medium.com/@ashutoshpanda.india).
+
+---
+
+## GitHub activity
 
 <div align="center">
 
 <img width="49%" src="https://github-readme-stats.vercel.app/api?username=Ashutosh-Panda2004&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00F5FF&icon_color=00F5FF&text_color=FFFFFF" />
 <img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=Ashutosh-Panda2004&theme=tokyonight&hide_border=true&background=0D1117&ring=00F5FF&fire=00F5FF&currStreakLabel=00F5FF" />
 
-</div>
-
-<div align="center">
-
 <img width="70%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Ashutosh-Panda2004&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00F5FF&text_color=FFFFFF" />
-
-</div>
-
----
-
-## 📈 Contribution Graph
-
-<div align="center">
 
 [![Ashutosh's github activity graph](https://raw.githubusercontent.com/Ashutosh-Panda2004/Ashutosh-Panda2004/output/activity-graph.svg)](https://github.com/Ashutosh-Panda2004)
 
-</div>
-
----
-
-## 💡 Current Mission
-
-```python
-class CurrentGoals:
-    def __init__(self):
-        self.learning = ["Advanced React Patterns", "System Design", "Cloud Architecture"]
-        self.building = ["Full-Stack Projects", "Open Source Contributions"]
-        self.exploring = ["AI/ML Applications", "Web3 Technologies"]
-    
-    def next_milestone(self):
-        return "Building solutions that make a difference 🎯"
-```
-
----
-
-## 🤝 Let's Connect!
-
-<div align="center">
-
-I'm always excited to collaborate on innovative projects and connect with fellow developers!
-
-[![LinkedIn](https://img.shields.io/badge/Connect_on_LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ashutosh-panda-748531255/)
-[![Portfolio](https://img.shields.io/badge/View_My_Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white)](https://ashutoshpanda.vercel.app/)
-[![Email](https://img.shields.io/badge/Send_Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ashutoshpanda.india@gmail.com)
-
-### 📬 Open for:
-✅ Collaboration | ✅ Open Source | ✅ Networking
-
-</div>
-
----
-
-<div align="center">
-
-### 🌟 "Code with passion, debug with patience, deploy with pride"
-
 ![Snake animation](https://raw.githubusercontent.com/Ashutosh-Panda2004/Ashutosh-Panda2004/output/github-contribution-grid-snake-dark.svg)
 
+</div>
+
 ---
 
-**⭐ From [Ashutosh-Panda2004](https://github.com/Ashutosh-Panda2004) with 💙**
+## Contact
 
-*Last Updated: October 2026*
-
-</div>
+The quickest way to reach me is email — [ashutoshpanda.india@gmail.com](mailto:ashutoshpanda.india@gmail.com). I'm also on [LinkedIn](https://www.linkedin.com/in/ashutosh-panda-748531255/), and my full portfolio is at [ashutosh-panda-system.vercel.app](https://ashutosh-panda-system.vercel.app/).
