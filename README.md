@@ -44,7 +44,6 @@ A cost-observability platform for **GitHub Copilot**: measures credit usage from
 
 `TypeScript` · `Fastify` · `React` · `SQLite` · `VS Code API`
 
-<a href="https://tokenslens.vercel.app/"><img width="85%" src="https://raw.githubusercontent.com/Ashutosh-Panda2004/TokensLens/main/docs/screenshots/dashboard-overview.png" alt="TokenLens dashboard" /></a>
 
 [![Live Site](https://img.shields.io/badge/Live_Site-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://tokenslens.vercel.app/)
 [![Source Code](https://img.shields.io/badge/Source_Code-171515?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Ashutosh-Panda2004/TokensLens)
@@ -57,7 +56,6 @@ Terminates your service the way your orchestrator will — **under real load** �
 
 `Go` · `Docker` · `GitHub Actions`
 
-<a href="https://shutdowncheck.vercel.app/"><img width="85%" src="https://raw.githubusercontent.com/Ashutosh-Panda2004/ShutdownCheck/main/docs/screenshots/report.png" alt="ShutdownCheck report" /></a>
 
 [![Live Site](https://img.shields.io/badge/Live_Site-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://shutdowncheck.vercel.app/)
 [![Source Code](https://img.shields.io/badge/Source_Code-171515?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Ashutosh-Panda2004/ShutdownCheck)
@@ -70,7 +68,6 @@ Terminates your service the way your orchestrator will — **under real load** �
 
 `React 19` · `TypeScript` · `Gemini Live API` · `Express`
 
-<a href="https://interview-coach-ai-steel.vercel.app/"><img width="85%" src="https://raw.githubusercontent.com/Ashutosh-Panda2004/Interviewcoach--AI/main/assets/dashboard_1.png" alt="InterviewCoach AI dashboard" /></a>
 
 [![Live Site](https://img.shields.io/badge/Live_Site-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://interview-coach-ai-steel.vercel.app/)
 [![Source Code](https://img.shields.io/badge/Source_Code-171515?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Ashutosh-Panda2004/Interviewcoach--AI)
