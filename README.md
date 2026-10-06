@@ -2,6 +2,10 @@
 
 <img src="https://raw.githubusercontent.com/Ashutosh-Panda2004/Ashutosh-Panda2004/main/assets/banner.svg" alt="Ashutosh Panda — SDE 1 at Honeywell" width="100%" />
 
+<a href="https://shutdowncheck.vercel.app/"><img src="https://raw.githubusercontent.com/Ashutosh-Panda2004/Ashutosh-Panda2004/main/assets/chip-shutdowncheck.svg" alt="ShutdownCheck — live site" height="46" /></a>
+<a href="https://tokenslens.vercel.app/"><img src="https://raw.githubusercontent.com/Ashutosh-Panda2004/Ashutosh-Panda2004/main/assets/chip-tokenlens.svg" alt="TokenLens — live site" height="46" /></a>
+<a href="https://interview-coach-ai-steel.vercel.app/"><img src="https://raw.githubusercontent.com/Ashutosh-Panda2004/Ashutosh-Panda2004/main/assets/chip-interviewcoach.svg" alt="InterviewCoach AI — live site" height="46" /></a>
+
 </div>
 
 <div align="center">
