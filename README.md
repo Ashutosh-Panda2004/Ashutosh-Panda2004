@@ -13,7 +13,7 @@
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=26&duration=3000&pause=1200&color=58A6FF&center=true&vCenter=true&width=600&lines=SDE+1+at+Honeywell;Backend+systems+%C2%B7+Go+%C2%B7+TypeScript;I+build+developer+tools+in+the+open)](https://git.io/typing-svg)
 
 [![GitHub](https://img.shields.io/badge/GitHub-171515?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Ashutosh-Panda2004)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ashutosh-panda-748531255/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ashutosh2004/)
 [![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white)](https://ashutosh-panda-system.vercel.app/)
 [![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ashutoshpanda.india@gmail.com)
 
@@ -106,4 +106,4 @@ Notes on system design and engineering practice, on [Medium](https://medium.com/
 
 ## Contact
 
-The quickest way to reach me is email — [ashutoshpanda.india@gmail.com](mailto:ashutoshpanda.india@gmail.com). I'm also on [LinkedIn](https://www.linkedin.com/in/ashutosh-panda-748531255/), and my full portfolio is at [ashutosh-panda-system.vercel.app](https://ashutosh-panda-system.vercel.app/).
+The quickest way to reach me is email — [ashutoshpanda.india@gmail.com](mailto:ashutoshpanda.india@gmail.com). I'm also on [LinkedIn](https://www.linkedin.com/in/ashutosh2004/), and my full portfolio is at [ashutosh-panda-system.vercel.app](https://ashutosh-panda-system.vercel.app/).
