@@ -23,7 +23,7 @@
 
 ## About
 
-I'm a software development engineer at Honeywell in Bengaluru, where I'm the sole backend engineer on M2H, an enterprise migration platform built on .NET and Azure. Before that, I was a software engineering intern at Nielsen, working on a cross-browser metering extension used by over a million panelists.
+I'm a software development engineer at Honeywell in Bengaluru, where I'm the sole backend engineer on an enterprise migration platform built on .NET and Azure. Before that, I was a software engineering intern at Nielsen, working on a cross-browser metering extension used by over a million panelists.
 
 Outside work, I build small, focused developer tools — ShutdownCheck, TokenLens, and InterviewCoach AI, below — and contribute fixes and tests to open-source projects.
 
