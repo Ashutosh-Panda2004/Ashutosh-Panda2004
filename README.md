@@ -1,6 +1,6 @@
 <div align="center">
 
-<a href="https://www.linkedin.com/in/ashutosh2004/" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/Ashutosh-Panda2004/Ashutosh-Panda2004/main/assets/banner.svg" alt="Ashutosh Panda — SDE 1 at Honeywell" width="100%" /></a>
+<a href="https://www.linkedin.com/in/ashutosh2004/" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/Ashutosh-Panda2004/Ashutosh-Panda2004/main/assets/banner.svg?v=20261007" alt="Ashutosh Panda — SDE 1 at Honeywell" width="100%" /></a>
 
 <a href="https://shutdowncheck.vercel.app/"><img src="https://raw.githubusercontent.com/Ashutosh-Panda2004/Ashutosh-Panda2004/main/assets/chip-shutdowncheck.svg" alt="ShutdownCheck — live site" height="46" /></a>
 <a href="https://tokenslens.vercel.app/"><img src="https://raw.githubusercontent.com/Ashutosh-Panda2004/Ashutosh-Panda2004/main/assets/chip-tokenlens.svg" alt="TokenLens — live site" height="46" /></a>
