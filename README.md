@@ -106,4 +106,4 @@ Notes on system design and engineering practice, on [Medium](https://medium.com/
 
 ## Contact
 
-The quickest way to reach me is email — [ashutoshpanda.india@gmail.com](mailto:ashutoshpanda.india@gmail.com). I'm also on [LinkedIn](https://www.linkedin.com/in/ashutosh2004/), and my full portfolio is at [ashutosh-panda-system.vercel.app](https://ashutosh-panda-system.vercel.app/).
+The quickest way to reach me is email — [ashutoshpanda.india@gmail.com](mailto:ashutoshpanda.india@gmail.com). I'm also on [LinkedIn](https://www.linkedin.com/in/ashutosh2004/)
