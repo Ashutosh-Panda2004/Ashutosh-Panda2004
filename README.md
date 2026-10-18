@@ -35,7 +35,7 @@ Outside work, I build small, focused developer tools — ShutdownCheck, TokenLen
 
 ## Open source highlights
 
-61 merged pull requests · I mostly contribute to checkstyle, Apache Fineract and Eclipse SW360.
+65 merged pull requests · 25 of them in checkstyle, where I contribute most.
 
 | # | Pull Request | Repo | Impact |
 | --- | --- | --- | --- |
