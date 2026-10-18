@@ -1,10 +1,10 @@
 <div align="center">
 
-<a href="https://www.linkedin.com/in/ashutosh2004/" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/Ashutosh-Panda2004/Ashutosh-Panda2004/main/assets/banner.svg?v=20261007" alt="Ashutosh Panda — SDE 1 at Honeywell" width="100%" /></a>
+<a href="https://www.linkedin.com/in/ashutosh2004/" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/Ashutosh-Panda2004/Ashutosh-Panda2004/main/assets/banner.svg?v=20261007" alt="Ashutosh Panda, SDE 1 at Honeywell" width="100%" /></a>
 
-<a href="https://shutdowncheck.vercel.app/"><img src="https://raw.githubusercontent.com/Ashutosh-Panda2004/Ashutosh-Panda2004/main/assets/chip-shutdowncheck.svg" alt="ShutdownCheck — live site" height="46" /></a>
-<a href="https://tokenslens.vercel.app/"><img src="https://raw.githubusercontent.com/Ashutosh-Panda2004/Ashutosh-Panda2004/main/assets/chip-tokenlens.svg" alt="TokenLens — live site" height="46" /></a>
-<a href="https://interview-coach-ai-steel.vercel.app/"><img src="https://raw.githubusercontent.com/Ashutosh-Panda2004/Ashutosh-Panda2004/main/assets/chip-interviewcoach.svg" alt="InterviewCoach AI — live site" height="46" /></a>
+<a href="https://shutdowncheck.vercel.app/"><img src="https://raw.githubusercontent.com/Ashutosh-Panda2004/Ashutosh-Panda2004/main/assets/chip-shutdowncheck.svg" alt="ShutdownCheck live site" height="46" /></a>
+<a href="https://tokenslens.vercel.app/"><img src="https://raw.githubusercontent.com/Ashutosh-Panda2004/Ashutosh-Panda2004/main/assets/chip-tokenlens.svg" alt="TokenLens live site" height="46" /></a>
+<a href="https://interview-coach-ai-steel.vercel.app/"><img src="https://raw.githubusercontent.com/Ashutosh-Panda2004/Ashutosh-Panda2004/main/assets/chip-interviewcoach.svg" alt="InterviewCoach AI live site" height="46" /></a>
 
 </div>
 
@@ -23,11 +23,11 @@
 
 ## About
 
-I'm a software development engineer at Honeywell in Bengaluru, where I'm the sole backend engineer on a migration platform. Before that, I was a software engineering intern at Nielsen, working on a cross-browser metering extension used by over a million panelists.
+I'm a software development engineer at Honeywell in Bengaluru, where I'm the sole backend engineer on a migration platform. Before that, I was a software engineering intern at Nielsen, where I worked on a browser extension used by more than a million people.
 
-Outside work, I build small, focused developer tools — ShutdownCheck, TokenLens, and InterviewCoach AI, below — and contribute fixes and tests to open-source projects.
+Outside work, I build small developer tools (ShutdownCheck, TokenLens and InterviewCoach AI, below) and contribute fixes and tests to open source projects.
 
-**Now (October 2026):** hardening ShutdownCheck's release pipeline, day-to-day backend work at Honeywell, and small open-source contributions most weeks.
+**Now (October 2026):** improving ShutdownCheck's release pipeline, day to day backend work at Honeywell, and open source contributions most weeks.
 
 ---
 
@@ -55,7 +55,7 @@ Outside work, I build small, focused developer tools — ShutdownCheck, TokenLen
 
 ### TokenLens
 
-Cost observability for GitHub Copilot. It reads the local usage ledger, attributes spend to five cost centres, forecasts budget burn, and shows where credits are being wasted. Ships as a CLI, a local dashboard, and a VS Code extension, and runs entirely on your machine.
+Shows what GitHub Copilot is costing you. TokenLens reads the usage data stored on your machine, breaks the spend down by project and model, forecasts the month's bill, and shows where credits are being wasted. It comes as a CLI, a local dashboard, and a VS Code extension, and nothing leaves your machine.
 
 `TypeScript` · `Fastify` · `React` · `SQLite`
 
@@ -64,7 +64,7 @@ Cost observability for GitHub Copilot. It reads the local usage ledger, attribut
 
 ### ShutdownCheck
 
-Checks whether a service shuts down cleanly. It terminates the service under real load, the way an orchestrator would, and reports which of the seven stages of graceful shutdown failed — with named findings (SC000–SC017) and specific fixes for each. Works against processes, Docker containers, and in CI.
+Checks if a service shuts down cleanly. It stops the service under real load, the way a platform like Kubernetes would, and reports which of the seven shutdown stages failed, with a named finding (SC000–SC017) and a fix for each one. Works on local processes, Docker containers, and in CI.
 
 `Go` · `Docker` · `GitHub Actions`
 
@@ -73,7 +73,7 @@ Checks whether a service shuts down cleanly. It terminates the service under rea
 
 ### InterviewCoach AI
 
-Interview practice with a voice AI. Real-time voice interviews through Gemini Live, questions grounded in your resume, evidence-checked feedback with STAR review, a JavaScript practice arena, and a system-design canvas. Your data stays in your browser.
+Practice interviews with a voice AI. It runs live voice interviews, asks questions based on your resume, and gives feedback on your answers, including a STAR review. There is also a JavaScript practice area and a system design canvas. Your data stays in your browser.
 
 `React 19` · `TypeScript` · `Gemini Live API` · `Express`
 
@@ -84,11 +84,11 @@ Interview practice with a voice AI. Real-time voice interviews through Gemini Li
 
 ## Experience
 
-**Honeywell** — Software Development Engineer 1 · Feb 2026 – present
-Sole backend engineer on a migration platform. 
+**Honeywell**, Software Development Engineer 1 · Feb 2026 – present
+Sole backend engineer on a migration platform.
 
-**Nielsen** — Software Engineer Intern · Jan 2025 – Feb 2026
-Scaled a cross-browser metering extension to 1,00,000+ panelists at 99.9% uptime, with canary CI/CD and a Node.js validation layer over Oracle SQL pipelines.
+**Nielsen**, Software Engineer Intern · Jan 2025 – Feb 2026
+Scaled a browser extension to 1M+ users at 99.9% uptime. Built the data checks behind it, which handled 4M+ events a day.
 
 Six patents filed (three granted), an IEEE publication, and a Smart India Hackathon top-20 finish.
 
@@ -126,4 +126,4 @@ Notes on system design and engineering practice, on [Medium](https://medium.com/
 
 ## Contact
 
-The quickest way to reach me is email — [ashutoshpanda.india@gmail.com](mailto:ashutoshpanda.india@gmail.com). I'm also on [LinkedIn](https://www.linkedin.com/in/ashutosh2004/)
+The quickest way to reach me is email, at [ashutoshpanda.india@gmail.com](mailto:ashutoshpanda.india@gmail.com). I'm also on [LinkedIn](https://www.linkedin.com/in/ashutosh2004/)
