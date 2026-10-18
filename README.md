@@ -20,6 +20,10 @@
   </tr>
 </table>
 
+<br>
+
+<img src="./github-activity.svg" width="860" alt="GitHub activity: contributions by type, 77 merged pull requests, streaks and weekly activity" />
+
 </div>
 
 <div align="center">

@@ -1,0 +1,7 @@
+{
+ "commits": 313,
+ "pull_requests": 134,
+ "issues": 18,
+ "reviews": 10,
+ "repos": [["checkstyle", 37], ["Fineract", 4], ["rust-smallvec", 3], ["snowopslabs", 3], ["oras", 2], ["graywolf", 2]]
+}

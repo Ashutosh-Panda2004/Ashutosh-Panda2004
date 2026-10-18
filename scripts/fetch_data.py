@@ -114,6 +114,52 @@ def fetch_contributions():
     print("contributions.json saved")
 
 
+def fetch_activity(s):
+    """Category counts + top merged-PR repos for the GitHub activity card."""
+    path = os.path.join(ROOT, "data", "activity.json")
+    act = {}
+    if os.path.exists(path):
+        with open(path) as f:
+            act = json.load(f)
+    def total(q):
+        return s.get(f"{API}/search/issues", params={"q": q},
+                     timeout=30).json()["total_count"]
+    repos = []
+    for repo, label in [("checkstyle/checkstyle", "checkstyle"),
+                        ("apache/fineract", "Fineract"),
+                        ("servo/rust-smallvec", "rust-smallvec"),
+                        ("sagar2395/snowopslabs", "snowopslabs"),
+                        ("oras-project/oras", "oras"),
+                        ("chrissnell/graywolf", "graywolf")]:
+        n = total(f"author:{USERNAME} type:pr is:merged repo:{repo}")
+        if n:
+            repos.append([label, n])
+    repos.sort(key=lambda r: -r[1])
+    if repos:
+        act["repos"] = repos[:6]
+    try:
+        from datetime import timedelta
+        end = date.today()
+        start = end - timedelta(days=365)
+        query = {"query": "query($u:String!,$from:DateTime!,$to:DateTime!)"
+                 "{user(login:$u){contributionsCollection(from:$from,to:$to)"
+                 "{totalCommitContributions totalPullRequestContributions "
+                 "totalIssueContributions totalPullRequestReviewContributions}}}",
+                 "variables": {"u": USERNAME,
+                               "from": f"{start.isoformat()}T00:00:00Z",
+                               "to": f"{end.isoformat()}T23:59:59Z"}}
+        cc = s.post("https://api.github.com/graphql", json=query,
+                    timeout=30).json()["data"]["user"]["contributionsCollection"]
+        act.update({"commits": cc["totalCommitContributions"],
+                    "pull_requests": cc["totalPullRequestContributions"],
+                    "issues": cc["totalIssueContributions"],
+                    "reviews": cc["totalPullRequestReviewContributions"]})
+    except Exception as e:
+        print("activity graphql skipped:", e)
+    save("activity.json", act)
+    print("activity:", act)
+
+
 def main():
     s = requests.Session()
     s.headers["Accept"] = "application/vnd.github+json"
@@ -122,6 +168,7 @@ def main():
     fetch_profile(s)
     fetch_counts(s)
     fetch_contributions()
+    fetch_activity(s)
 
 
 if __name__ == "__main__":
