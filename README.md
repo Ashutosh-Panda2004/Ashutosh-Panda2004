@@ -23,7 +23,7 @@
 
 ## About
 
-I'm a software development engineer at Honeywell in Bengaluru, where I'm the sole backend engineer on a migration platform. Before that, I was a software engineering intern at Nielsen, where I worked on a browser extension used by more than a million people.
+I'm a software development engineer at Honeywell in Bengaluru, where I'm a backend engineer on a migration platform. Before that, I was a software engineering intern at Nielsen, where I worked on a browser extension used by more than a million people.
 
 Outside work, I build small developer tools (ShutdownCheck, TokenLens and InterviewCoach AI, below) and contribute fixes and tests to open source projects.
 
@@ -85,7 +85,7 @@ Practice interviews with a voice AI. It runs live voice interviews, asks questio
 ## Experience
 
 **Honeywell**, Software Development Engineer 1 · Feb 2026 – present
-Sole backend engineer on a migration platform.
+Backend engineer on a migration platform.
 
 **Nielsen**, Software Engineer Intern · Jan 2025 – Feb 2026
 Scaled a browser extension to 1M+ users at 99.9% uptime. Built the data checks behind it, which handled 4M+ events a day.
