@@ -1,6 +1,6 @@
 <div align="center">
 
-<a href="https://www.linkedin.com/in/ashutosh2004" target="_blank"><img src="./header.svg?v=8" width="860" alt="Ashutosh Panda, backend engineer from Bengaluru" /></a>
+<a href="https://www.linkedin.com/in/ashutosh2004" target="_blank"><img src="./header.svg?v=9" width="860" alt="Ashutosh Panda, backend engineer from Bengaluru" /></a>
 
 <br><br>
 

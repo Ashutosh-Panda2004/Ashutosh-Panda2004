@@ -62,7 +62,7 @@
 <animate attributeName="x" values="60.0;60.0;386.4;386.4;60.0;60.0" keyTimes="0.0000;0.7500;0.8435;0.9450;0.9825;1.0000" dur="20.0s" repeatCount="indefinite"/>
 <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.7500;0.9825;0.9826;1" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/>
 </rect></g>
-<g class="fade" style="animation-delay:1.9s"><text x="40" y="182" font-size="13" fill="#8b949e">SDE-1 at Honeywell · Bengaluru, IN · Go, TypeScript and backend systems</text></g>
+<g class="fade" style="animation-delay:1.9s"><text x="40" y="182" font-size="13" fill="#8b949e">SDE-1 at Honeywell · Bengaluru, IN</text></g>
 
 <g clip-path="url(#cardClip)"><rect x="0" y="32" width="860" height="2" fill="url(#accentBar)" opacity="0.55"/><rect x="0" y="0" width="860" height="70" fill="url(#cardSheen)"/><rect x="0" y="0" width="860" height="210" fill="url(#vig)"/></g>
 <rect x="1" y="1" width="858" height="208" rx="9" fill="none" stroke="#ffffff" stroke-opacity="0.05"/>

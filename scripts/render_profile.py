@@ -78,7 +78,7 @@ ROLES = [
     "Building TokenLens and ShutdownCheck",
     "Backend Systems and AI Engineering",
 ]
-TAGLINE = "SDE-1 at Honeywell · Bengaluru, IN · Go, TypeScript and backend systems"
+TAGLINE = "SDE-1 at Honeywell · Bengaluru, IN"
 
 
 def header_svg():
