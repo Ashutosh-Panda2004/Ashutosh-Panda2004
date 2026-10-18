@@ -27,10 +27,10 @@
 </g>
 <g class="fade" style="animation-delay:1.4s"><text x="40" y="148" font-size="16" fill="#8b949e">&gt;</text></g>
 <g class="fade" style="animation-delay:1.6s"><clipPath id="r0"><rect x="60" y="132" width="0" height="22">
-<animate attributeName="width" values="0.0;278.4;278.4;0.0;0.0" keyTimes="0.0000;0.0638;0.1560;0.1860;1.0000" dur="25.0s" repeatCount="indefinite"/></rect></clipPath>
-<text x="60" y="148" font-size="16" fill="#c9d1d9" textLength="278.4" lengthAdjust="spacingAndGlyphs" clip-path="url(#r0)">Backend Engineer at Honeywell</text>
+<animate attributeName="width" values="0.0;163.2;163.2;0.0;0.0" keyTimes="0.0000;0.0374;0.1560;0.1860;1.0000" dur="25.0s" repeatCount="indefinite"/></rect></clipPath>
+<text x="60" y="148" font-size="16" fill="#c9d1d9" textLength="163.2" lengthAdjust="spacingAndGlyphs" clip-path="url(#r0)">SDE-1 @ Honeywell</text>
 <rect x="60" y="134" width="9" height="18" fill="#39d353" opacity="0">
-<animate attributeName="x" values="60.0;338.4;338.4;60.0;60.0" keyTimes="0.0000;0.0638;0.1560;0.1860;1.0000" dur="25.0s" repeatCount="indefinite"/>
+<animate attributeName="x" values="60.0;223.2;223.2;60.0;60.0" keyTimes="0.0000;0.0374;0.1560;0.1860;1.0000" dur="25.0s" repeatCount="indefinite"/>
 <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.0000;0.1860;0.1861;1" dur="25.0s" repeatCount="indefinite" calcMode="discrete"/>
 </rect><clipPath id="r1"><rect x="60" y="132" width="0" height="22">
 <animate attributeName="width" values="0.0;0.0;220.8;220.8;0.0;0.0" keyTimes="0.0000;0.2000;0.2506;0.3560;0.3860;1.0000" dur="25.0s" repeatCount="indefinite"/></rect></clipPath>

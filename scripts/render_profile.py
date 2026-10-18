@@ -63,7 +63,7 @@ NAME = "Ashutosh Panda"
 PROMPT_USER = "ashutosh"
 PROMPT_HOST = "github"
 ROLES = [
-    "Backend Engineer at Honeywell",
+    "SDE-1 @ Honeywell",
     "Open Source Contributor",
     "77 merged pull requests",
     "Building TokenLens and ShutdownCheck",
@@ -127,6 +127,7 @@ def header_svg():
 
 
 
+
 # ---------------------------------------------------------------- portrait
 def portrait_svg():
     src = os.path.join(ROOT, "work", "source-prepped.png")
@@ -136,35 +137,20 @@ def portrait_svg():
     from PIL import Image
     W, H = 370, 420
     ramp = " .`:-=+*cs#%@"
-    cols, font, lh = 94, 6.0, 6.9
+    cols, font, lh = 92, 6.2, 7.0
     cw = font * 0.6
     img = Image.open(src).convert("L")
-    a_full = np.asarray(img, dtype=np.float32) / 255
-    ys, xs = np.nonzero(a_full > 0.04)
-    if len(xs) == 0:
-        raise ValueError("portrait source is empty")
-    subj = a_full[ys.min():ys.max() + 1, xs.min():xs.max() + 1]
-    sh, sw = subj.shape
-    band = subj[:max(1, int(sh * 0.18))]
-    bx = np.nonzero(band > 0.04)[1]
-    head_cx = float(np.median(bx)) if len(bx) else sw / 2
-    half = sw * 0.26
-    cx0 = int(max(0, head_cx - half))
-    cx1 = int(min(sw, head_cx + half))
-    crop = subj[:int(sh * 0.58), cx0:cx1]
-    ch, cw_px = crop.shape
-    rows = int(cols * cw / lh * ch / cw_px)
+    w, h = img.size
+    img = img.crop((int(0.04 * w), 0, int(0.96 * w), int(0.88 * h)))
+    rows = int(cols * cw / lh * img.height / img.width)
     max_rows = int((H - 52) / lh)
     if rows > max_rows:
-        keep = int(ch * max_rows / rows)
-        crop, rows = crop[:keep], max_rows
-    small = np.asarray(
-        Image.fromarray((crop * 255).astype("uint8")).resize(
-            (cols, rows), Image.LANCZOS), dtype=np.float32) / 255
-    nz = small[small > 0.04]
-    lo, hi = np.percentile(nz, [2, 99.5]) if nz.size else (0, 1)
-    a = np.where(small > 0.04,
-                 np.clip((small - lo) / max(hi - lo, 1e-6), 0, 1) ** 0.6, 0)
+        keep = int(img.height * max_rows / rows)
+        img, rows = img.crop((0, 0, img.width, keep)), max_rows
+    a = np.asarray(img.resize((cols, rows), Image.LANCZOS), dtype=np.float32) / 255
+    nz = a[a > 0.04]
+    lo, hi = np.percentile(nz, [5, 99]) if nz.size else (0, 1)
+    a = np.where(a > 0.04, np.clip((a - lo) / (hi - lo), 0, 1) ** 0.8, 0)
     grid_w = cols * cw
     x0 = (W - grid_w) / 2
     y0 = 32 + (H - 32 - rows * lh) / 2 + lh * 0.8
@@ -200,7 +186,9 @@ LANG_COLORS = {
     "JavaScript": "#f1e05a", "TypeScript": "#3178c6", "Python": "#3572A5",
     "CSS": "#663399", "HTML": "#e34c26", "Go": "#00ADD8", "Java": "#b07219",
     "Shell": "#89e051", "Dockerfile": "#384d54", "C++": "#f34b7d",
-    "C#": "#178600", "Rust": "#dea584",
+    "C#": "#178600", "Rust": "#dea584", "SCSS": "#c6538c", "Dart": "#00B4AB",
+    "C": "#555555", "Kotlin": "#A97BFF", "Swift": "#F05138", "HCL": "#844FBA",
+    "Jupyter Notebook": "#DA5B0B", "CMake": "#DA3434",
 }
 KEY_COLORS = [GREEN, CYAN, PURPLE, ORANGE, PINK]
 
@@ -223,7 +211,7 @@ def info_card_svg():
     st = load("contributions.json", {}).get("stats", {})
     langs = prof.get("languages", {})
     rows = [
-        ("Role", "Backend Engineer · Honeywell"),
+        ("Role", "SDE-1 @ Honeywell · Ex-SWE Intern @ Nielsen"),
         ("Now", "Backend work on a migration platform"),
         ("OSS", "checkstyle · Fineract · SW360"),
         ("Uptime", f"{_uptime(prof['created_at'])} on GitHub"
@@ -232,7 +220,7 @@ def info_card_svg():
         ("Backend", "Go · .NET · Node.js"),
         ("Frontend", "React · Vite · Tailwind"),
         ("Projects", "TokenLens · ShutdownCheck"),
-        ("PRs", f"{gh.get('prs_opened', '-')} opened · {gh.get('prs_merged', '-')} merged"),
+        ("PRs", f"{gh.get('prs_merged', '-')} merged · {gh.get('prs_opened', '-')} opened"),
         ("Reviews", f"{gh.get('prs_reviewed', '-')} PRs reviewed · {gh.get('issues_opened', '-')} issues"),
         ("Repos", f"{prof.get('public_repos', '-')} public · {prof.get('stars', '-')} stars"),
         ("Streak", f"{st.get('current_streak', 0)}d current · {st.get('longest_streak', 0)}d best"),
@@ -252,7 +240,7 @@ def info_card_svg():
             f'<tspan x="{x + 92}" fill="{FG}">{esc(val)}</tspan></text></g>')
     # language bar over the six biggest languages
     top = list(langs.items())[:6]
-    shown_total = sum(v for _, v in top) or 1
+    shown_total = sum(langs.values()) or 1
     by = ry + len(rows) * 20 + 4
     bar_w = W - 2 * x
     segs, legend, cx, lx, ly = [], [], x, x, by + 28
@@ -267,13 +255,14 @@ def info_card_svg():
         legend.append(f'<circle cx="{lx + 4}" cy="{ly - 4}" r="4" fill="{c}"/><text x="{lx + 13}" y="{ly}" font-size="11" fill="{MUTED}">{esc(label)}</text>')
         lx += len(label) * 6.6 + 30
     lines.append(
-        f'<clipPath id="barClip"><rect x="{x}" y="{by}" width="0" height="8" rx="4"><animate attributeName="width" from="0" to="{bar_w}" begin="1.6s" dur="1.2s" fill="freeze"/></rect></clipPath>'
+        f'<clipPath id="barClip"><rect x="{x}" y="{by}" width="0" height="8" rx="4"><animate attributeName="width" from="0" to="{bar_w}" begin="1.6s" dur="1.2s" fill="freeze" calcMode="spline" keySplines=".2 .8 .2 1" keyTimes="0;1"/></rect></clipPath>'
         f'<rect x="{x}" y="{by}" width="{bar_w}" height="8" rx="4" fill="{BORDER}"/>'
         f'<g clip-path="url(#barClip)">{"".join(segs)}</g>'
         f'<g class="ln" style="animation-delay:2.3s">{"".join(legend)}</g>')
     defs = """<style>.ln { opacity: 0; animation: ln .5s ease-out forwards; } @keyframes ln { from { opacity: 0; transform: translateX(-10px); } to { opacity: 1; transform: none; } }</style>"""
     write_svg("info-card.svg", window(W, H, f"{PROMPT_USER}@{PROMPT_HOST}: ~",
                                       "\n".join(lines), defs))
+
 
 
 
@@ -287,125 +276,106 @@ REGIONS = [
 ]
 GLOBE_R = 132
 GLOBE_C = (215, 205)
-GLOBE_TILT = 22.0
+GLOBE_TILT = math.radians(22)
 GLOBE_PERIOD = 36
-VIEW_LON = 35.0
+GLOBE_SAMPLES = 36
+ARC_COLORS = [CYAN, PURPLE, ORANGE, PINK, "#79c0ff"]
 
 
-def _land_points():
-    """Fallback coarse grid, used only if scripts/land_points.json is missing."""
-    return [(lat, lon) for lat in range(-56, 81, 8)
-            for lon in range(-180, 180, 8)]
-
-
-def _globe_pos(lat, theta_deg):
-    la, th = math.radians(lat), math.radians(theta_deg)
-    t = math.radians(GLOBE_TILT)
-    x = GLOBE_C[0] + GLOBE_R * math.cos(la) * math.sin(th)
-    y = GLOBE_C[1] - GLOBE_R * (math.sin(la) * math.cos(t)
-                                - math.cos(la) * math.cos(th) * math.sin(t))
-    return x, y
-
-
-def _globe_split(lat):
-    return GLOBE_C[1] - GLOBE_R * math.sin(math.radians(lat)) * math.cos(
-        math.radians(GLOBE_TILT))
-
-
-def _slerp(lat1, lon1, lat2, lon2):
+def _slerp_point(p, q, t):
     def vec(lat, lon):
         la, lo = math.radians(lat), math.radians(lon)
         return (math.cos(la) * math.cos(lo), math.cos(la) * math.sin(lo),
                 math.sin(la))
-    A, B = vec(lat1, lon1), vec(lat2, lon2)
-    dot = max(-1.0, min(1.0, sum(a * b for a, b in zip(A, B))))
-    ang = math.degrees(math.acos(dot))
-    n = max(5, int(round(ang / 7.0)))
-    pts, s = [], math.sin(math.radians(ang))
-    for i in range(1, n + 1):
-        f = i / n
-        ka = math.sin((1 - f) * math.radians(ang)) / s
-        kb = math.sin(f * math.radians(ang)) / s
-        v = tuple(ka * a + kb * b for a, b in zip(A, B))
-        pts.append((round(math.degrees(math.asin(max(-1.0, min(1.0, v[2])))), 1),
-                    round(math.degrees(math.atan2(v[1], v[0])), 1)))
-    return pts
+    v1, v2 = vec(*p), vec(*q)
+    om = math.acos(max(-1.0, min(1.0, sum(x * y for x, y in zip(v1, v2)))))
+    if om < 1e-6:
+        return p
+    s1 = math.sin((1 - t) * om) / math.sin(om)
+    s2 = math.sin(t * om) / math.sin(om)
+    v = tuple(s1 * x + s2 * y for x, y in zip(v1, v2))
+    return (math.degrees(math.asin(max(-1.0, min(1.0, v[2])))),
+            math.degrees(math.atan2(v[1], v[0])))
 
 
 def globe_svg():
     W, H = 430, 400
+    CX, CY, R = GLOBE_C[0], GLOBE_C[1], GLOBE_R
     lp = os.path.join(ROOT, "scripts", "land_points.json")
-    land = [tuple(p) for p in json.load(open(lp))] if os.path.exists(lp) \
-        else _land_points()
-    rows = {}
-    def row(lat):
-        return rows.setdefault(round(float(lat), 1),
-                               {"land": [], "route": [], "home": False})
+    land = [tuple(p) for p in json.load(open(lp))] if os.path.exists(lp) else []
+    rings = {}
     for lat, lon in land:
-        row(lat)["land"].append(lon)
-    for _name, rlat, rlon in REGIONS:
-        for lat, lon in _slerp(HOME[1], HOME[2], rlat, rlon):
-            row(lat)["route"].append(lon)
-    row(HOME[1])["home"] = True
-    home_delay = ((HOME[2] - VIEW_LON) % 360) / 360 * GLOBE_PERIOD
-    keys, groups = [], []
-    for i, lat in enumerate(sorted(rows)):
-        frames = []
-        for s in range(37):
-            x, y = _globe_pos(lat, s * 10)
-            frames.append(f"{100.0 * s / 36:.2f}%{{transform:translate({x:.1f}px,{y:.1f}px)}}")
-        keys.append(f"@keyframes kf{i}{{{''.join(frames)}}}.k{i}{{animation:kf{i} {GLOBE_PERIOD}s linear infinite}}")
-        split = _globe_split(lat)
-        r = 1.7 if abs(lat) <= 55 else 1.4
-        def circles(lons, twinkle=False):
-            out = []
-            for j, lon in enumerate(lons):
-                delay = ((lon - VIEW_LON) % 360) / 360 * GLOBE_PERIOD
-                tw = (f'<animate attributeName="opacity" values="0.15;1;0.15" dur="2.8s" '
-                      f'begin="{(j * 0.37) % 2.8:.2f}s" repeatCount="indefinite"/>') if twinkle else ""
-                out.append(f'<circle r="{r}" class="k{i}" style="animation-delay:-{delay:.2f}s">{tw}</circle>')
-            return "".join(out)
-        info = rows[lat]
-        if info["land"]:
-            dots = circles(sorted(info["land"]))
-            groups.append(f'<clipPath id="f{i}"><rect x="0" y="{split:.2f}" width="{W}" height="{H}"/></clipPath>'
-                          f'<g clip-path="url(#f{i})" fill="{GREEN}">{dots}</g>')
-            groups.append(f'<clipPath id="b{i}"><rect x="0" y="0" width="{W}" height="{split:.2f}"/></clipPath>'
-                          f'<g clip-path="url(#b{i})" fill="{GREEN}" opacity="0.14">{dots}</g>')
-        if info["route"]:
-            groups.append(f'<clipPath id="r{i}"><rect x="0" y="{split:.2f}" width="{W}" height="{H}"/></clipPath>'
-                          f'<g clip-path="url(#r{i})" fill="{ORANGE}">{circles(sorted(info["route"]), twinkle=True)}</g>')
-        if info["home"]:
-            groups.append(
-                f'<clipPath id="hf{i}"><rect x="0" y="{split:.2f}" width="{W}" height="{H}"/></clipPath>'
-                f'<g clip-path="url(#hf{i})">'
-                f'<circle r="2.8" fill="{ORANGE}" class="k{i}" style="animation-delay:-{home_delay:.2f}s"/>'
-                f'<circle r="3" fill="{ORANGE}" class="k{i}" style="animation-delay:-{home_delay:.2f}s">'
-                f'<animate attributeName="r" values="3;13" dur="1.8s" repeatCount="indefinite"/>'
-                f'<animate attributeName="opacity" values="0.8;0" dur="1.8s" repeatCount="indefinite"/></circle>'
-                f'<circle r="3.2" fill="#ffffff" class="k{i}" style="animation-delay:-{home_delay:.2f}s"/></g>')
-    grat = []
-    for lat in (-60, -30, 0, 30, 60):
-        rx = GLOBE_R * math.cos(math.radians(lat))
-        grat.append(f'<ellipse cx="{GLOBE_C[0]}" cy="{_globe_split(lat):.1f}" rx="{rx:.1f}" '
-                    f'ry="{rx * math.sin(math.radians(GLOBE_TILT)):.1f}" fill="none" stroke="#2d3a4a" stroke-width="0.8"/>')
-    legend = "Bengaluru → checkstyle · Fineract · SW360 · OpenMRS"
+        rings.setdefault(lat, []).append(lon)
+    keyframes = []
+
+    def ring(lat, lons, color, r, alt=1.0, back=0.0, anim=""):
+        phi = math.radians(lat)
+        a = alt * R * math.cos(phi)
+        b = a * math.sin(GLOBE_TILT)
+        ty = CY - alt * R * math.sin(phi) * math.cos(GLOBE_TILT)
+        c0 = -math.tan(phi) * math.tan(GLOBE_TILT)
+        if alt > 1:
+            c0 -= (alt - 1) * 0.6
+        k = len(keyframes)
+        steps = " ".join(
+            f"{100.0 * i / GLOBE_SAMPLES:.2f}%{{transform:translate({CX + a * math.sin(2 * math.pi * i / GLOBE_SAMPLES):.1f}px,{ty + b * math.cos(2 * math.pi * i / GLOBE_SAMPLES):.1f}px)}}"
+            for i in range(GLOBE_SAMPLES + 1))
+        keyframes.append(f"@keyframes k{k}{{{steps}}}.k{k}{{animation:k{k} {GLOBE_PERIOD}s linear infinite}}")
+        dots = "".join(
+            f'<circle r="{r}" class="k{k}" style="animation-delay:-{((lon - HOME[2]) % 360) / 360 * GLOBE_PERIOD:.2f}s">{anim}</circle>'
+            for lon in lons)
+        out = []
+        if c0 < 1:
+            out.append(f'<clipPath id="f{k}"><rect x="0" y="{ty + b * max(c0, -1.5):.2f}" width="{W}" height="{H}"/></clipPath>'
+                       f'<g clip-path="url(#f{k})" fill="{color}">{dots}</g>')
+        if back and c0 > -1:
+            out.append(f'<clipPath id="b{k}"><rect x="0" y="0" width="{W}" height="{ty + b * min(c0, 1.5):.2f}"/></clipPath>'
+                       f'<g clip-path="url(#b{k})" fill="{color}" opacity="{back}">{dots}</g>')
+        return "".join(out)
+
+    layers = []
+    for lat in range(-60, 61, 30):
+        phi = math.radians(lat)
+        a = R * math.cos(phi)
+        ty = CY - R * math.sin(phi) * math.cos(GLOBE_TILT)
+        layers.append(f'<ellipse cx="{CX}" cy="{ty:.1f}" rx="{a:.1f}" ry="{a * math.sin(GLOBE_TILT):.1f}" fill="none" stroke="#2d3a4a" stroke-width="0.8"/>')
+    for lat in sorted(rings):
+        layers.append(ring(lat, rings[lat], GREEN, 1.7, back=0.14))
+    arcs = []
+    home = (HOME[1], HOME[2])
+    for n, (_name, la, lo) in enumerate(REGIONS):
+        color = ARC_COLORS[n % len(ARC_COLORS)]
+        for s in range(1, 16):
+            t = s / 16
+            plat, plon = _slerp_point(home, (la, lo), t)
+            alt = 1 + 0.22 * math.sin(math.pi * t)
+            begin = (t * 1.4 + n * 0.5) % 2.8
+            pulse = f'<animate attributeName="opacity" values="0.15;1;0.15" dur="2.8s" begin="{begin:.2f}s" repeatCount="indefinite"/>'
+            arcs.append(ring(plat, [plon], color, 1.3, alt=alt, anim=pulse))
+        arcs.append(ring(la, [lo], color, 2.8))
+    pin = (ring(HOME[1], [HOME[2]], ORANGE, 3,
+                anim='<animate attributeName="r" values="3;13" dur="1.8s" repeatCount="indefinite"/>'
+                     '<animate attributeName="opacity" values="0.8;0" dur="1.8s" repeatCount="indefinite"/>')
+           + ring(HOME[1], [HOME[2]], "#fff", 3.2))
+    names = " · ".join(r[0] for r in REGIONS[:3]) + \
+        (f" +{len(REGIONS) - 3}" if len(REGIONS) > 3 else "")
     defs = f"""
 <radialGradient id="ocean" cx="0.38" cy="0.32" r="0.75"><stop offset="0" stop-color="#16324a"/><stop offset="0.7" stop-color="#0c1724"/><stop offset="1" stop-color="#070b12"/></radialGradient>
 <radialGradient id="shade" cx="0.5" cy="0.5" r="0.5"><stop offset="0.72" stop-color="#05080d" stop-opacity="0"/><stop offset="1" stop-color="#05080d" stop-opacity="0.75"/></radialGradient>
 <radialGradient id="atmo" cx="0.5" cy="0.5" r="0.5"><stop offset="0.86" stop-color="{CYAN}" stop-opacity="0"/><stop offset="0.92" stop-color="{CYAN}" stop-opacity="0.22"/><stop offset="1" stop-color="{CYAN}" stop-opacity="0"/></radialGradient>
-<style>{''.join(keys)}.fin{{opacity:0;animation:fin 1s ease-out .3s forwards}}@keyframes fin{{to{{opacity:1}}}}</style>"""
+<style>{''.join(keyframes)}.fin{{opacity:0;animation:fin 1s ease-out .3s forwards}}@keyframes fin{{to{{opacity:1}}}}</style>"""
     body = f"""
 <text x="20" y="56" font-size="12" fill="{FG}"><tspan fill="{GREEN}">$</tspan> ./open-source --from bengaluru</text>
 <g class="fin">
-<circle cx="{GLOBE_C[0]}" cy="{GLOBE_C[1]}" r="153" fill="url(#atmo)"/>
-<circle cx="{GLOBE_C[0]}" cy="{GLOBE_C[1]}" r="{GLOBE_R}" fill="url(#ocean)"/>
-{''.join(grat)}
-{''.join(groups)}
-<circle cx="{GLOBE_C[0]}" cy="{GLOBE_C[1]}" r="{GLOBE_R}" fill="url(#shade)"/>
-<circle cx="{GLOBE_C[0]}" cy="{GLOBE_C[1]}" r="{GLOBE_R}" fill="none" stroke="{CYAN}" stroke-opacity="0.25"/>
+<circle cx="{CX}" cy="{CY}" r="{R * 1.16:.0f}" fill="url(#atmo)"/>
+<circle cx="{CX}" cy="{CY}" r="{R}" fill="url(#ocean)"/>
+{''.join(layers)}
+<circle cx="{CX}" cy="{CY}" r="{R}" fill="url(#shade)"/>
+{''.join(arcs)}
+{pin}
+<circle cx="{CX}" cy="{CY}" r="{R}" fill="none" stroke="{CYAN}" stroke-opacity="0.25"/>
 </g>
-<text x="215" y="378" font-size="10.5" fill="{MUTED}" text-anchor="middle"><tspan fill="{ORANGE}">●</tspan> {esc(legend)}</text>
+<text x="215" y="378" font-size="10.5" fill="{MUTED}" text-anchor="middle"><tspan fill="{ORANGE}">●</tspan> {esc(HOME[0])} → {esc(names)}</text>
 """
     write_svg("globe.svg", window(W, H, "globe.sh", body, defs))
 
@@ -424,69 +394,74 @@ TECH_COLORS = [CYAN, GREEN, ORANGE, PURPLE, PINK]
 
 def tech_sphere_svg():
     W, H = 430, 400
-    cx, cy, R = 215, 208, 128
-    steps, period = 48, 30
-    cats = list(TECH.items())
-    order, idxs, remaining = [], [0] * len(cats), sum(len(v) for _, v in cats)
-    ci = 0
-    while remaining:
-        k = ci % len(cats)
-        cat, items = cats[k]
-        if idxs[k] < len(items):
-            order.append((cat, items[idxs[k]], TECH_COLORS[k]))
-            idxs[k] += 1
-            remaining -= 1
-        ci += 1
-    labels = []
-    for i, (cat, label, color) in enumerate(order):
-        frac = (i + 0.5) / len(order)
-        lat = math.degrees(math.asin(1 - 2 * frac))
-        lon0 = (i * 137.508) % 360
-        xs, ys, fs, os_ = [], [], [], []
-        for s in range(steps + 1):
-            th, la = math.radians(lon0 + 360.0 * s / steps), math.radians(lat)
-            z = math.cos(la) * math.cos(th)
-            xs.append(f"{cx + R * math.cos(la) * math.sin(th):.1f}")
-            ys.append(f"{cy - R * math.sin(la):.1f}")
-            fs.append(f"{9.5 + 5.5 * (z + 1) / 2:.1f}")
-            os_.append(f"{0.14 + 0.86 * max(0.0, (z + 1) / 2):.2f}")
-        labels.append(
-            f'<text x="{xs[0]}" y="{ys[0]}" text-anchor="middle" fill="{color}" font-weight="700" font-size="{fs[0]}">'
-            f'<animate attributeName="x" values="{";".join(xs)}" dur="{period}s" repeatCount="indefinite"/>'
-            f'<animate attributeName="y" values="{";".join(ys)}" dur="{period}s" repeatCount="indefinite"/>'
-            f'<animate attributeName="font-size" values="{";".join(fs)}" dur="{period}s" repeatCount="indefinite"/>'
-            f'<animate attributeName="opacity" values="{";".join(os_)}" dur="{period}s" repeatCount="indefinite"/>'
-            f'{esc(label)}</text>')
-    rings = []
-    for j in range(5):
-        vals = ";".join(f"{R * abs(math.sin(math.radians(360.0 * s / steps + j * 36))):.1f}"
-                        for s in range(steps + 1))
-        rings.append(f'<ellipse cx="{cx}" cy="{cy}" rx="{R}" ry="{R}" fill="none" stroke="#2d3a4a" stroke-width="0.8" opacity="0.8">'
-                     f'<animate attributeName="rx" values="{vals}" dur="{period}s" repeatCount="indefinite"/></ellipse>')
-    for lat in (-40, 0, 40):
-        rx = R * math.cos(math.radians(lat))
-        rings.append(f'<ellipse cx="{cx}" cy="{cy - R * math.sin(math.radians(lat)):.1f}" rx="{rx:.1f}" '
-                     f'ry="{rx * math.sin(math.radians(22)):.1f}" fill="none" stroke="#2d3a4a" stroke-width="0.8" opacity="0.8"/>')
-    legend, total_w = [], 0
-    widths = [len(c) * 6.4 + 24 for c in TECH]
-    total_w = sum(widths) - 8
+    CX, CY, R = 215, 212, 128
+    TILT = math.radians(18)
+    PERIOD, SAMPLES = 30, 60
+
+    def project(v, theta):
+        x, y, z = v
+        x, z = x * math.cos(theta) + z * math.sin(theta), \
+            -x * math.sin(theta) + z * math.cos(theta)
+        y, z = y * math.cos(TILT) - z * math.sin(TILT), \
+            y * math.sin(TILT) + z * math.cos(TILT)
+        return CX + R * x, CY - R * y, z
+
+    labels = [(t, cat) for cat, items in TECH.items() for t in items]
+    color = {cat: TECH_COLORS[k % len(TECH_COLORS)]
+             for k, cat in enumerate(TECH)}
+    n = len(labels)
+    golden = math.pi * (3 - math.sqrt(5))
+    pts = []
+    for i in range(n):
+        y = 1 - 2 * (i + 0.5) / n
+        r = math.sqrt(max(0.0, 1 - y * y))
+        pts.append((r * math.cos(golden * i), y, r * math.sin(golden * i)))
+    thetas = [2 * math.pi * k / SAMPLES for k in range(SAMPLES + 1)]
+    texts = []
+    for (label, cat), v in zip(labels, pts):
+        xs, ys, sizes, ops = [], [], [], []
+        for th in thetas:
+            x, y, z = project(v, th)
+            d = (z + 1) / 2
+            xs.append(f"{x:.1f}")
+            ys.append(f"{y + 4:.1f}")
+            sizes.append(f"{8.5 + 8 * d:.1f}")
+            ops.append(f"{0.18 + 0.82 * d ** 1.6:.2f}")
+        a = f'dur="{PERIOD}s" repeatCount="indefinite"'
+        texts.append(
+            f'<text text-anchor="middle" fill="{color[cat]}" font-weight="700" x="{xs[0]}" y="{ys[0]}" font-size="{sizes[0]}" opacity="{ops[0]}">{esc(label)}'
+            f'<animate attributeName="x" values="{";".join(xs)}" {a}/>'
+            f'<animate attributeName="y" values="{";".join(ys)}" {a}/>'
+            f'<animate attributeName="font-size" values="{";".join(sizes)}" {a}/>'
+            f'<animate attributeName="opacity" values="{";".join(ops)}" {a}/></text>')
+    wire = []
+    for lat in (-60, -30, 0, 30, 60):
+        p = math.radians(lat)
+        rx = R * math.cos(p)
+        wire.append(f'<ellipse cx="{CX}" cy="{CY - R * math.sin(p) * math.cos(TILT):.1f}" rx="{rx:.1f}" ry="{rx * math.sin(TILT):.1f}" fill="none" stroke="#2d3a4a"/>')
+    for m in range(0, 180, 30):
+        rxs = ";".join(f"{abs(R * math.sin(math.radians(m) + th)):.1f}"
+                       for th in thetas)
+        wire.append(f'<ellipse cx="{CX}" cy="{CY}" rx="{R}" ry="{R}" fill="none" stroke="#2d3a4a">'
+                    f'<animate attributeName="rx" values="{rxs}" dur="{PERIOD}s" repeatCount="indefinite"/></ellipse>')
+    legend = []
+    total_w = sum(len(c) + 4 for c in TECH) * 6.4
     lx = (W - total_w) / 2
-    for k, cat in enumerate(TECH):
-        legend.append(f'<circle cx="{lx + 3.5:.1f}" cy="374" r="3.5" fill="{TECH_COLORS[k]}"/>'
-                      f'<text x="{lx + 10.5:.1f}" y="378" font-size="10.5" fill="{MUTED}">{esc(cat)}</text>')
-        lx += widths[k]
+    for c in TECH:
+        legend.append(f'<circle cx="{lx + 4:.1f}" cy="{H - 26}" r="3.5" fill="{color[c]}"/>'
+                      f'<text x="{lx + 11:.1f}" y="{H - 22}" font-size="10.5" fill="{MUTED}">{esc(c)}</text>')
+        lx += (len(c) + 4) * 6.4
     defs = f"""
 <radialGradient id="core" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="{PURPLE}" stop-opacity="0.18"/><stop offset="0.6" stop-color="{CYAN}" stop-opacity="0.05"/><stop offset="1" stop-color="{CYAN}" stop-opacity="0"/></radialGradient>
 <style>.fin{{opacity:0;animation:fin 1s ease-out .3s forwards}}@keyframes fin{{to{{opacity:1}}}}</style>"""
     body = f"""
 <text x="20" y="56" font-size="12" fill="{FG}"><tspan fill="{GREEN}">$</tspan> ls ~/stack --3d</text>
 <g class="fin">
-<circle cx="{cx}" cy="{cy}" r="150" fill="url(#core)"/>
-<circle cx="{cx}" cy="{cy}" r="{R}" fill="none" stroke="#2d3a4a"/>
-{''.join(rings)}
-{''.join(labels)}
-{''.join(legend)}
+<circle cx="{CX}" cy="{CY}" r="{R * 1.25:.0f}" fill="url(#core)"/>
+{''.join(wire)}
+{''.join(texts)}
 </g>
+{''.join(legend)}
 """
     write_svg("tech-sphere.svg", window(W, H, "stack.sh", body, defs))
 
@@ -513,99 +488,110 @@ def _weeks(days):
 
 def skyline_svg():
     W, H = 860, 470
+    IX, IY = 11.2, 4.8
+    JX, JY = -11.2, 6.0
+    HMAX = 105
+    INSET = 0.1
+    TOPS = ["#1f2630", "#1a6b3c", "#1f9a4b", "#33c25a", "#5ae27a", "#9dffbe"]
+    LEFT = ["#171d25", "#0f4a29", "#137034", "#22903f", "#36ad54", "#6fe597"]
+    RIGHT = ["#12171e", "#0a3520", "#0d5226", "#196c30", "#26843f", "#4cc173"]
+    from datetime import date, timedelta
     data = load("contributions.json", {})
     days, st = data.get("days", []), data.get("stats", {})
-    maxc = max((d["count"] for d in days), default=1) or 1
-    OX, OY = 150.0, 88.0
-    WX, WY, DX, DY = 11.2, 4.8, -11.2, 6.0
-    LEVELS = {
-        1: ("#1a6b3c", "#0f4a29", "#0a3520"),
-        2: ("#26a641", "#177245", "#0e4d2e"),
-        3: ("#39d353", "#27a844", "#1c7f33"),
-        4: ("#69f0a0", "#3fce74", "#27a854"),
-    }
-    PEAK = ("#c9f7dc", "#69f0a0", "#39d353")
-    towers = []
-    for i, d in enumerate(days):
-        w, wd = divmod(i, 7)
-        towers.append((OY + w * WY + wd * DY, w, wd,
-                       OX + w * WX + wd * DX, OY + w * WY + wd * DY, d))
-    towers.sort(key=lambda t: (t[0], t[1], t[2]))
-    parts, month_labels, seen_months = [], [], set()
-    peak_pos = None
-    for oi, (_, w, wd, cxp, cyp, d) in enumerate(towers):
-        c = d["count"]
-        delay = 0.3 + oi * 0.004
-        title = f"<title>{c} contributions on {d['date']}</title>"
-        if wd == 6:
-            from datetime import date
-            mon = date.fromisoformat(d["date"]).strftime("%b")
-            key = date.fromisoformat(d["date"]).strftime("%Y-%m")
-            if key not in seen_months:
-                seen_months.add(key)
-                lx, ly = OX + w * WX + 6 * DX + 2, OY + w * WY + 6 * DY + 47
-                month_labels.append(f'<text x="{lx:.1f}" y="{ly:.1f}" font-size="10" fill="{MUTED}" transform="rotate(23.2 {lx:.1f} {ly:.1f})">{mon}</text>')
-        if c == 0:
-            parts.append(f'<g class="t" style="animation-delay:{delay:.2f}s"><polygon points="{cxp:.1f},{cyp - 4.3:.1f} {cxp + 9:.1f},{cyp - 0.5:.1f} {cxp:.1f},{cyp + 4.3:.1f} {cxp - 9:.1f},{cyp + 0.5:.1f}" fill="#1f2630"/>{title}</g>')
+    if not days:
+        return
+    first = date.fromisoformat(days[0]["date"])
+    start = first - timedelta(days=(first.weekday() + 1) % 7)
+    cols = (date.fromisoformat(days[-1]["date"]) - start).days // 7 + 1
+    peak = max(1, max(d["count"] for d in days))
+    ox = (W - (cols + 7) * IX) / 2 + 7 * IX - 10
+    oy = 92
+
+    def P(i, j, h=0.0):
+        return ox + i * IX + j * JX, oy + i * IY + j * JY - h
+
+    def poly(pts, fill):
+        return f'<polygon points="{" ".join(f"{x:.1f},{y:.1f}" for x, y in pts)}" fill="{fill}"/>'
+
+    cells = []
+    for d in days:
+        off = (date.fromisoformat(d["date"]) - start).days
+        cells.append((off // 7, off % 7, d))
+    cells.sort(key=lambda t: (t[0] + t[1], t[1]))
+    out, best_top = [], None
+    a, b = INSET, 1 - INSET
+    for i, j, d in cells:
+        lvl = d["level"]
+        if d["count"] == peak:
+            lvl = 5
+        h = 0 if d["count"] == 0 else 3 + math.sqrt(d["count"] / peak) * HMAX
+        top = [P(i + a, j + a, h), P(i + b, j + a, h),
+               P(i + b, j + b, h), P(i + a, j + b, h)]
+        delay = 0.4 + i * 0.035 + j * 0.03
+        tip = f"<title>{d['count']} contributions on {d['date']}</title>"
+        if h == 0:
+            out.append(f'<g class="t" style="animation-delay:{delay:.2f}s">{poly(top, TOPS[0])}{tip}</g>')
             continue
-        h = 3 + math.sqrt(c / maxc) * 96
-        ratio = c / maxc
-        top_c, left_c, right_c = PEAK if c == maxc else LEVELS[
-            1 if ratio <= 0.25 else 2 if ratio <= 0.5 else 3 if ratio <= 0.75 else 4]
-        ty = cyp - h
-        parts.append(
-            f'<g class="b" style="animation-delay:{delay:.2f}s">'
-            f'<polygon points="{cxp - 9:.1f},{ty + 0.5:.1f} {cxp:.1f},{ty + 4.3:.1f} {cxp:.1f},{cyp + 4.3:.1f} {cxp - 9:.1f},{cyp + 0.5:.1f}" fill="{left_c}"/>'
-            f'<polygon points="{cxp + 9:.1f},{ty - 0.5:.1f} {cxp:.1f},{ty + 4.3:.1f} {cxp:.1f},{cyp + 4.3:.1f} {cxp + 9:.1f},{cyp - 0.5:.1f}" fill="{right_c}"/>'
-            f'<polygon points="{cxp:.1f},{ty - 4.3:.1f} {cxp + 9:.1f},{ty - 0.5:.1f} {cxp:.1f},{ty + 4.3:.1f} {cxp - 9:.1f},{ty + 0.5:.1f}" fill="{top_c}"/>'
-            f'{title}</g>')
-        if c == maxc:
-            peak_pos = (cxp, ty)
-    beam, peak_label = "", ""
-    if peak_pos:
-        from datetime import date
-        px, pty = peak_pos
-        best = st.get("best_day", {})
-        try:
-            bdate = date.fromisoformat(best.get("date", "")).strftime("%b %d")
-        except Exception:
-            bdate = best.get("date", "")
-        beam = f'<polygon points="{px - 3:.1f},{pty + 4:.1f} {px + 3:.1f},{pty + 4:.1f} {px + 1:.1f},{pty - 44:.1f} {px - 1:.1f},{pty - 44:.1f}" fill="url(#beam)"/>'
-        peak_label = f'<text x="{px + 12:.1f}" y="{pty - 48:.1f}" font-size="11" fill="{ORANGE}">peak {best.get("count", 0)} · {esc(bdate)}</text>'
+        left = [P(i + a, j + b, h), P(i + b, j + b, h),
+                P(i + b, j + b), P(i + a, j + b)]
+        right = [P(i + b, j + a, h), P(i + b, j + b, h),
+                 P(i + b, j + b), P(i + b, j + a)]
+        out.append(f'<g class="b" style="animation-delay:{delay:.2f}s">'
+                   f'{poly(left, LEFT[lvl])}{poly(right, RIGHT[lvl])}{poly(top, TOPS[lvl])}{tip}</g>')
+        if d["count"] == peak and best_top is None:
+            best_top = (P(i + 0.5, j + 0.5, h), d)
+    months, seen = [], set()
+    for i, j, d in cells:
+        dt = date.fromisoformat(d["date"])
+        if j == 0 and dt.day <= 7 and dt.month not in seen:
+            seen.add(dt.month)
+            x, y = P(i + 0.2, 7.5)
+            ang = math.degrees(math.atan2(IY, IX))
+            months.append(f'<text x="{x:.1f}" y="{y + 8:.1f}" font-size="10" fill="{MUTED}" transform="rotate({ang:.1f} {x:.1f} {y + 8:.1f})">{dt.strftime("%b")}</text>')
+    beacon = ""
+    if best_top:
+        (bx, by), bd = best_top
+        label = f"{bd['count']} · {date.fromisoformat(bd['date']).strftime('%b %d')}"
+        beacon = (
+            f'<g class="fin" style="animation-delay:3.2s">'
+            f'<rect x="{bx - 1.5:.1f}" y="{by - 46:.1f}" width="3" height="46" fill="url(#beam)"/>'
+            f'<circle cx="{bx:.1f}" cy="{by - 48:.1f}" r="4" fill="{ORANGE}"><animate attributeName="r" values="3;6;3" dur="1.6s" repeatCount="indefinite"/></circle>'
+            f'<circle cx="{bx:.1f}" cy="{by - 48:.1f}" r="4" fill="none" stroke="{ORANGE}"><animate attributeName="r" values="4;16" dur="1.6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.9;0" dur="1.6s" repeatCount="indefinite"/></circle>'
+            f'<text x="{bx + 12:.1f}" y="{by - 52:.1f}" font-size="11" fill="{ORANGE}">peak {esc(label)}</text></g>')
     def fmt_range(r):
-        from datetime import date
         try:
-            a = date.fromisoformat(r[0]).strftime("%b %Y")
-            b = date.fromisoformat(r[1]).strftime("%b %Y")
-            return f"{a} → {b}"
+            a_ = date.fromisoformat(r[0]).strftime("%b %Y")
+            b_ = date.fromisoformat(r[1]).strftime("%b %Y")
+            return f"{a_} → {b_}"
         except Exception:
             return ""
-    stats_rows = [
-        ("current streak", CYAN, f"{st.get('current_streak', 0)} days"),
-        ("longest streak", PURPLE, f"{st.get('longest_streak', 0)} days"),
-        ("active days", GREEN, f"{st.get('active_days', 0)} / {len(days)}"),
-        ("busiest weekday", ORANGE, esc(st.get('busiest_weekday', '-'))),
+    rows = [
+        ("current streak", f"{st.get('current_streak', 0)} day{'s' if st.get('current_streak', 0) != 1 else ''}", CYAN),
+        ("longest streak", f"{st.get('longest_streak', 0)} day{'s' if st.get('longest_streak', 0) != 1 else ''}", PURPLE),
+        ("active days", f"{st.get('active_days', 0)} / {len(days)}", GREEN),
+        ("busiest weekday", esc(st.get('busiest_weekday', '-')), ORANGE),
     ]
-    stats = "".join(
-        f'<text x="36" y="{366 + k * 22}" font-size="12" fill="{MUTED}">{label}<tspan x="168" fill="{color}" font-weight="700">{val}</tspan></text>'
-        for k, (label, color, val) in enumerate(stats_rows))
-    defs = """
-<radialGradient id="glow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#39d353" stop-opacity="0.16"/><stop offset="1" stop-color="#39d353" stop-opacity="0"/></radialGradient>
-<linearGradient id="beam" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#ffa657" stop-opacity="0.9"/><stop offset="1" stop-color="#ffa657" stop-opacity="0"/></linearGradient>
-<linearGradient id="txt" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#39d353"/><stop offset="1" stop-color="#58d5e8"/></linearGradient>
-<style>.b{transform-box:fill-box;transform-origin:50% 100%;transform:scaleY(0);animation:rise .9s cubic-bezier(.2,1.3,.4,1) forwards}@keyframes rise{to{transform:scaleY(1)}}.t,.fin{opacity:0;animation:fin .6s ease-out forwards}@keyframes fin{to{opacity:1}}</style>"""
+    stats_bl = "".join(
+        f'<g class="fin" style="animation-delay:{2.6 + k * 0.15:.2f}s"><text x="36" y="{H - 104 + k * 22}" font-size="12" fill="{MUTED}">{lbl}<tspan x="168" fill="{c}" font-weight="700">{v}</tspan></text></g>'
+        for k, (lbl, v, c) in enumerate(rows))
+    gx, gy = P(cols / 2, 3.5)
+    defs = f"""
+<radialGradient id="glow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="{GREEN}" stop-opacity="0.16"/><stop offset="1" stop-color="{GREEN}" stop-opacity="0"/></radialGradient>
+<linearGradient id="beam" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="{ORANGE}" stop-opacity="0.9"/><stop offset="1" stop-color="{ORANGE}" stop-opacity="0"/></linearGradient>
+<linearGradient id="txt" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="{GREEN}"/><stop offset="1" stop-color="{CYAN}"/></linearGradient>
+<style>.b{{transform-box:fill-box;transform-origin:50% 100%;transform:scaleY(0);animation:rise .9s cubic-bezier(.2,1.3,.4,1) forwards}}@keyframes rise{{to{{transform:scaleY(1)}}}}.t,.fin{{opacity:0;animation:fin .6s ease-out forwards}}@keyframes fin{{to{{opacity:1}}}}</style>"""
     body = f"""
-<text x="36" y="62" font-size="13" fill="{FG}"><tspan fill="{GREEN}">$</tspan> ./skyline --user Ashutosh-Panda2004 --3d</text>
-<ellipse cx="430" cy="240" rx="400" ry="180" fill="url(#glow)"/>
-{''.join(parts)}
-{''.join(month_labels)}
-{beam}{peak_label}
-<g class="fin" style="animation-delay:2.2s" text-anchor="end">
-  <text x="824" y="98" font-size="44" font-weight="800" fill="url(#txt)">{st.get('total', 0):,}</text>
-  <text x="824" y="120" font-size="13" fill="{FG}">contributions in the last year</text>
-  <text x="824" y="139" font-size="11" fill="{MUTED}">{esc(fmt_range(st.get('range', [])))}</text>
+<ellipse cx="{gx:.0f}" cy="{gy:.0f}" rx="380" ry="170" fill="url(#glow)"/>
+<text x="36" y="62" font-size="13" fill="{FG}"><tspan fill="{GREEN}">$</tspan> ./skyline --user {esc(data.get('username', 'Ashutosh-Panda2004'))} --3d</text>
+{''.join(out)}
+{''.join(months)}
+{beacon}
+<g class="fin" style="animation-delay:2.4s" text-anchor="end">
+  <text x="{W - 36}" y="98" font-size="44" font-weight="800" fill="url(#txt)">{st.get('total', 0):,}</text>
+  <text x="{W - 36}" y="120" font-size="13" fill="{FG}">contributions in the last year</text>
+  <text x="{W - 36}" y="139" font-size="11" fill="{MUTED}">{esc(fmt_range(st.get('range', [])))}</text>
 </g>
-<g class="fin" style="animation-delay:2.5s">{stats}</g>
+{stats_bl}
 """
     write_svg("contrib-skyline.svg", window(W, H, "skyline.sh", body, defs))
 
@@ -614,48 +600,71 @@ def skyline_svg():
 # ---------------------------------------------------------------- heatmap
 def heatmap_svg():
     W, H = 860, 270
+    CELL, GAP = 12, 3.2
+    STEP = CELL + GAP
+    from datetime import date, timedelta
     data = load("contributions.json", {})
     days, st = data.get("days", []), data.get("stats", {})
-    cell, step = 12, 15.2
-    x0, y0 = 42.8, 92
-    cells, month_labels, seen = [], [], set()
-    from datetime import date
-    for i, d in enumerate(days):
-        col, row = divmod(i, 7)
-        x, y = x0 + col * step, y0 + row * step
-        delay = (col + row) * 0.018
-        cells.append(f'<rect class="cell" style="animation-delay:{delay:.3f}s" x="{x:.1f}" y="{y:.1f}" width="{cell}" height="{cell}" rx="2.5" fill="{PALETTE[d["level"]]}"><title>{d["date"]}: {d["count"]}</title></rect>')
+    if not days:
+        return
+    first = date.fromisoformat(days[0]["date"])
+    start = first - timedelta(days=(first.weekday() + 1) % 7)
+    cols = (date.fromisoformat(days[-1]["date"]) - start).days // 7 + 1
+    grid_w = cols * STEP - GAP
+    x0 = (W - grid_w) / 2 + 14
+    y0 = 92
+    cells, months, last_month = [], [], None
+    best_count = max(1, st.get("best_day", {}).get("count", 1))
+    for d in days:
         dt = date.fromisoformat(d["date"])
-        if row == 0 and dt.strftime("%Y-%m") not in seen:
-            seen.add(dt.strftime("%Y-%m"))
-            if not (col == 0 and dt.day != 1):
-                month_labels.append(f'<text x="{x:.1f}" y="{y0 - 9}" font-size="11" fill="{MUTED}">{dt.strftime("%b")}</text>')
-    weekdays = "".join(
-        f'<text x="{x0 - 10}" y="{y0 + r * step + 10}" font-size="10" fill="{MUTED}" text-anchor="end">{label}</text>'
-        for r, label in [(1, "Mon"), (3, "Wed"), (5, "Fri")])
-    legend = [f'<text x="707" y="{y0 + 7 * step + 24}" font-size="11" fill="{MUTED}" text-anchor="end">Less</text>']
-    for i, c in enumerate(PALETTE[1:]):
-        legend.append(f'<rect x="{715 + i * (cell + 3.2):.1f}" y="{y0 + 7 * step + 12}" width="{cell}" height="{cell}" rx="2.5" fill="{c}"/>')
-    legend.append(f'<text x="809" y="{y0 + 7 * step + 24}" font-size="11" fill="{MUTED}">More</text>')
+        off = (dt - start).days
+        c, r = divmod(off, 7)
+        x, y = x0 + c * STEP, y0 + r * STEP
+        lvl = d["level"]
+        if d["count"] == best_count:
+            lvl = 5
+        delay = (c + r * 1.5) * 0.018
+        cells.append(f'<rect x="{x:.1f}" y="{y:.1f}" width="{CELL}" height="{CELL}" rx="2.5" fill="{PALETTE[lvl]}" class="c" style="animation-delay:{delay:.3f}s"><title>{d["count"]} on {d["date"]}</title></rect>')
+        if r == 0 and dt.month != last_month and dt.day <= 7 and c < cols - 2:
+            months.append(f'<text x="{x:.1f}" y="{y0 - 9}" font-size="11" fill="{MUTED}">{dt.strftime("%b")}</text>')
+            last_month = dt.month
+    wd = "".join(
+        f'<text x="{x0 - 10}" y="{y0 + r * STEP + 10}" font-size="10" fill="{MUTED}" text-anchor="end">{n}</text>'
+        for r, n in ((1, "Mon"), (3, "Wed"), (5, "Fri")))
+    legend_x = x0 + grid_w - 6 * 15 - 40
+    ly = y0 + 7 * STEP + 14
+    legend = (
+        f'<text x="{legend_x - 8}" y="{ly + 10}" font-size="11" fill="{MUTED}" text-anchor="end">Less</text>'
+        + "".join(f'<rect x="{legend_x + i * 15}" y="{ly}" width="{CELL}" height="{CELL}" rx="2.5" fill="{p}"/>' for i, p in enumerate(PALETTE))
+        + f'<text x="{legend_x + 6 * 15 + 4}" y="{ly + 10}" font-size="11" fill="{MUTED}">More</text>')
     best = st.get("best_day", {})
+    try:
+        best_label = date.fromisoformat(best.get("date", "")).strftime("%b %d")
+    except Exception:
+        best_label = ""
     groups = [
-        (42.8, GREEN, f"{st.get('total', 0):,}", "contributions"),
-        (202, CYAN, f"{st.get('current_streak', 0)}d", "current streak"),
-        (368.4, PURPLE, f"{st.get('longest_streak', 0)}d", "longest streak"),
-        (534.8, ORANGE, f"{best.get('count', 0)}", "best day"),
+        (f"{st.get('total', 0):,}", "contributions", GREEN),
+        (f"{st.get('current_streak', 0)}d", "current streak", CYAN),
+        (f"{st.get('longest_streak', 0)}d", "longest streak", PURPLE),
+        (f"{best.get('count', 0)}", f"best day · {best_label}", ORANGE),
     ]
-    stats = "".join(
-        f'<text x="{gx}" y="250" font-size="15" font-weight="700" fill="{color}">{num}<tspan font-size="11" font-weight="400" fill="{MUTED}" dx="6">{label}</tspan></text>'
-        for gx, color, num, label in groups)
+    foot, sx = [], x0
+    for i, (v, label, color) in enumerate(groups):
+        foot.append(f'<g class="f" style="animation-delay:{1.6 + i * 0.15:.2f}s"><text x="{sx:.1f}" y="{H - 20}" font-size="15" font-weight="700" fill="{color}">{esc(v)}<tspan font-size="11" font-weight="400" fill="{MUTED}" dx="6">{esc(label)}</tspan></text></g>')
+        sx += (len(v) + len(label)) * 7.2 + 44
+    clip_cells = "".join(c.split("<title>")[0].replace(' class="c"', "") + "</rect>" for c in cells)
+    defs = f"""
+<linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="0.5" stop-color="#fff" stop-opacity="0.22"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<clipPath id="gridClip">{clip_cells}</clipPath>
+<style>.c{{opacity:0;transform-box:fill-box;transform-origin:center;animation:pop .45s cubic-bezier(.2,1.6,.4,1) forwards}}@keyframes pop{{from{{opacity:0;transform:scale(.2)}}to{{opacity:1;transform:scale(1)}}}}.f{{opacity:0;animation:fin .6s ease-out forwards}}@keyframes fin{{to{{opacity:1}}}}</style>"""
     body = f"""
-<text x="{x0}" y="58" font-size="13" fill="{FG}"><tspan fill="{GREEN}">$</tspan> git log --since="1 year ago" | heatmap</text>
-{''.join(month_labels)}
-{weekdays}
+<text x="{x0}" y="{y0 - 34}" font-size="13" fill="{FG}"><tspan fill="{GREEN}">$</tspan> git log --since="1 year ago" | heatmap</text>
+{''.join(months)}{wd}
 {''.join(cells)}
-{''.join(legend)}
-{stats}
+<g clip-path="url(#gridClip)"><rect x="{x0 - 160}" y="{y0}" width="160" height="{7 * STEP}" fill="url(#sweep)"><animate attributeName="x" values="{x0 - 160};{x0 + grid_w + 160}" begin="2.2s" dur="3.2s" repeatCount="indefinite"/></rect></g>
+{legend}
+{''.join(foot)}
 """
-    defs = """<style>.cell{opacity:0;animation:cell .4s ease-out forwards}@keyframes cell{from{opacity:0}to{opacity:1}}</style>"""
     write_svg("contrib-heatmap.svg", window(W, H, "contributions.sh", body, defs))
 
 
@@ -670,76 +679,105 @@ def activity_svg():
     commits = act.get("commits", 0)
     prs = act.get("pull_requests", 0) or gh.get("prs_opened", 0)
     issues_reviews = act.get("issues", 0) + act.get("reviews", 0)
-    rows = [("Commits", commits, GREEN), ("Pull Requests", prs, CYAN),
-            ("Issues + Reviews", issues_reviews, PURPLE)]
-    other = max(total - sum(v for _, v, _ in rows), 0)
-    cx, cy, r = 132, 176, 62
-    circ = 2 * math.pi * r
+    other = max(total - commits - prs - issues_reviews, 0)
+    # donut, mirroring the reference stats card: thin ring, animated segments
+    DCX, DCY, DR = 132, 168, 60
+    circ = 2 * math.pi * DR
+    items = [(commits, GREEN), (prs, CYAN), (issues_reviews, PURPLE),
+             (other, "#6e7681")]
+    gap = 3 if sum(1 for v, _ in items if v) > 1 else 0
     segs, cum = [], 0.0
-    for val, color in [(commits, GREEN), (prs, CYAN), (issues_reviews, PURPLE),
-                       (other, "#30363d")]:
-        if val <= 0:
-            continue
-        frac = val / total
-        segs.append(f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="none" stroke="{color}" stroke-width="22" '
-                    f'stroke-dasharray="{frac * circ:.1f} {circ:.1f}" transform="rotate({-90 + cum * 360:.1f} {cx} {cy})"/>')
-        cum += frac
-    row_svg = []
-    for k, (label, val, color) in enumerate(rows):
-        y = 118 + k * 52
+    for k, (val, color) in enumerate(items):
+        seg = circ * val / total
+        if seg > gap:
+            segs.append(
+                f'<circle cx="{DCX}" cy="{DCY}" r="{DR}" fill="none" stroke="{color}" stroke-width="10" '
+                f'stroke-dasharray="0 {circ:.1f}" stroke-dashoffset="{-cum:.1f}" transform="rotate(-90 {DCX} {DCY})">'
+                f'<animate attributeName="stroke-dasharray" from="0 {circ:.1f}" to="{seg - gap:.1f} {circ:.1f}" '
+                f'begin="{0.6 + k * 0.45:.2f}s" dur="0.7s" fill="freeze" calcMode="spline" keySplines=".3 .7 .3 1" keyTimes="0;1"/></circle>')
+        cum += seg
+    donut = (f'<circle cx="{DCX}" cy="{DCY}" r="{DR}" fill="none" stroke="{BORDER}" stroke-width="10"/>'
+             + "".join(segs)
+             + f'<g class="fin" style="animation-delay:.4s" text-anchor="middle">'
+               f'<text x="{DCX}" y="{DCY + 6}" font-size="34" font-weight="800" fill="{FG}">{total:,}</text>'
+               f'<text x="{DCX}" y="{DCY + 26}" font-size="11" fill="{MUTED}">contributions</text></g>')
+    rows_svg = []
+    for k, (label, val, color) in enumerate(
+            [("Commits", commits, GREEN), ("Pull Requests", prs, CYAN),
+             ("Issues + Reviews", issues_reviews, PURPLE)]):
+        ry = 118 + k * 52
         share = 100 * val / total
-        row_svg.append(
-            f'<text x="248" y="{y}" font-size="13" font-weight="700" fill="{color}">{esc(label)}</text>'
-            f'<text x="382" y="{y}" font-size="15" font-weight="700" fill="{FG}">{val}<tspan font-size="11" font-weight="400" fill="{MUTED}"> / {total:,}</tspan></text>'
-            f'<text x="548" y="{y}" font-size="11" fill="{MUTED}" text-anchor="end">share <tspan dx="4" fill="{color}" font-weight="700">{share:.1f}%</tspan></text>'
-            f'<rect x="248" y="{y + 10}" width="300" height="6" rx="3" fill="#30363d"/>'
-            f'<rect x="248" y="{y + 10}" width="0" height="6" rx="3" fill="{color}">'
-            f'<animate attributeName="width" from="0" to="{300 * val / total:.1f}" begin="0.8s" dur="1s" fill="freeze"/></rect>')
+        rows_svg.append(
+            f'<g class="fin" style="animation-delay:{0.5 + k * 0.15:.2f}s">'
+            f'<text x="248" y="{ry}" font-size="13" font-weight="700" fill="{color}">{esc(label)}</text>'
+            f'<text x="382" y="{ry}" font-size="15" font-weight="700" fill="{FG}">{val}<tspan font-size="11" font-weight="400" fill="{MUTED}"> / {total:,}</tspan></text>'
+            f'<text x="548" y="{ry}" font-size="11" fill="{MUTED}" text-anchor="end">share <tspan dx="4" fill="{color}" font-weight="700">{share:.1f}%</tspan></text>'
+            f'<rect x="248" y="{ry + 10}" width="300" height="6" rx="3" fill="{BORDER}"/>'
+            f'<rect x="248" y="{ry + 10}" width="0" height="6" rx="3" fill="{color}">'
+            f'<animate attributeName="width" from="0" to="{300 * val / total:.1f}" begin="{0.9 + k * 0.2:.2f}s" dur="1.1s" fill="freeze" calcMode="spline" keySplines=".2 .8 .2 1" keyTimes="0;1"/></rect></g>')
     merged = gh.get("prs_merged", 0)
     opened = gh.get("prs_opened", 0) or 1
+    block_rows = [
+        f'<text x="610" y="106" font-size="11" fill="{MUTED}">merged pull requests</text>',
+        f'<text x="610" y="146" font-size="40" font-weight="800" fill="url(#ghGrad)">{merged}</text>',
+        f'<text x="610" y="170" font-size="12" fill="{FG}">{100 * merged / opened:.1f}% merge rate<tspan fill="{MUTED}">  ·  {opened} opened</tspan></text>',
+        f'<text x="610" y="208" font-size="20" font-weight="800" fill="{ORANGE}">{st.get("current_streak", 0)}d<tspan font-size="11" font-weight="400" fill="{MUTED}" dx="6">current streak</tspan></text>',
+        f'<text x="610" y="230" font-size="11" fill="{MUTED}">{st.get("longest_streak", 0)}d best  ·  {st.get("active_days", 0)} active days</text>',
+    ]
+    block = "".join(f'<g class="fin" style="animation-delay:{0.7 + k * 0.12:.2f}s">{r}</g>'
+                    for k, r in enumerate(block_rows))
+    # weekly bars
+    from datetime import timedelta
     weeks = _weeks(days)
-    maxw = max((c for _, c in weeks), default=1) or 1
-    bars, wlabels, seen = [], [], set()
-    for i, (start, count) in enumerate(weeks):
-        x = 36 + i * 14.86
-        h = 3 + (count / maxw) * 49 if count else 2
-        bars.append(f'<rect class="b" style="animation-delay:{0.4 + i * 0.02:.2f}s" x="{x:.1f}" y="{325 - h:.1f}" width="11" height="{h:.1f}" rx="1.5" fill="url(#barGrad)"><title>{count} contributions in the week of {start.isoformat()}</title></rect>')
-        key = start.strftime("%Y-%m")
-        if key not in seen:
-            seen.add(key)
-            if not (i == 0 and start.day != 1):
-                wlabels.append(f'<text x="{x - 2:.1f}" y="337" font-size="10" fill="{MUTED}">{start.strftime("%b")}</text>')
-    chips, chip_x = [], 46.0
-    for name, count in act.get("repos", []):
-        chips.append(f'<text x="{chip_x:.1f}" y="378" font-size="11" fill="{FG}">{esc(name)}<tspan dx="6" fill="{ORANGE}">{count}</tspan></text>')
-        chip_x += len(name) * 6.6 + 6 + len(str(count)) * 6.6 + 26
-    best = st.get("best_day", {})
-    defs = """
-<linearGradient id="ghGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#39d353"/><stop offset="1" stop-color="#58d5e8"/></linearGradient>
-<linearGradient id="barGrad" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#ffa657"/><stop offset="1" stop-color="#ffc01e"/></linearGradient>
-<radialGradient id="halo" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#39d353" stop-opacity="0.12"/><stop offset="1" stop-color="#39d353" stop-opacity="0"/></radialGradient>
-<style>.fin{opacity:0;animation:fin .6s ease-out forwards}@keyframes fin{to{opacity:1}}.b{transform-box:fill-box;transform-origin:50% 100%;transform:scaleY(0);animation:rise .7s cubic-bezier(.2,1.3,.4,1) forwards}@keyframes rise{to{transform:scaleY(1)}}</style>"""
+    nweeks = len(weeks) or 1
+    step = (W - 72) / nweeks
+    bw = step - 3.5
+    peakw = max((c for _, c in weeks), default=1) or 1
+    bars, wlabels, last_month = [], [], None
+    for w, (start, count) in enumerate(weeks):
+        x = 36 + w * step
+        tip = f"<title>{count} contributions · week of {start.strftime('%b %d')}</title>"
+        if count:
+            h = 4 + 42 * count / peakw
+            op = 0.45 + 0.55 * count / peakw
+            bars.append(f'<rect class="b" style="animation-delay:{1.2 + w * 0.02:.2f}s" x="{x:.1f}" y="{322 - h:.1f}" width="{bw:.1f}" height="{h:.1f}" rx="2" fill="url(#barGrad)" opacity="{op:.2f}">{tip}</rect>')
+        else:
+            bars.append(f'<rect x="{x:.1f}" y="320" width="{bw:.1f}" height="2" rx="1" fill="{BORDER}">{tip}</rect>')
+        for i in range(7):
+            d = start + timedelta(days=i)
+            if d.day == 1 and d.month != last_month and w < nweeks - 2:
+                wlabels.append(f'<text x="{x:.1f}" y="337" font-size="10" fill="{MUTED}">{d.strftime("%b")}</text>')
+                last_month = d.month
+    badge_text = f"◆ Best day · {st.get('best_day', {}).get('count', 0)}"
+    chips_max = W - 36 - (len(badge_text) + 2) * 6.6 - 16
+    chips, chip_x = [], 36.0
+    for k, (name, count) in enumerate(act.get("repos", [])):
+        wch = len(name) * 6.6 + 6 + len(str(count)) * 6.6 + 20
+        if chip_x + wch > chips_max:
+            break
+        chips.append(
+            f'<g class="fin" style="animation-delay:{2.2 + k * 0.08:.2f}s">'
+            f'<rect x="{chip_x:.1f}" y="364" width="{wch:.1f}" height="20" rx="10" fill="{PANEL}" stroke="{BORDER}"/>'
+            f'<text x="{chip_x + 10:.1f}" y="378" font-size="11" fill="{FG}">{esc(name)}<tspan dx="6" fill="{ORANGE}">{count}</tspan></text></g>')
+        chip_x += wch + 8
+    defs = f"""
+<linearGradient id="ghGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="{GREEN}"/><stop offset="1" stop-color="{CYAN}"/></linearGradient>
+<linearGradient id="barGrad" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#ffa116"/><stop offset="1" stop-color="#ffc01e"/></linearGradient>
+<radialGradient id="halo" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="{GREEN}" stop-opacity="0.14"/><stop offset="1" stop-color="{GREEN}" stop-opacity="0"/></radialGradient>
+<style>.fin{{opacity:0;animation:fin .6s ease-out forwards}}@keyframes fin{{to{{opacity:1}}}}.b{{transform-box:fill-box;transform-origin:50% 100%;transform:scaleY(0);animation:rise .7s cubic-bezier(.2,1.3,.4,1) forwards}}@keyframes rise{{to{{transform:scaleY(1)}}}}</style>"""
     body = f"""
 <text x="36" y="62" font-size="13" fill="{FG}"><tspan fill="{GREEN}">$</tspan> github --user Ashutosh-Panda2004 --stats</text>
 <text x="824" y="62" font-size="11" fill="{MUTED}" text-anchor="end">github.com/Ashutosh-Panda2004</text>
-<g class="fin">
-<circle cx="{cx}" cy="{cy}" r="86" fill="url(#halo)"/>
-<circle cx="{cx}" cy="{cy}" r="{r}" fill="none" stroke="#21262d" stroke-width="22"/>
-{''.join(segs)}
-<text x="{cx}" y="{cy + 4}" font-size="34" font-weight="800" fill="{FG}" text-anchor="middle">{total:,}</text>
-<text x="{cx}" y="{cy + 24}" font-size="11" fill="{MUTED}" text-anchor="middle">contributions</text>
-{''.join(row_svg)}
-<text x="610" y="106" font-size="11" fill="{MUTED}">merged pull requests</text>
-<text x="610" y="146" font-size="40" font-weight="800" fill="url(#ghGrad)">{merged}</text>
-<text x="610" y="170" font-size="12" fill="{FG}">{100 * merged / opened:.1f}% merge rate<tspan fill="{MUTED}">  ·  {opened} opened</tspan></text>
-<text x="610" y="208" font-size="20" font-weight="800" fill="{ORANGE}">{st.get('current_streak', 0)}d<tspan font-size="11" font-weight="400" fill="{MUTED}" dx="6">current streak</tspan></text>
-<text x="610" y="230" font-size="11" fill="{MUTED}">{st.get('longest_streak', 0)}d best  ·  {st.get('active_days', 0)} active days</text>
-<text x="36" y="262" font-size="11" fill="{MUTED}">contributions per week  ·  <tspan fill="{FG}">{total:,}</tspan> in the last year  ·  busiest on {esc(st.get('busiest_weekday', '-'))}s</text>
+<circle cx="{DCX}" cy="{DCY}" r="96" fill="url(#halo)"/>
+{donut}
+{''.join(rows_svg)}
+<line x1="582" y1="96" x2="582" y2="238" stroke="{BORDER}"/>
+{block}
+<g class="fin" style="animation-delay:1s"><text x="36" y="262" font-size="11" fill="{MUTED}">contributions per week  ·  <tspan fill="{FG}">{total:,}</tspan> in the last year  ·  busiest on {esc(st.get('busiest_weekday', '-'))}s</text></g>
 {''.join(bars)}
 {''.join(wlabels)}
 {''.join(chips)}
-<text x="824" y="378" font-size="11" fill="{ORANGE}" text-anchor="end">◆ best day · {best.get('count', 0)} contributions</text>
-</g>
+<g class="fin" style="animation-delay:2.6s"><text x="824" y="378" font-size="11" fill="{ORANGE}" text-anchor="end">{esc(badge_text)}</text></g>
 """
     write_svg("github-activity.svg", window(W, H, "github.sh", body, defs))
 
