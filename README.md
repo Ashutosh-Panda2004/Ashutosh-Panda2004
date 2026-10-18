@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./header.svg?v=10" width="860" alt="Ashutosh Panda, backend engineer from Bengaluru" />
+<img src="./header.svg?v=11" width="860" alt="Ashutosh Panda, backend engineer from Bengaluru" />
 
 <br><br>
 
