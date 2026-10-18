@@ -203,13 +203,8 @@ def _uptime(created_iso):
     return ", ".join(parts)
 
 
-def info_card_svg():
-    W, H = 490, 420
-    prof = load("profile.json", {})
-    gh = load("github.json", {})
-    st = load("contributions.json", {}).get("stats", {})
-    langs = prof.get("languages", {})
-    rows = [
+def _info_rows(prof, gh, st, langs):
+    return [
         ("Role", "SDE-1 @ Honeywell · Ex-SWE Intern @ Nielsen"),
         ("Now", "Backend work on a migration platform"),
         ("OSS", "checkstyle · Fineract · SW360"),
@@ -224,6 +219,42 @@ def info_card_svg():
         ("Repos", f"{prof.get('public_repos', '-')} public · {prof.get('stars', '-')} stars"),
         ("Streak", f"{st.get('current_streak', 0)}d current · {st.get('longest_streak', 0)}d best"),
     ]
+
+
+def update_readme_block():
+    """Keep the selectable text version of the info card in README.md fresh."""
+    prof = load("profile.json", {})
+    gh = load("github.json", {})
+    st = load("contributions.json", {}).get("stats", {})
+    langs = prof.get("languages", {})
+    rows = _info_rows(prof, gh, st, langs)
+    total = sum(langs.values()) or 1
+    legend = " · ".join(f"{k} {100 * v / total:.1f}%"
+                         for k, v in list(langs.items())[:6])
+    width = max(len(k) for k, _ in rows)
+    body = "\n".join(f"{k:<{width}}  {v}" for k, v in rows)
+    block = f"ashutosh@github\n---------------\n{body}\n\n{legend}"
+    path = os.path.join(ROOT, "README.md")
+    if not os.path.exists(path):
+        return
+    text = open(path, encoding="utf-8").read()
+    start, end = "<!-- INFO-TEXT-START -->", "<!-- INFO-TEXT-END -->"
+    if start not in text or end not in text:
+        return
+    i = text.index(start) + len(start)
+    j = text.index(end)
+    new = text[:i] + "\n\n```text\n" + block + "\n```\n\n" + text[j:]
+    if new != text:
+        open(path, "w", encoding="utf-8").write(new)
+
+
+def info_card_svg():
+    W, H = 490, 420
+    prof = load("profile.json", {})
+    gh = load("github.json", {})
+    st = load("contributions.json", {}).get("stats", {})
+    langs = prof.get("languages", {})
+    rows = _info_rows(prof, gh, st, langs)
     x, y = 24, 60
     head = f"{PROMPT_USER}@{PROMPT_HOST}"
     lines = [
@@ -307,7 +338,8 @@ def globe_svg():
         rings.setdefault(lat, []).append(lon)
     keyframes = []
 
-    def ring(lat, lons, color, r, alt=1.0, back=0.0, anim=""):
+    def ring(lat, lons, color, r, alt=1.0, back=0.0, anim="", samples=None):
+        ns = samples or GLOBE_SAMPLES
         phi = math.radians(lat)
         a = alt * R * math.cos(phi)
         b = a * math.sin(GLOBE_TILT)
@@ -317,8 +349,8 @@ def globe_svg():
             c0 -= (alt - 1) * 0.6
         k = len(keyframes)
         steps = " ".join(
-            f"{100.0 * i / GLOBE_SAMPLES:.2f}%{{transform:translate({CX + a * math.sin(2 * math.pi * i / GLOBE_SAMPLES):.1f}px,{ty + b * math.cos(2 * math.pi * i / GLOBE_SAMPLES):.1f}px)}}"
-            for i in range(GLOBE_SAMPLES + 1))
+            f"{100.0 * i / ns:.2f}%{{transform:translate({CX + a * math.sin(2 * math.pi * i / ns):.1f}px,{ty + b * math.cos(2 * math.pi * i / ns):.1f}px)}}"
+            for i in range(ns + 1))
         keyframes.append(f"@keyframes k{k}{{{steps}}}.k{k}{{animation:k{k} {GLOBE_PERIOD}s linear infinite}}")
         dots = "".join(
             f'<circle r="{r}" class="k{k}" style="animation-delay:-{((lon - HOME[2]) % 360) / 360 * GLOBE_PERIOD:.2f}s">{anim}</circle>'
@@ -339,7 +371,7 @@ def globe_svg():
         ty = CY - R * math.sin(phi) * math.cos(GLOBE_TILT)
         layers.append(f'<ellipse cx="{CX}" cy="{ty:.1f}" rx="{a:.1f}" ry="{a * math.sin(GLOBE_TILT):.1f}" fill="none" stroke="#2d3a4a" stroke-width="0.8"/>')
     for lat in sorted(rings):
-        layers.append(ring(lat, rings[lat], GREEN, 1.7, back=0.14))
+        layers.append(ring(lat, rings[lat], GREEN, 1.7, back=0.14, samples=72))
     arcs = []
     home = (HOME[1], HOME[2])
     for n, (_name, la, lo) in enumerate(REGIONS):
@@ -788,6 +820,7 @@ def main():
     except (FileNotFoundError, ImportError):
         print("skip ascii-portrait.svg (work/source-prepped.png not present)")
     info_card_svg()
+    update_readme_block()
     globe_svg()
     tech_sphere_svg()
     skyline_svg()

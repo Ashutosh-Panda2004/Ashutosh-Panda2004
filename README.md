@@ -11,11 +11,39 @@
   </tr>
 </table>
 
+<details>
+<summary>ashutosh@github in plain text (select and copy)</summary>
+
+<!-- INFO-TEXT-START -->
+
+```text
+ashutosh@github
+---------------
+Role      SDE-1 @ Honeywell · Ex-SWE Intern @ Nielsen
+Now       Backend work on a migration platform
+OSS       checkstyle · Fineract · SW360
+Uptime    3 yrs, 5 mos on GitHub
+Langs     TypeScript · JavaScript · Go
+Backend   Go · C# · .NET · Node.js
+Frontend  React · Vite · Tailwind
+Projects  TokenLens · ShutdownCheck
+PRs       77 merged · 134 opened
+Reviews   23 PRs reviewed · 20 issues
+Repos     96 public · 3 stars
+Streak    29d current · 29d best
+
+TypeScript 55.2% · JavaScript 17.8% · Go 14.7% · CSS 5.4% · HTML 3.4% · Java 2.0%
+```
+
+<!-- INFO-TEXT-END -->
+
+</details>
+
 <br>
 
 <table>
   <tr>
-    <td valign="top"><img src="./globe.svg?v=2" width="430" alt="Rotating 3D globe with arcs from Bengaluru to the open source projects I contribute to" /></td>
+    <td valign="top"><img src="./globe.svg?v=3" width="430" alt="Rotating 3D globe with arcs from Bengaluru to the open source projects I contribute to" /></td>
     <td valign="top"><img src="./tech-sphere.svg?v=2" width="430" alt="Tech stack on a rotating 3D sphere" /></td>
   </tr>
 </table>
