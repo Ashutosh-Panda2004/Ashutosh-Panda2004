@@ -23,11 +23,11 @@
 
 ## About
 
-I'm a software development engineer at Honeywell in Bengaluru, where I'm the sole backend engineer on an enterprise migration platform built on .NET and Azure. Before that, I was a software engineering intern at Nielsen, working on a cross-browser metering extension used by over a million panelists.
+I'm a software development engineer at Honeywell in Bengaluru, where I'm the sole backend engineer on a migration platform. Before that, I was a software engineering intern at Nielsen, working on a cross-browser metering extension used by over a million panelists.
 
 Outside work, I build small, focused developer tools — ShutdownCheck, TokenLens, and InterviewCoach AI, below — and contribute fixes and tests to open-source projects.
 
-**Now (October 2026):** hardening ShutdownCheck's release pipeline, day-to-day backend work on M2H at Honeywell, and small open-source contributions most weeks.
+**Now (October 2026):** hardening ShutdownCheck's release pipeline, day-to-day backend work at Honeywell, and small open-source contributions most weeks.
 
 ---
 
@@ -85,7 +85,7 @@ Interview practice with a voice AI. Real-time voice interviews through Gemini Li
 ## Experience
 
 **Honeywell** — Software Development Engineer 1 · Feb 2026 – present
-Sole backend engineer on the M2H enterprise migration platform: C#/.NET, Entity Framework Core, Azure Service Bus, Entra ID RBAC. 
+Sole backend engineer on a migration platform. 
 
 **Nielsen** — Software Engineer Intern · Jan 2025 – Feb 2026
 Scaled a cross-browser metering extension to 1,00,000+ panelists at 99.9% uptime, with canary CI/CD and a Node.js validation layer over Oracle SQL pipelines.
