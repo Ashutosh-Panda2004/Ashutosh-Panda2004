@@ -128,13 +128,15 @@ def header_svg():
 
 # ---------------------------------------------------------------- portrait
 def portrait_svg():
+    src = os.path.join(ROOT, "work", "source-prepped.png")
+    if not os.path.exists(src):
+        raise FileNotFoundError(src)
     import numpy as np
     from PIL import Image
     W, H = 370, 420
     ramp = " .`:-=+*cs#%@"
     cols, font, lh = 92, 6.2, 7.0
     cw = font * 0.6
-    src = os.path.join(ROOT, "work", "source-prepped.png")
     img = Image.open(src).convert("L")
     w, h = img.size
     img = img.crop((int(0.04 * w), 0, int(0.96 * w), int(0.88 * h)))
@@ -557,7 +559,7 @@ def main():
     header_svg()
     try:
         portrait_svg()
-    except FileNotFoundError:
+    except (FileNotFoundError, ImportError):
         print("skip ascii-portrait.svg (work/source-prepped.png not present)")
     info_card_svg()
     globe_svg()
