@@ -13,8 +13,6 @@
 
 <br>
 
-<sub><b>FEATURED PROJECTS</b> · click a card to open the live site</sub>
-
 <table>
   <tr>
     <td valign="top"><a href="https://tokenslens.vercel.app/" target="_blank"><img src="./project-tokenlens.svg?v=1" width="272" alt="TokenLens: Copilot credit ledger with waste attribution and policy compilation" /></a><p align="center"><a href="https://github.com/Ashutosh-Panda2004/TokensLens">GitHub · source code</a></p></td>
