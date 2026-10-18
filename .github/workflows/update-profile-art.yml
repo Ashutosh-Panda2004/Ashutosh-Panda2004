@@ -31,10 +31,17 @@ jobs:
       - name: Fetch data
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PROFILE_TOKEN: ${{ secrets.PROFILE_TOKEN }}
         run: python scripts/fetch_data.py
       - name: Render SVGs
         run: python scripts/render_profile.py
+      # Commits are authored by github-actions[bot], not by the account
+      # owner, so the daily refresh never counts as the owner's own
+      # contribution and this repo stays out of his top contributed repos.
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Update profile art"
+          commit_user_name: "github-actions[bot]"
+          commit_user_email: "41898282+github-actions[bot]@users.noreply.github.com"
+          commit_author: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
           file_pattern: "data/*.json *.svg"
