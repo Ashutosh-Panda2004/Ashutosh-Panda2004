@@ -113,7 +113,7 @@ Notes on system design and engineering practice, on [Medium](https://medium.com/
 
 <div align="center">
 
-<img width="49%" src="https://github-readme-stats.vercel.app/api?username=Ashutosh-Panda2004&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00F5FF&icon_color=00F5FF&text_color=FFFFFF&show=prs_merged&hide=commits" />
+<img width="49%" src="https://github-readme-stats.vercel.app/api?username=Ashutosh-Panda2004&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00F5FF&icon_color=00F5FF&text_color=FFFFFF&show=prs_merged" />
 <img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=Ashutosh-Panda2004&theme=tokyonight&hide_border=true&background=0D1117&ring=00F5FF&fire=00F5FF&currStreakLabel=00F5FF" />
 
 [![Ashutosh's github activity graph](https://raw.githubusercontent.com/Ashutosh-Panda2004/Ashutosh-Panda2004/output/activity-graph.svg)](https://github.com/Ashutosh-Panda2004)
