@@ -65,7 +65,6 @@ PROMPT_HOST = "github"
 ROLES = [
     "SDE-1 @ Honeywell",
     "Open Source Contributor",
-    "77 merged pull requests",
     "Building TokenLens and ShutdownCheck",
     "Backend Systems and AI Engineering",
 ]
