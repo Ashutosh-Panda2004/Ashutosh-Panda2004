@@ -1,13 +1,13 @@
 <div align="center">
 
-<img src="./header.svg?v=2" width="860" alt="Ashutosh Panda, backend engineer from Bengaluru" />
+<img src="./header.svg?v=3" width="860" alt="Ashutosh Panda, backend engineer from Bengaluru" />
 
 <br><br>
 
 <table>
   <tr>
     <td valign="top"><img src="./ascii-portrait.svg?v=2" width="370" alt="ASCII portrait of Ashutosh Panda" /></td>
-    <td valign="top"><img src="./info-card.svg?v=2" width="490" alt="neofetch style card: role, stack and live GitHub stats" /></td>
+    <td valign="top"><img src="./info-card.svg?v=3" width="490" alt="neofetch style card: role, stack and live GitHub stats" /></td>
   </tr>
 </table>
 

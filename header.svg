@@ -51,10 +51,10 @@
 <animate attributeName="x" values="60.0;60.0;405.6;405.6;60.0;60.0" keyTimes="0.0000;0.6000;0.6792;0.7560;0.7860;1.0000" dur="25.0s" repeatCount="indefinite"/>
 <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.6000;0.7860;0.7861;1" dur="25.0s" repeatCount="indefinite" calcMode="discrete"/>
 </rect><clipPath id="r4"><rect x="60" y="132" width="0" height="22">
-<animate attributeName="width" values="0.0;0.0;345.6;345.6;0.0;0.0" keyTimes="0.0000;0.8000;0.8792;0.9560;0.9860;1.0000" dur="25.0s" repeatCount="indefinite"/></rect></clipPath>
-<text x="60" y="148" font-size="16" fill="#c9d1d9" textLength="345.6" lengthAdjust="spacingAndGlyphs" clip-path="url(#r4)">Backend systems in Go and TypeScript</text>
+<animate attributeName="width" values="0.0;0.0;326.4;326.4;0.0;0.0" keyTimes="0.0000;0.8000;0.8748;0.9560;0.9860;1.0000" dur="25.0s" repeatCount="indefinite"/></rect></clipPath>
+<text x="60" y="148" font-size="16" fill="#c9d1d9" textLength="326.4" lengthAdjust="spacingAndGlyphs" clip-path="url(#r4)">Backend Systems and AI Engineering</text>
 <rect x="60" y="134" width="9" height="18" fill="#39d353" opacity="0">
-<animate attributeName="x" values="60.0;60.0;405.6;405.6;60.0;60.0" keyTimes="0.0000;0.8000;0.8792;0.9560;0.9860;1.0000" dur="25.0s" repeatCount="indefinite"/>
+<animate attributeName="x" values="60.0;60.0;386.4;386.4;60.0;60.0" keyTimes="0.0000;0.8000;0.8748;0.9560;0.9860;1.0000" dur="25.0s" repeatCount="indefinite"/>
 <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.8000;0.9860;0.9861;1" dur="25.0s" repeatCount="indefinite" calcMode="discrete"/>
 </rect></g>
 <g class="fade" style="animation-delay:1.9s"><text x="40" y="182" font-size="13" fill="#8b949e">Bengaluru, IN  ·  Go, TypeScript and backend systems</text></g>

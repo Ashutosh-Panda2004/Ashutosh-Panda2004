@@ -67,7 +67,7 @@ ROLES = [
     "Open Source Contributor",
     "77 merged pull requests",
     "Building TokenLens and ShutdownCheck",
-    "Backend systems in Go and TypeScript",
+    "Backend Systems and AI Engineering",
 ]
 TAGLINE = "Bengaluru, IN  ·  Go, TypeScript and backend systems"
 
@@ -217,7 +217,7 @@ def info_card_svg():
         ("Uptime", f"{_uptime(prof['created_at'])} on GitHub"
          if prof.get("created_at") else "-"),
         ("Langs", " · ".join(list(langs)[:3]) or "-"),
-        ("Backend", "Go · .NET · Node.js"),
+        ("Backend", "Go · C# · .NET · Node.js"),
         ("Frontend", "React · Vite · Tailwind"),
         ("Projects", "TokenLens · ShutdownCheck"),
         ("PRs", f"{gh.get('prs_merged', '-')} merged · {gh.get('prs_opened', '-')} opened"),
