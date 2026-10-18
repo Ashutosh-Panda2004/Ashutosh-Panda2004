@@ -44,16 +44,25 @@ def write_svg(name, svg):
     print(f"wrote {name} ({len(svg) // 1024} KB)")
 
 
-def window(width, height, title, body, extra_defs=""):
+def window(width, height, title, body, extra_defs="", finish=True):
     """Terminal window chrome shared by every card."""
+    chrome_defs, overlay = "", ""
+    if finish:
+        chrome_defs = f"""
+<radialGradient id="vig" cx="0.5" cy="0.42" r="0.78"><stop offset="0.55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity="0.20"/></radialGradient>
+<linearGradient id="cardSheen" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0.05"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<clipPath id="cardClip"><rect x="0.5" y="0.5" width="{width - 1}" height="{height - 1}" rx="10"/></clipPath>"""
+        overlay = f"""
+<g clip-path="url(#cardClip)"><rect x="0" y="0" width="{width}" height="70" fill="url(#cardSheen)"/><rect x="0" y="0" width="{width}" height="{height}" fill="url(#vig)"/></g>
+<rect x="1" y="1" width="{width - 2}" height="{height - 2}" rx="9" fill="none" stroke="#ffffff" stroke-opacity="0.05"/>"""
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" font-family="{FONT}">
-<defs>{extra_defs}</defs>
+<defs>{extra_defs}{chrome_defs}</defs>
 <rect x="0.5" y="0.5" width="{width - 1}" height="{height - 1}" rx="10" fill="{BG}" stroke="{BORDER}"/>
 <path d="M0.5 32 V10.5 a10 10 0 0 1 10 -10 H{width - 10.5} a10 10 0 0 1 10 10 V32 Z" fill="{PANEL}"/>
 <line x1="0.5" y1="32" x2="{width - 0.5}" y2="32" stroke="{BORDER}"/>
 <circle cx="18" cy="16" r="5.5" fill="#ff5f56"/><circle cx="36" cy="16" r="5.5" fill="#ffbd2e"/><circle cx="54" cy="16" r="5.5" fill="#27c93f"/>
 <text x="{width / 2}" y="20.5" fill="{MUTED}" font-size="12" text-anchor="middle">{esc(title)}</text>
-{body}
+{body}{overlay}
 </svg>
 """
 
@@ -104,6 +113,8 @@ def header_svg():
 </linearGradient>
 <filter id="glow" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
 <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#ffffff" opacity="0.05"/></pattern>
+<radialGradient id="auroraG" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="{GREEN}" stop-opacity="0.13"/><stop offset="1" stop-color="{GREEN}" stop-opacity="0"/></radialGradient>
+<radialGradient id="auroraP" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="{PURPLE}" stop-opacity="0.10"/><stop offset="1" stop-color="{PURPLE}" stop-opacity="0"/></radialGradient>
 <linearGradient id="scan" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{GREEN}" stop-opacity="0"/><stop offset="1" stop-color="{GREEN}" stop-opacity="0.08"/></linearGradient>
 <clipPath id="inner"><rect x="1" y="33" width="{W - 2}" height="{H - 34}" rx="9"/></clipPath>
 <clipPath id="cmdClip"><rect x="{cmd_x}" y="40" width="0" height="20"><animate attributeName="width" from="0" to="{len(cmd) * 8.4 + 2}" begin="0.3s" dur="0.6s" fill="freeze"/></rect></clipPath>
@@ -111,6 +122,8 @@ def header_svg():
     body = f"""
 <g clip-path="url(#inner)">
   <rect x="0" y="32" width="{W}" height="{H}" fill="url(#dots)"/>
+  <ellipse cx="180" cy="122" rx="300" ry="92" fill="url(#auroraG)"><animate attributeName="cx" values="180;265;180" dur="11s" repeatCount="indefinite"/></ellipse>
+  <ellipse cx="645" cy="98" rx="260" ry="82" fill="url(#auroraP)"><animate attributeName="cx" values="645;560;645" dur="13s" repeatCount="indefinite"/></ellipse>
   <rect x="0" y="-40" width="{W}" height="40" fill="url(#scan)"><animate attributeName="y" values="-10;{H}" dur="5s" repeatCount="indefinite"/></rect>
 </g>
 <text x="40" y="55" font-size="14"><tspan fill="{GREEN}">{esc(prompt)}</tspan></text>
@@ -118,6 +131,7 @@ def header_svg():
 <g class="fade" style="animation-delay:1s">
   <text x="40" y="112" font-size="46" font-weight="800" letter-spacing="2" fill="url(#nameGrad)" filter="url(#glow)">{esc(NAME.upper())}</text>
 </g>
+<g class="fade" style="animation-delay:1.7s"><rect x="40" y="126" width="0" height="2" fill="url(#nameGrad)" opacity="0.85"><animate attributeName="width" from="0" to="400" begin="1.8s" dur="0.9s" fill="freeze" calcMode="spline" keySplines=".2 .8 .2 1" keyTimes="0;1"/></rect></g>
 <g class="fade" style="animation-delay:1.4s"><text x="40" y="148" font-size="16" fill="{MUTED}">&gt;</text></g>
 <g class="fade" style="animation-delay:1.6s">{''.join(roles)}</g>
 <g class="fade" style="animation-delay:1.9s"><text x="40" y="182" font-size="13" fill="{MUTED}">{esc(TAGLINE)}</text></g>
@@ -177,7 +191,7 @@ def portrait_svg():
 </linearGradient>"""
     body = f"""
 <g fill="url(#ink)" font-size="{font}">{''.join(out)}</g>"""
-    write_svg("ascii-portrait.svg", window(W, H, "portrait.txt", body, defs))
+    write_svg("ascii-portrait.svg", window(W, H, "portrait.txt", body, defs, finish=False))
 
 
 # ---------------------------------------------------------------- info card
@@ -287,9 +301,15 @@ def info_card_svg():
     lines.append(
         f'<clipPath id="barClip"><rect x="{x}" y="{by}" width="0" height="8" rx="4"><animate attributeName="width" from="0" to="{bar_w}" begin="1.6s" dur="1.2s" fill="freeze" calcMode="spline" keySplines=".2 .8 .2 1" keyTimes="0;1"/></rect></clipPath>'
         f'<rect x="{x}" y="{by}" width="{bar_w}" height="8" rx="4" fill="{BORDER}"/>'
-        f'<g clip-path="url(#barClip)">{"".join(segs)}</g>'
-        f'<g class="ln" style="animation-delay:2.3s">{"".join(legend)}</g>')
-    defs = """<style>.ln { opacity: 0; animation: ln .5s ease-out forwards; } @keyframes ln { from { opacity: 0; transform: translateX(-10px); } to { opacity: 1; transform: none; } }</style>"""
+        f'<g clip-path="url(#barClip)" filter="url(#barGlow)">{"".join(segs)}</g>'
+        f'<g class="ln" style="animation-delay:1.94s">{"".join(legend)}</g>')
+    lines.append(
+        f'<clipPath id="infoClip"><rect x="0.5" y="0.5" width="{W - 1}" height="{H - 1}" rx="10"/></clipPath>'
+        f'<g clip-path="url(#infoClip)"><g transform="rotate(18 245 210)"><rect x="-240" y="-60" width="120" height="{H + 120}" fill="url(#infoSheen)">'
+        f'<animate attributeName="x" values="-240;640;640" keyTimes="0;0.26;1" dur="9s" repeatCount="indefinite"/></rect></g></g>')
+    defs = f"""<style>.ln {{ opacity: 0; animation: ln .5s ease-out forwards; }} @keyframes ln {{ from {{ opacity: 0; transform: translateX(-10px); }} to {{ opacity: 1; transform: none; }} }}</style>
+<linearGradient id="infoSheen" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="0.5" stop-color="#fff" stop-opacity="0.06"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<filter id="barGlow" x="-5%" y="-120%" width="110%" height="340%"><feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="{GREEN}" flood-opacity="0.30"/></filter>"""
     write_svg("info-card.svg", window(W, H, f"{PROMPT_USER}@{PROMPT_HOST}: ~",
                                       "\n".join(lines), defs))
 
@@ -390,13 +410,24 @@ def globe_svg():
            + ring(HOME[1], [HOME[2]], "#fff", 3.2))
     names = " · ".join(r[0] for r in REGIONS[:3]) + \
         (f" +{len(REGIONS) - 3}" if len(REGIONS) > 3 else "")
+    import random
+    rng = random.Random(42)
+    stars = []
+    while len(stars) < 70:
+        sx_, sy_ = rng.uniform(22, 408), rng.uniform(42, 386)
+        if (sx_ - CX) ** 2 + (sy_ - CY) ** 2 < 158 ** 2:
+            continue
+        stars.append(f'<circle cx="{sx_:.0f}" cy="{sy_:.0f}" r="{rng.uniform(0.5, 1.3):.1f}" fill="#d7ecff" class="tw" style="animation-delay:{rng.uniform(0, 4):.1f}s;animation-duration:{rng.uniform(2.4, 4.6):.1f}s"/>')
     defs = f"""
 <radialGradient id="ocean" cx="0.38" cy="0.32" r="0.75"><stop offset="0" stop-color="#16324a"/><stop offset="0.7" stop-color="#0c1724"/><stop offset="1" stop-color="#070b12"/></radialGradient>
 <radialGradient id="shade" cx="0.5" cy="0.5" r="0.5"><stop offset="0.72" stop-color="#05080d" stop-opacity="0"/><stop offset="1" stop-color="#05080d" stop-opacity="0.75"/></radialGradient>
 <radialGradient id="atmo" cx="0.5" cy="0.5" r="0.5"><stop offset="0.86" stop-color="{CYAN}" stop-opacity="0"/><stop offset="0.92" stop-color="{CYAN}" stop-opacity="0.22"/><stop offset="1" stop-color="{CYAN}" stop-opacity="0"/></radialGradient>
-<style>{''.join(keyframes)}.fin{{opacity:0;animation:fin 1s ease-out .3s forwards}}@keyframes fin{{to{{opacity:1}}}}</style>"""
+<style>{''.join(keyframes)}.tw{{opacity:.14;animation:tw 3.4s ease-in-out infinite}}@keyframes tw{{0%,100%{{opacity:.10}}50%{{opacity:.55}}}}.fin{{opacity:0;animation:fin 1s ease-out .3s forwards}}@keyframes fin{{to{{opacity:1}}}}</style>
+<radialGradient id="floorGlow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="{GREEN}" stop-opacity="0.10"/><stop offset="1" stop-color="{GREEN}" stop-opacity="0"/></radialGradient>"""
     body = f"""
 <text x="20" y="56" font-size="12" fill="{FG}"><tspan fill="{GREEN}">$</tspan> ./open-source --from bengaluru</text>
+{''.join(stars)}
+<ellipse cx="215" cy="352" rx="150" ry="26" fill="url(#floorGlow)"/>
 <g class="fin">
 <circle cx="{CX}" cy="{CY}" r="{R * 1.16:.0f}" fill="url(#atmo)"/>
 <circle cx="{CX}" cy="{CY}" r="{R}" fill="url(#ocean)"/>
@@ -460,7 +491,7 @@ def tech_sphere_svg():
             ops.append(f"{0.18 + 0.82 * d ** 1.6:.2f}")
         a = f'dur="{PERIOD}s" repeatCount="indefinite"'
         texts.append(
-            f'<text text-anchor="middle" fill="{color[cat]}" font-weight="700" x="{xs[0]}" y="{ys[0]}" font-size="{sizes[0]}" opacity="{ops[0]}">{esc(label)}'
+            f'<text text-anchor="middle" fill="{color[cat]}" paint-order="stroke" stroke="#0d1117" stroke-width="1.2" stroke-linejoin="round" font-weight="700" x="{xs[0]}" y="{ys[0]}" font-size="{sizes[0]}" opacity="{ops[0]}">{esc(label)}'
             f'<animate attributeName="x" values="{";".join(xs)}" {a}/>'
             f'<animate attributeName="y" values="{";".join(ys)}" {a}/>'
             f'<animate attributeName="font-size" values="{";".join(sizes)}" {a}/>'
@@ -479,8 +510,10 @@ def tech_sphere_svg():
     total_w = sum(len(c) + 4 for c in TECH) * 6.4
     lx = (W - total_w) / 2
     for c in TECH:
-        legend.append(f'<circle cx="{lx + 4:.1f}" cy="{H - 26}" r="3.5" fill="{color[c]}"/>'
-                      f'<text x="{lx + 11:.1f}" y="{H - 22}" font-size="10.5" fill="{MUTED}">{esc(c)}</text>')
+        wch = (len(c) + 4) * 6.4 - 8
+        legend.append(f'<rect x="{lx:.1f}" y="{H - 40}" width="{wch:.1f}" height="20" rx="10" fill="{PANEL}" stroke="{BORDER}"/>'
+                      f'<circle cx="{lx + 11:.1f}" cy="{H - 30}" r="3.5" fill="{color[c]}"/>'
+                      f'<text x="{lx + 19:.1f}" y="{H - 26}" font-size="10.5" fill="{MUTED}">{esc(c)}</text>')
         lx += (len(c) + 4) * 6.4
     defs = f"""
 <radialGradient id="core" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="{PURPLE}" stop-opacity="0.18"/><stop offset="0.6" stop-color="{CYAN}" stop-opacity="0.05"/><stop offset="1" stop-color="{CYAN}" stop-opacity="0"/></radialGradient>
@@ -488,7 +521,7 @@ def tech_sphere_svg():
     body = f"""
 <text x="20" y="56" font-size="12" fill="{FG}"><tspan fill="{GREEN}">$</tspan> ls ~/stack --3d</text>
 <g class="fin">
-<circle cx="{CX}" cy="{CY}" r="{R * 1.25:.0f}" fill="url(#core)"/>
+<circle cx="{CX}" cy="{CY}" r="{R * 1.25:.0f}" fill="url(#core)"><animate attributeName="r" values="{R * 1.25:.0f};{R * 1.34:.0f};{R * 1.25:.0f}" dur="6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.85;1;0.85" dur="6s" repeatCount="indefinite"/></circle>
 {''.join(wire)}
 {''.join(texts)}
 </g>
@@ -606,13 +639,20 @@ def skyline_svg():
         f'<g class="fin" style="animation-delay:{2.6 + k * 0.15:.2f}s"><text x="36" y="{H - 104 + k * 22}" font-size="12" fill="{MUTED}">{lbl}<tspan x="168" fill="{c}" font-weight="700">{v}</tspan></text></g>'
         for k, (lbl, v, c) in enumerate(rows))
     gx, gy = P(cols / 2, 3.5)
+    import random
+    rng = random.Random(7)
+    stars = []
+    while len(stars) < 46:
+        sx_, sy_ = rng.uniform(28, 832), rng.uniform(68, 215)
+        stars.append(f'<circle cx="{sx_:.0f}" cy="{sy_:.0f}" r="{rng.uniform(0.5, 1.2):.1f}" fill="#d7ecff" class="tw" style="animation-delay:{rng.uniform(0, 4):.1f}s;animation-duration:{rng.uniform(2.6, 5):.1f}s"/>')
     defs = f"""
-<radialGradient id="glow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="{GREEN}" stop-opacity="0.16"/><stop offset="1" stop-color="{GREEN}" stop-opacity="0"/></radialGradient>
+<radialGradient id="glow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="{GREEN}" stop-opacity="0.22"/><stop offset="1" stop-color="{GREEN}" stop-opacity="0"/></radialGradient>
 <linearGradient id="beam" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="{ORANGE}" stop-opacity="0.9"/><stop offset="1" stop-color="{ORANGE}" stop-opacity="0"/></linearGradient>
 <linearGradient id="txt" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="{GREEN}"/><stop offset="1" stop-color="{CYAN}"/></linearGradient>
-<style>.b{{transform-box:fill-box;transform-origin:50% 100%;transform:scaleY(0);animation:rise .9s cubic-bezier(.2,1.3,.4,1) forwards}}@keyframes rise{{to{{transform:scaleY(1)}}}}.t,.fin{{opacity:0;animation:fin .6s ease-out forwards}}@keyframes fin{{to{{opacity:1}}}}</style>"""
+<style>.tw{{opacity:.10;animation:tw 3.8s ease-in-out infinite}}@keyframes tw{{0%,100%{{opacity:.06}}50%{{opacity:.4}}}}.b{{transform-box:fill-box;transform-origin:50% 100%;transform:scaleY(0);animation:rise .9s cubic-bezier(.2,1.3,.4,1) forwards}}@keyframes rise{{to{{transform:scaleY(1)}}}}.t,.fin{{opacity:0;animation:fin .6s ease-out forwards}}@keyframes fin{{to{{opacity:1}}}}</style>"""
     body = f"""
 <ellipse cx="{gx:.0f}" cy="{gy:.0f}" rx="380" ry="170" fill="url(#glow)"/>
+{''.join(stars)}
 <text x="36" y="62" font-size="13" fill="{FG}"><tspan fill="{GREEN}">$</tspan> ./skyline --user {esc(data.get('username', 'Ashutosh-Panda2004'))} --3d</text>
 {''.join(out)}
 {''.join(months)}
@@ -644,7 +684,8 @@ def heatmap_svg():
     grid_w = cols * STEP - GAP
     x0 = (W - grid_w) / 2 + 14
     y0 = 92
-    cells, months, last_month = [], [], None
+    cells, months, seps, last_month = [], [], [], None
+    best_xy = None
     best_count = max(1, st.get("best_day", {}).get("count", 1))
     for d in days:
         dt = date.fromisoformat(d["date"])
@@ -656,8 +697,12 @@ def heatmap_svg():
             lvl = 5
         delay = (c + r * 1.5) * 0.018
         cells.append(f'<rect x="{x:.1f}" y="{y:.1f}" width="{CELL}" height="{CELL}" rx="2.5" fill="{PALETTE[lvl]}" class="c" style="animation-delay:{delay:.3f}s"><title>{d["count"]} on {d["date"]}</title></rect>')
+        if d["count"] == best_count and best_xy is None:
+            best_xy = (x, y)
         if r == 0 and dt.month != last_month and dt.day <= 7 and c < cols - 2:
             months.append(f'<text x="{x:.1f}" y="{y0 - 9}" font-size="11" fill="{MUTED}">{dt.strftime("%b")}</text>')
+            if last_month is not None:
+                seps.append(f'<line x1="{x - STEP / 2:.1f}" y1="{y0}" x2="{x - STEP / 2:.1f}" y2="{y0 + 7 * STEP}" stroke="#ffffff" stroke-opacity="0.05"/>')
             last_month = dt.month
     wd = "".join(
         f'<text x="{x0 - 10}" y="{y0 + r * STEP + 10}" font-size="10" fill="{MUTED}" text-anchor="end">{n}</text>'
@@ -687,11 +732,13 @@ def heatmap_svg():
     defs = f"""
 <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="0.5" stop-color="#fff" stop-opacity="0.22"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
 <clipPath id="gridClip">{clip_cells}</clipPath>
-<style>.c{{opacity:0;transform-box:fill-box;transform-origin:center;animation:pop .45s cubic-bezier(.2,1.6,.4,1) forwards}}@keyframes pop{{from{{opacity:0;transform:scale(.2)}}to{{opacity:1;transform:scale(1)}}}}.f{{opacity:0;animation:fin .6s ease-out forwards}}@keyframes fin{{to{{opacity:1}}}}</style>"""
+<style>.c{{opacity:0;transform-box:fill-box;transform-origin:center;animation:pop .45s cubic-bezier(.2,1.6,.4,1) forwards}}@keyframes pop{{from{{opacity:0;transform:scale(.2)}}to{{opacity:1;transform:scale(1)}}}}.bp{{animation:bp 2.2s ease-in-out infinite}}@keyframes bp{{0%,100%{{opacity:.2}}50%{{opacity:.95}}}}.f{{opacity:0;animation:fin .6s ease-out forwards}}@keyframes fin{{to{{opacity:1}}}}</style>"""
     body = f"""
 <text x="{x0}" y="{y0 - 34}" font-size="13" fill="{FG}"><tspan fill="{GREEN}">$</tspan> git log --since="1 year ago" | heatmap</text>
 {''.join(months)}{wd}
+{''.join(seps)}
 {''.join(cells)}
+{f'<rect x="{best_xy[0] - 1.5:.1f}" y="{best_xy[1] - 1.5:.1f}" width="{CELL + 3}" height="{CELL + 3}" rx="3.5" fill="none" stroke="#69f0a0" stroke-width="1.4" class="bp"/>' if best_xy else ''}
 <g clip-path="url(#gridClip)"><rect x="{x0 - 160}" y="{y0}" width="160" height="{7 * STEP}" fill="url(#sweep)"><animate attributeName="x" values="{x0 - 160};{x0 + grid_w + 160}" begin="2.2s" dur="3.2s" repeatCount="indefinite"/></rect></g>
 {legend}
 {''.join(foot)}
@@ -750,13 +797,16 @@ def activity_svg():
     opened = gh.get("prs_opened", 0) or 1
     block_rows = [
         f'<text x="610" y="106" font-size="11" fill="{MUTED}">merged pull requests</text>',
-        f'<text x="610" y="146" font-size="40" font-weight="800" fill="url(#ghGrad)">{merged}</text>',
+        f'<text x="610" y="146" font-size="40" font-weight="800" fill="url(#ghGrad)" filter="url(#numGlow)">{merged}</text>',
         f'<text x="610" y="170" font-size="12" fill="{FG}">{100 * merged / opened:.1f}% merge rate<tspan fill="{MUTED}">  ·  {opened} opened</tspan></text>',
         f'<text x="610" y="208" font-size="20" font-weight="800" fill="{ORANGE}">{st.get("current_streak", 0)}d<tspan font-size="11" font-weight="400" fill="{MUTED}" dx="6">current streak</tspan></text>',
         f'<text x="610" y="230" font-size="11" fill="{MUTED}">{st.get("longest_streak", 0)}d best  ·  {st.get("active_days", 0)} active days</text>',
     ]
     block = "".join(f'<g class="fin" style="animation-delay:{0.7 + k * 0.12:.2f}s">{r}</g>'
                     for k, r in enumerate(block_rows))
+    grid = "".join(
+        f'<line x1="36" y1="{322 - gy}" x2="824" y2="{322 - gy}" stroke="{BORDER}" stroke-opacity="0.45" stroke-dasharray="2 4"/>'
+        for gy in (15, 30, 45))
     # weekly bars
     from datetime import timedelta
     weeks = _weeks(days)
@@ -779,6 +829,11 @@ def activity_svg():
             if d.day == 1 and d.month != last_month and w < nweeks - 2:
                 wlabels.append(f'<text x="{x:.1f}" y="337" font-size="10" fill="{MUTED}">{d.strftime("%b")}</text>')
                 last_month = d.month
+    if weeks:
+        pw, (pstart, pcount) = max(enumerate(weeks), key=lambda t: t[1][1])
+        if pcount:
+            ph = 4 + 42 * pcount / peakw
+            bars.append(f'<text x="{36 + pw * step + bw / 2:.1f}" y="{322 - ph - 7:.1f}" font-size="9.5" fill="{ORANGE}" text-anchor="middle">{pcount}</text>')
     badge_text = f"◆ Best day · {st.get('best_day', {}).get('count', 0)}"
     chips_max = W - 36 - (len(badge_text) + 2) * 6.6 - 16
     chips, chip_x = [], 36.0
@@ -795,15 +850,17 @@ def activity_svg():
 <linearGradient id="ghGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="{GREEN}"/><stop offset="1" stop-color="{CYAN}"/></linearGradient>
 <linearGradient id="barGrad" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#ffa116"/><stop offset="1" stop-color="#ffc01e"/></linearGradient>
 <radialGradient id="halo" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="{GREEN}" stop-opacity="0.14"/><stop offset="1" stop-color="{GREEN}" stop-opacity="0"/></radialGradient>
+<filter id="numGlow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="0" stdDeviation="5" flood-color="{GREEN}" flood-opacity="0.45"/></filter>
 <style>.fin{{opacity:0;animation:fin .6s ease-out forwards}}@keyframes fin{{to{{opacity:1}}}}.b{{transform-box:fill-box;transform-origin:50% 100%;transform:scaleY(0);animation:rise .7s cubic-bezier(.2,1.3,.4,1) forwards}}@keyframes rise{{to{{transform:scaleY(1)}}}}</style>"""
     body = f"""
 <text x="36" y="62" font-size="13" fill="{FG}"><tspan fill="{GREEN}">$</tspan> github --user Ashutosh-Panda2004 --stats</text>
 <text x="824" y="62" font-size="11" fill="{MUTED}" text-anchor="end">github.com/Ashutosh-Panda2004</text>
-<circle cx="{DCX}" cy="{DCY}" r="96" fill="url(#halo)"/>
+<circle cx="{DCX}" cy="{DCY}" r="96" fill="url(#halo)"><animate attributeName="opacity" values="0.6;1;0.6" dur="5s" repeatCount="indefinite"/></circle>
 {donut}
 {''.join(rows_svg)}
 <line x1="582" y1="96" x2="582" y2="238" stroke="{BORDER}"/>
 {block}
+{grid}
 <g class="fin" style="animation-delay:1s"><text x="36" y="262" font-size="11" fill="{MUTED}">contributions per week  ·  <tspan fill="{FG}">{total:,}</tspan> in the last year  ·  busiest on {esc(st.get('busiest_weekday', '-'))}s</text></g>
 {''.join(bars)}
 {''.join(wlabels)}
