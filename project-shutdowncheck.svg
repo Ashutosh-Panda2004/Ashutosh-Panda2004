@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="277" height="210" viewBox="0 0 277 210" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace">
+<defs><style>.fin{opacity:0;animation:fin .7s ease-out forwards}@keyframes fin{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}</style>
+<radialGradient id="vig" cx="0.5" cy="0.42" r="0.78"><stop offset="0.55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity="0.20"/></radialGradient>
+<linearGradient id="accentBar" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#39d353"/><stop offset="0.5" stop-color="#58d5e8"/><stop offset="1" stop-color="#bc8cff"/></linearGradient>
+<linearGradient id="cardSheen" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0.05"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<clipPath id="cardClip"><rect x="0.5" y="0.5" width="276" height="209" rx="10"/></clipPath></defs>
+<rect x="0.5" y="0.5" width="276" height="209" rx="10" fill="#0d1117" stroke="#30363d"/>
+<path d="M0.5 32 V10.5 a10 10 0 0 1 10 -10 H266.5 a10 10 0 0 1 10 10 V32 Z" fill="#161b22"/>
+<line x1="0.5" y1="32" x2="276.5" y2="32" stroke="#30363d"/>
+<circle cx="18" cy="16" r="5.5" fill="#ff5f56"/><circle cx="36" cy="16" r="5.5" fill="#ffbd2e"/><circle cx="54" cy="16" r="5.5" fill="#27c93f"/>
+<text x="138.5" y="20.5" fill="#8b949e" font-size="12" text-anchor="middle">shutdowncheck.sh</text>
+
+<g class="fin">
+  <path d="M29.5 53.5 a10.5 10.5 0 1 0 15 0" fill="none" stroke="#ffa657" stroke-width="2" stroke-linecap="round"/><line x1="37" y1="46" x2="37" y2="57" stroke="#ffa657" stroke-width="2.4" stroke-linecap="round"/>
+  <text x="58" y="58" font-size="16.5" font-weight="800" fill="#c9d1d9">ShutdownCheck</text>
+  <text x="58" y="76" font-size="9.5" fill="#8b949e">shutdowncheck.vercel.app</text>
+  <line x1="24" y1="88" x2="253" y2="88" stroke="#30363d" stroke-opacity="0.7"/>
+  <text x="24" y="104" font-size="11.5" fill="#c9d1d9">Terminates your service the way</text><text x="24" y="120" font-size="11.5" fill="#c9d1d9">your orchestrator will, under real</text><text x="24" y="136" font-size="11.5" fill="#c9d1d9">load. A 7-stage termination model</text><text x="24" y="152" font-size="11.5" fill="#c9d1d9">with named findings and</text><text x="24" y="168" font-size="11.5" fill="#c9d1d9">deterministic scoring.</text>
+  <rect x="24" y="178" width="92" height="18" rx="9" fill="#161b22" stroke="#30363d"/>
+  <circle cx="36" cy="187" r="3" fill="#ffa657"/>
+  <text x="44" y="190.5" font-size="10" fill="#c9d1d9">Live site</text>
+  <text x="104" y="190.5" font-size="10" fill="#ffa657">↗</text>
+</g>
+<g clip-path="url(#cardClip)"><rect x="0" y="32" width="277" height="2" fill="url(#accentBar)" opacity="0.55"/><rect x="0" y="0" width="277" height="70" fill="url(#cardSheen)"/><rect x="0" y="0" width="277" height="210" fill="url(#vig)"/></g>
+<rect x="1" y="1" width="275" height="208" rx="9" fill="none" stroke="#ffffff" stroke-opacity="0.05"/>
+</svg>

@@ -13,6 +13,7 @@
 <clipPath id="cmdClip"><rect x="199.20000000000002" y="40" width="0" height="20"><animate attributeName="width" from="0" to="86.0" begin="0.3s" dur="0.6s" fill="freeze"/></rect></clipPath>
 <style>.fade { opacity: 0; animation: in .7s ease-out forwards; } @keyframes in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }</style>
 <radialGradient id="vig" cx="0.5" cy="0.42" r="0.78"><stop offset="0.55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity="0.20"/></radialGradient>
+<linearGradient id="accentBar" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#39d353"/><stop offset="0.5" stop-color="#58d5e8"/><stop offset="1" stop-color="#bc8cff"/></linearGradient>
 <linearGradient id="cardSheen" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0.05"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
 <clipPath id="cardClip"><rect x="0.5" y="0.5" width="859" height="209" rx="10"/></clipPath></defs>
 <rect x="0.5" y="0.5" width="859" height="209" rx="10" fill="#0d1117" stroke="#30363d"/>
@@ -59,8 +60,8 @@
 <animate attributeName="x" values="60.0;60.0;386.4;386.4;60.0;60.0" keyTimes="0.0000;0.7500;0.8435;0.9450;0.9825;1.0000" dur="20.0s" repeatCount="indefinite"/>
 <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.7500;0.9825;0.9826;1" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/>
 </rect></g>
-<g class="fade" style="animation-delay:1.9s"><text x="40" y="182" font-size="13" fill="#8b949e">Bengaluru, IN  ·  Go, TypeScript and backend systems</text></g>
+<g class="fade" style="animation-delay:1.9s"><text x="40" y="182" font-size="13" fill="#8b949e">SDE-1 at Honeywell · Bengaluru, IN · Go, TypeScript and backend systems</text></g>
 
-<g clip-path="url(#cardClip)"><rect x="0" y="0" width="860" height="70" fill="url(#cardSheen)"/><rect x="0" y="0" width="860" height="210" fill="url(#vig)"/></g>
+<g clip-path="url(#cardClip)"><rect x="0" y="32" width="860" height="2" fill="url(#accentBar)" opacity="0.55"/><rect x="0" y="0" width="860" height="70" fill="url(#cardSheen)"/><rect x="0" y="0" width="860" height="210" fill="url(#vig)"/></g>
 <rect x="1" y="1" width="858" height="208" rx="9" fill="none" stroke="#ffffff" stroke-opacity="0.05"/>
 </svg>

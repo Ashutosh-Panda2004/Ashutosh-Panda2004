@@ -50,10 +50,11 @@ def window(width, height, title, body, extra_defs="", finish=True):
     if finish:
         chrome_defs = f"""
 <radialGradient id="vig" cx="0.5" cy="0.42" r="0.78"><stop offset="0.55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity="0.20"/></radialGradient>
+<linearGradient id="accentBar" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#39d353"/><stop offset="0.5" stop-color="#58d5e8"/><stop offset="1" stop-color="#bc8cff"/></linearGradient>
 <linearGradient id="cardSheen" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0.05"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
 <clipPath id="cardClip"><rect x="0.5" y="0.5" width="{width - 1}" height="{height - 1}" rx="10"/></clipPath>"""
         overlay = f"""
-<g clip-path="url(#cardClip)"><rect x="0" y="0" width="{width}" height="70" fill="url(#cardSheen)"/><rect x="0" y="0" width="{width}" height="{height}" fill="url(#vig)"/></g>
+<g clip-path="url(#cardClip)"><rect x="0" y="32" width="{width}" height="2" fill="url(#accentBar)" opacity="0.55"/><rect x="0" y="0" width="{width}" height="70" fill="url(#cardSheen)"/><rect x="0" y="0" width="{width}" height="{height}" fill="url(#vig)"/></g>
 <rect x="1" y="1" width="{width - 2}" height="{height - 2}" rx="9" fill="none" stroke="#ffffff" stroke-opacity="0.05"/>"""
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" font-family="{FONT}">
 <defs>{extra_defs}{chrome_defs}</defs>
@@ -77,7 +78,7 @@ ROLES = [
     "Building TokenLens and ShutdownCheck",
     "Backend Systems and AI Engineering",
 ]
-TAGLINE = "Bengaluru, IN  ·  Go, TypeScript and backend systems"
+TAGLINE = "SDE-1 at Honeywell · Bengaluru, IN · Go, TypeScript and backend systems"
 
 
 def header_svg():
@@ -233,33 +234,6 @@ def _info_rows(prof, gh, st, langs):
         ("Repos", f"{prof.get('public_repos', '-')} public · {prof.get('stars', '-')} stars"),
         ("Streak", f"{st.get('current_streak', 0)}d current · {st.get('longest_streak', 0)}d best"),
     ]
-
-
-def update_readme_block():
-    """Keep the selectable text version of the info card in README.md fresh."""
-    prof = load("profile.json", {})
-    gh = load("github.json", {})
-    st = load("contributions.json", {}).get("stats", {})
-    langs = prof.get("languages", {})
-    rows = _info_rows(prof, gh, st, langs)
-    total = sum(langs.values()) or 1
-    legend = " · ".join(f"{k} {100 * v / total:.1f}%"
-                         for k, v in list(langs.items())[:6])
-    width = max(len(k) for k, _ in rows)
-    body = "\n".join(f"{k:<{width}}  {v}" for k, v in rows)
-    block = f"ashutosh@github\n---------------\n{body}\n\n{legend}"
-    path = os.path.join(ROOT, "README.md")
-    if not os.path.exists(path):
-        return
-    text = open(path, encoding="utf-8").read()
-    start, end = "<!-- INFO-TEXT-START -->", "<!-- INFO-TEXT-END -->"
-    if start not in text or end not in text:
-        return
-    i = text.index(start) + len(start)
-    j = text.index(end)
-    new = text[:i] + "\n\n```text\n" + block + "\n```\n\n" + text[j:]
-    if new != text:
-        open(path, "w", encoding="utf-8").write(new)
 
 
 def info_card_svg():
@@ -877,12 +851,70 @@ def main():
     except (FileNotFoundError, ImportError):
         print("skip ascii-portrait.svg (work/source-prepped.png not present)")
     info_card_svg()
-    update_readme_block()
     globe_svg()
     tech_sphere_svg()
     skyline_svg()
     activity_svg()
     heatmap_svg()
+    projects_svg()
+
+
+# ---------------------------------------------------------------- projects
+PROJECT_CARDS = [
+    ("TokenLens", "tokenlens.sh", CYAN, "tokenslens.vercel.app", "lens",
+     ["Copilot credit ledger with waste",
+      "attribution across 14 named causes,",
+      "savings simulation and policy",
+      "compilation. Fully local, zero",
+      "network calls."]),
+    ("ShutdownCheck", "shutdowncheck.sh", ORANGE, "shutdowncheck.vercel.app", "power",
+     ["Terminates your service the way",
+      "your orchestrator will, under real",
+      "load. A 7-stage termination model",
+      "with named findings and",
+      "deterministic scoring."]),
+    ("InterviewCoach AI", "interviewcoach.sh", PURPLE, "interview-coach-ai-steel.vercel.app", "voice",
+     ["Voice-based mock interviews with",
+      "an AI that knows your resume.",
+      "Realistic questions, detailed",
+      "structured feedback after every",
+      "session."]),
+]
+
+
+def _project_icon(kind, color):
+    if kind == "lens":
+        return (f'<circle cx="37" cy="60" r="11" fill="none" stroke="{color}" stroke-width="2"/>'
+                f'<circle cx="37" cy="60" r="4.5" fill="{color}"/>')
+    if kind == "power":
+        return (f'<path d="M29.5 53.5 a10.5 10.5 0 1 0 15 0" fill="none" stroke="{color}" stroke-width="2" stroke-linecap="round"/>'
+                f'<line x1="37" y1="46" x2="37" y2="57" stroke="{color}" stroke-width="2.4" stroke-linecap="round"/>')
+    return (f'<rect x="27" y="55" width="4.5" height="10" rx="2.25" fill="{color}"/>'
+            f'<rect x="34.75" y="50" width="4.5" height="20" rx="2.25" fill="{color}"/>'
+            f'<rect x="42.5" y="53.5" width="4.5" height="13" rx="2.25" fill="{color}"/>')
+
+
+def projects_svg():
+    W, H = 277, 210
+    for name, slug, color, domain, icon, desc in PROJECT_CARDS:
+        fname = "project-" + name.split()[0].lower() + ".svg"
+        lines = [f'<text x="24" y="{104 + i * 16}" font-size="11.5" fill="{FG}">{esc(t)}</text>'
+                 for i, t in enumerate(desc)]
+        defs = (f'<style>.fin{{opacity:0;animation:fin .7s ease-out forwards}}'
+                f'@keyframes fin{{from{{opacity:0;transform:translateY(8px)}}to{{opacity:1;transform:none}}}}</style>')
+        body = f"""
+<g class="fin">
+  {_project_icon(icon, color)}
+  <text x="58" y="58" font-size="16.5" font-weight="800" fill="{FG}">{esc(name)}</text>
+  <text x="58" y="76" font-size="9.5" fill="{MUTED}">{esc(domain)}</text>
+  <line x1="24" y1="88" x2="{W - 24}" y2="88" stroke="{BORDER}" stroke-opacity="0.7"/>
+  {''.join(lines)}
+  <rect x="24" y="{H - 32}" width="92" height="18" rx="9" fill="{PANEL}" stroke="{BORDER}"/>
+  <circle cx="36" cy="{H - 23}" r="3" fill="{color}"/>
+  <text x="44" y="{H - 19.5}" font-size="10" fill="{FG}">Live site</text>
+  <text x="104" y="{H - 19.5}" font-size="10" fill="{color}">↗</text>
+</g>"""
+        write_svg(fname, window(W, H, slug, body, defs))
 
 
 if __name__ == "__main__":

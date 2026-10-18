@@ -37,4 +37,4 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Update profile art"
-          file_pattern: "data/*.json *.svg README.md"
+          file_pattern: "data/*.json *.svg"
