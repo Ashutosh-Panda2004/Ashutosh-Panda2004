@@ -35,7 +35,7 @@ Outside work, I build small, focused developer tools — ShutdownCheck, TokenLen
 
 ## Open source highlights
 
-58 merged pull requests · I mostly contribute to checkstyle, Apache Fineract and Eclipse SW360.
+60 merged pull requests · I mostly contribute to checkstyle, Apache Fineract and Eclipse SW360.
 
 | # | Pull Request | Repo | Impact |
 | --- | --- | --- | --- |
@@ -43,9 +43,9 @@ Outside work, I build small, focused developer tools — ShutdownCheck, TokenLen
 | 2 | [Fix/686 Use explicit Global allocator parameter](https://github.com/servo/rust-smallvec/pull/694) | `servo/rust-smallvec` | Made the Global allocator parameter explicit on every SmallVec use across the crate |
 | 3 | [Reuse the old device ID when logging back in](https://github.com/ulyssa/iamb/pull/777) | `ulyssa/iamb` | Logout now removes the stored crypto account, so logging back in no longer fails with an account mismatch |
 | 4 | [Return a copy from Engine.Get so it never writes to the cached scenario](https://github.com/sagar2395/snowopslabs/pull/86) | `sagar2395/snowopslabs` | Engine.Get returns a copy, so callers can no longer mutate the cached scenario |
-| 5 | [Simplify boolean returns in json test equals methods](https://github.com/spring-projects/spring-integration/pull/11531) | `spring-projects/spring-integration` | Cleaned up boolean returns in the JSON module's test equals methods |
-| 6 | [FINERACT-2833: Document missing client template OpenAPI fields](https://github.com/apache/fineract/pull/6616) | `apache/fineract` | Documented three client template fields the API returned but the OpenAPI spec did not list |
-| 7 | [Issue #15456: Specify violation messages for UnnecessaryParenthesesCheck](https://github.com/checkstyle/checkstyle/pull/21872) | `checkstyle/checkstyle` | One of 20 merged PRs under issue #15456 specifying the exact violation messages expected in Checkstyle's check tests |
+| 5 | [Issue #21952: Limit exit code to 255 to avoid wrap to 0 on multiple of 256 errors](https://github.com/checkstyle/checkstyle/pull/21968) | `checkstyle/checkstyle` | The CLI exit code is now capped at 255, so a run with 256 or more errors no longer wraps to 0 and looks like a success |
+| 6 | [Show finished downloads in the Downloads popover](https://github.com/beyond-all-reason/bar-lobby/pull/745) | `beyond-all-reason/bar-lobby` | Finished downloads now stay in the Downloads popover for the session instead of disappearing as soon as they complete |
+| 7 | [FINERACT-2833: Document missing client template OpenAPI fields](https://github.com/apache/fineract/pull/6616) | `apache/fineract` | Documented three client template fields the API returned but the OpenAPI spec did not list |
 
 <!-- oss-highlights:end -->
 
