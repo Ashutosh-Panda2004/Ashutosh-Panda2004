@@ -35,7 +35,7 @@ Outside work, I build small, focused developer tools — ShutdownCheck, TokenLen
 
 ## Open source highlights
 
-60 merged pull requests · I mostly contribute to checkstyle, Apache Fineract and Eclipse SW360.
+61 merged pull requests · I mostly contribute to checkstyle, Apache Fineract and Eclipse SW360.
 
 | # | Pull Request | Repo | Impact |
 | --- | --- | --- | --- |
@@ -45,7 +45,7 @@ Outside work, I build small, focused developer tools — ShutdownCheck, TokenLen
 | 4 | [Return a copy from Engine.Get so it never writes to the cached scenario](https://github.com/sagar2395/snowopslabs/pull/86) | `sagar2395/snowopslabs` | Engine.Get returns a copy, so callers can no longer mutate the cached scenario |
 | 5 | [Issue #21952: Limit exit code to 255 to avoid wrap to 0 on multiple of 256 errors](https://github.com/checkstyle/checkstyle/pull/21968) | `checkstyle/checkstyle` | The CLI exit code is now capped at 255, so a run with 256 or more errors no longer wraps to 0 and looks like a success |
 | 6 | [Show finished downloads in the Downloads popover](https://github.com/beyond-all-reason/bar-lobby/pull/745) | `beyond-all-reason/bar-lobby` | Finished downloads now stay in the Downloads popover for the session instead of disappearing as soon as they complete |
-| 7 | [FINERACT-2833: Document missing client template OpenAPI fields](https://github.com/apache/fineract/pull/6616) | `apache/fineract` | Documented three client template fields the API returned but the OpenAPI spec did not list |
+| 7 | [FINERACT-2934: Merge the two force-withdrawal global configurations into a single one](https://github.com/apache/fineract/pull/6643) | `apache/fineract` | Merged the two force-withdrawal configurations into one; a database changeset copies the existing limit into the remaining configuration so existing installations keep the same behaviour |
 
 <!-- oss-highlights:end -->
 
