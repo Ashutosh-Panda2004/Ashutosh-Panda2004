@@ -35,7 +35,7 @@ Outside work, I build small developer tools (ShutdownCheck, TokenLens and Interv
 
 ## Open source highlights
 
-76 merged pull requests · I mostly contribute to checkstyle, Apache Fineract and Eclipse SW360.
+77 merged pull requests · I mostly contribute to checkstyle, Apache Fineract and Eclipse SW360.
 
 | # | Pull Request | Repo | Impact |
 | --- | --- | --- | --- |
@@ -44,7 +44,7 @@ Outside work, I build small developer tools (ShutdownCheck, TokenLens and Interv
 | 3 | [Reuse the old device ID when logging back in](https://github.com/ulyssa/iamb/pull/777) | `ulyssa/iamb` | Logout now removes the stored crypto account, so logging back in no longer fails with an account mismatch |
 | 4 | [Return a copy from Engine.Get so it never writes to the cached scenario](https://github.com/sagar2395/snowopslabs/pull/86) | `sagar2395/snowopslabs` | Engine.Get returns a copy, so callers can no longer mutate the cached scenario |
 | 5 | [Issue #21952: Limit exit code to 255 to avoid wrap to 0 on multiple of 256 errors](https://github.com/checkstyle/checkstyle/pull/21968) | `checkstyle/checkstyle` | The CLI exit code is now capped at 255, so a run with 256 or more errors no longer wraps to 0 and looks like a success |
-| 6 | [Show finished downloads in the Downloads popover](https://github.com/beyond-all-reason/bar-lobby/pull/745) | `beyond-all-reason/bar-lobby` | Finished downloads now stay in the Downloads popover for the session instead of disappearing as soon as they complete |
+| 6 | [Issue #22173: MethodCountCheck does not clear counters on beginTree](https://github.com/checkstyle/checkstyle/pull/22178) | `checkstyle/checkstyle` | MethodCountCheck now clears its counters at the start of each file, so leftover counters can no longer carry into the next file |
 | 7 | [FINERACT-2934: Merge the two force-withdrawal global configurations into a single one](https://github.com/apache/fineract/pull/6643) | `apache/fineract` | Merged the two force-withdrawal configurations into one; a database changeset copies the existing limit into the remaining configuration so existing installations keep the same behaviour |
 
 <!-- oss-highlights:end -->
