@@ -32,7 +32,7 @@ Reviews   23 PRs reviewed · 20 issues
 Repos     96 public · 3 stars
 Streak    29d current · 29d best
 
-TypeScript 55.2% · JavaScript 17.8% · Go 14.7% · CSS 5.4% · HTML 3.4% · Java 2.0%
+TypeScript 55.0% · JavaScript 17.7% · Go 14.6% · CSS 5.4% · HTML 3.3% · Java 2.0%
 ```
 
 <!-- INFO-TEXT-END -->
