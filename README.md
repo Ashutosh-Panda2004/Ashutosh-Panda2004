@@ -44,7 +44,7 @@
 
 ## Open source highlights
 
-117 merged pull requests · I mostly contribute to checkstyle, Apache Fineract and Eclipse SW360.
+119 merged pull requests · I mostly contribute to checkstyle, Apache Fineract and Eclipse SW360.
 
 | # | Pull Request | Repo | Impact |
 | --- | --- | --- | --- |
@@ -54,6 +54,6 @@
 | 4 | [TRUNK-6848: Reject invalid dates and times in Obs.setValueAsString for DT and TM datatypes](https://github.com/openmrs/openmrs-core/pull/6732) | `openmrs/openmrs-core` | Invalid date and time strings are now rejected when setting observation values, instead of being stored. |
 | 5 | [FINERACT-2934: Merge the two force-withdrawal global configurations into a single one](https://github.com/apache/fineract/pull/6643) | `apache/fineract` | Two separate force-withdrawal global configurations were merged into a single one. |
 | 6 | [fix(clearingRequest): include scan-available releases in total release count](https://github.com/eclipse-sw360/sw360/pull/4672) | `eclipse-sw360/sw360` | The total release count for a clearing request now includes releases that are available from a scan. |
-| 7 | [Deprecate into_vec and into_boxed_slice in favor of Into](https://github.com/servo/rust-smallvec/pull/685) | `servo/rust-smallvec` | Deprecated into_vec and into_boxed_slice in favour of the standard Into conversions. |
+| 7 | [FINERACT-2908: Withhold tax when the Post Interest For Savings job posts interest](https://github.com/apache/fineract/pull/6614) | `apache/fineract` | The Post Interest For Savings job now withholds tax when posting interest, with the matching journal entries, instead of skipping it. |
 
 <!-- oss-highlights:end -->
