@@ -44,7 +44,7 @@
 
 ## Open source highlights
 
-119 merged pull requests · I mostly contribute to checkstyle, Apache Fineract and Eclipse SW360.
+126 merged pull requests · I mostly contribute to checkstyle, Apache Fineract and rust-smallvec.
 
 | # | Pull Request | Repo | Impact |
 | --- | --- | --- | --- |
