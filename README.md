@@ -44,7 +44,7 @@
 
 ## Open source highlights
 
-130 merged pull requests · I mostly contribute to checkstyle, Apache Fineract and rust-smallvec.
+134 merged pull requests · I mostly contribute to checkstyle, Apache Fineract and rust-smallvec.
 
 | # | Pull Request | Repo | Impact |
 | --- | --- | --- | --- |
