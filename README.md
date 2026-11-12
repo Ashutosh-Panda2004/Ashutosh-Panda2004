@@ -22,7 +22,7 @@
 
 <br>
 
-<img src="./github-activity.svg?v=10" width="860" alt="GitHub activity: contributions by type, 130 merged pull requests, streaks and weekly activity" />
+<img src="./github-activity.svg?v=10" width="860" alt="GitHub activity: contributions by type, 147 merged pull requests, streaks and weekly activity" />
 
 </div>
 
