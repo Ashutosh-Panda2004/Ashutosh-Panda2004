@@ -44,7 +44,7 @@
 
 ## Open source highlights
 
-148 merged pull requests · I mostly contribute to checkstyle, Apache Fineract and rust-smallvec.
+149 merged pull requests · I mostly contribute to checkstyle, Apache Fineract and rust-smallvec.
 
 | # | Pull Request | Repo | Impact |
 | --- | --- | --- | --- |
@@ -53,7 +53,7 @@
 | 3 | [Issue #22173: MethodCountCheck does not clear counters on beginTree](https://github.com/checkstyle/checkstyle/pull/22178) | `checkstyle/checkstyle` | MethodCountCheck now resets its counters at the start of each file instead of counting across files. |
 | 4 | [TRUNK-6848: Reject invalid dates and times in Obs.setValueAsString for DT and TM datatypes](https://github.com/openmrs/openmrs-core/pull/6732) | `openmrs/openmrs-core` | Invalid date and time strings are now rejected when setting observation values, instead of being stored. |
 | 5 | [FINERACT-2934: Merge the two force-withdrawal global configurations into a single one](https://github.com/apache/fineract/pull/6643) | `apache/fineract` | Two separate force-withdrawal global configurations were merged into a single one. |
-| 6 | [fix(clearingRequest): include scan-available releases in total release count](https://github.com/eclipse-sw360/sw360/pull/4672) | `eclipse-sw360/sw360` | The total release count for a clearing request now includes releases that are available from a scan. |
+| 6 | [Issue #22787: Retry Groovy installation on network failure](https://github.com/checkstyle/checkstyle/pull/22789) | `checkstyle/checkstyle` | Groovy installation in CI now retries up to 5 times on network failure, so a transient 503 no longer kills the whole job. |
 | 7 | [FINERACT-2908: Withhold tax when the Post Interest For Savings job posts interest](https://github.com/apache/fineract/pull/6614) | `apache/fineract` | The Post Interest For Savings job now withholds tax when posting interest, with the matching journal entries, instead of skipping it. |
 
 <!-- oss-highlights:end -->
