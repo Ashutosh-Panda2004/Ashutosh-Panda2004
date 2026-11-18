@@ -1,12 +1,12 @@
 {
-  "commits": 504,
-  "pull_requests": 227,
-  "issues": 34,
+  "commits": 507,
+  "pull_requests": 233,
+  "issues": 44,
   "reviews": 14,
   "repos": [
     [
       "checkstyle",
-      107
+      109
     ],
     [
       "Fineract",

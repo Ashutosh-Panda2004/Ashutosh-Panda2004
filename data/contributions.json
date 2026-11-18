@@ -1,12 +1,7 @@
 {
   "username": "Ashutosh-Panda2004",
-  "fetched_at": "2026-11-17T14:33:57.289594+00:00",
+  "fetched_at": "2026-11-18T14:10:12.210911+00:00",
   "days": [
-    {
-      "date": "2025-11-18",
-      "count": 0,
-      "level": 0
-    },
     {
       "date": "2025-11-19",
       "count": 0,
@@ -1814,7 +1809,7 @@
     },
     {
       "date": "2026-11-15",
-      "count": 6,
+      "count": 7,
       "level": 2
     },
     {
@@ -1824,19 +1819,24 @@
     },
     {
       "date": "2026-11-17",
-      "count": 0,
-      "level": 0
+      "count": 15,
+      "level": 3
+    },
+    {
+      "date": "2026-11-18",
+      "count": 5,
+      "level": 2
     }
   ],
   "stats": {
-    "total": 853,
-    "current_streak": 50,
-    "longest_streak": 50,
+    "total": 874,
+    "current_streak": 52,
+    "longest_streak": 52,
     "best_day": {
       "date": "2026-10-18",
       "count": 62
     },
-    "active_days": 72,
+    "active_days": 74,
     "busiest_weekday": "Saturday",
     "monthly": {
       "2025-11": 26,
@@ -1851,11 +1851,11 @@
       "2026-08": 5,
       "2026-09": 89,
       "2026-10": 479,
-      "2026-11": 129
+      "2026-11": 150
     },
     "range": [
-      "2025-11-18",
-      "2026-11-17"
+      "2025-11-19",
+      "2026-11-18"
     ]
   }
 }
